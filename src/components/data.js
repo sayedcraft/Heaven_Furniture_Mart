@@ -54,13 +54,13 @@ export const featuredPieces = [
     title: "The Wardrobe",
     category: "Bedroom",
     description: "Storage shaped around the character of your space.",
-    image: "/image/Bespoke.jpg",
+    image: "/image/Wardrobe.jpg",
   },
   {
     title: "The TV Unit",
     category: "Living",
     description: "Quiet utility with a strong architectural line.",
-    image: "/image/Livingroom.jpg",
+    image: "/image/TV_Unit.jpg",
   },
   {
     title: "The Console",
@@ -72,13 +72,13 @@ export const featuredPieces = [
     title: "The Office Table",
     category: "Bespoke",
     description: "A focused surface, made to fit the way you work.",
-    image: "/image/Diningroom.jpg",
+    image: "/image/Office.jpg",
   },
   {
     title: "The Custom Piece",
     category: "Bespoke",
     description: "Designed around your space, size and taste.",
-    image: "/image/Founder.jpg",
+    image: "/image/Custom.jpg",
   },
 ];
 
