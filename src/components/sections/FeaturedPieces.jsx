@@ -10,7 +10,7 @@ export default function FeaturedPieces() {
   const [expanded, setExpanded] = useState(false);
   const visiblePieces = expanded ? featuredPieces : featuredPieces.slice(0, 4);
   return (
-    <section id="pieces" className="bg-[#e8e2d8] py-24 sm:py-32">
+    <section id="collections" className="bg-[#e8e2d8] py-24 sm:py-32">
       <Container>
         <div className="mb-14 flex items-end justify-between gap-8">
           <div>
