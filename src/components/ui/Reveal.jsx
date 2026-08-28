@@ -14,16 +14,19 @@ export default function Reveal({
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
+    const reveal = () => {
+      setVisible(true);
+      observer.disconnect();
+    };
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
+        if (entry.isIntersecting || entry.intersectionRatio > 0) reveal();
       },
-      { threshold: 0.12 },
+      { rootMargin: "0px 0px 18% 0px", threshold: [0, 0.01, 0.12] },
     );
     observer.observe(element);
+    const bounds = element.getBoundingClientRect();
+    if (bounds.top < window.innerHeight && bounds.bottom > 0) reveal();
     return () => observer.disconnect();
   }, []);
 

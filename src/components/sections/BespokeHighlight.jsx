@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import { images } from "@/components/data";
 import Reveal from "@/components/ui/Reveal";
+import { images } from "@/components/data";
 
 export default function BespokeHighlight() {
   return (
