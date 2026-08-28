@@ -6,8 +6,11 @@ export default function Footer() {
       <Container>
         <div className="grid gap-10 border-b border-white/15 pb-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <a href="#top" className="serif text-3xl">
-              Heaven Furniture Mart
+            <a href="#top" className="serif text-2xl">
+              <p className="serif block text-3xl font-extrabold tracking-wide">
+                HE<span className="text-yellow-500">A</span>VEN
+              </p>{" "}
+              Furniture Mart
             </a>
             <p className="mt-4 max-w-xs text-xs leading-6 text-white/60">
               Designed. Crafted. Customized.

@@ -27,9 +27,9 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         <a href="#top" className="leading-none">
-          <span className="serif block text-2xl font-semibold tracking-wide">
-            Heaven
-          </span>
+          <p className="serif block text-2xl font-extrabold tracking-wide">
+            HE<span className='text-yellow-500'>A</span>VEN
+          </p>
           <span className="text-[0.54rem] font-bold uppercase tracking-[0.28em] text-[var(--brass)]">
             Furniture Mart
           </span>
