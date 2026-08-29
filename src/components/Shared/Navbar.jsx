@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 
@@ -8,14 +9,25 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   useEffect(() => {
-    const update = () => setScrolled(window.scrollY > 36);
+    const update = () => {
+      setScrolled(window.scrollY > 36);
+    };
 
     update();
+
     window.addEventListener("scroll", update, { passive: true });
 
     return () => window.removeEventListener("scroll", update);
   }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    // setOpen(false);
+  }, [pathname]);
 
   const mainLinks = [
     ["Products", "/products"],
@@ -24,12 +36,14 @@ export default function Navbar() {
     ["Showroom", "/showroom"],
   ];
 
+  const transparentHome = isHomePage && !scrolled;
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 text-[var(--ivory)] transition-all duration-500 ${
-        scrolled
-          ? "border-b border-white/10 bg-[var(--charcoal)]/95 shadow-[0_8px_30px_rgba(0,0,0,.12)] backdrop-blur-sm"
-          : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
+        transparentHome
+          ? "bg-transparent text-[var(--ivory)]"
+          : "border-b border-black/10 bg-[#f4f0e9]/95 text-[var(--charcoal)] shadow-[0_8px_30px_rgba(0,0,0,.08)] backdrop-blur-md"
       }`}
     >
       <nav
@@ -41,10 +55,16 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="group flex-shrink-0 leading-none"
           onClick={() => setOpen(false)}
+          className="group flex-shrink-0 leading-none"
         >
-          <span className="serif block text-4xl font-bold leading-none tracking-wide transition-colors duration-300 group-hover:text-[var(--brass)]">
+          <span
+            className={`serif block text-4xl font-bold leading-none tracking-wide transition-colors duration-300 ${
+              transparentHome
+                ? "text-[var(--ivory)]"
+                : "text-[var(--charcoal)]"
+            } group-hover:text-[var(--brass)]`}
+          >
             HE<span className="text-[var(--brass)]">A</span>VEN
           </span>
 
@@ -70,6 +90,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-4 md:flex">
           {/* Search */}
           <button
+            type="button"
             aria-label="Search"
             className="p-2 transition-colors hover:text-[var(--brass)]"
           >
@@ -90,6 +111,7 @@ export default function Navbar() {
 
           {/* Cart */}
           <button
+            type="button"
             aria-label="Shopping cart"
             className="p-2 transition-colors hover:text-[var(--brass)]"
           >
@@ -108,11 +130,16 @@ export default function Navbar() {
             </svg>
           </button>
 
-          <div className="mx-2 h-5 w-px bg-white/15" />
+          {/* Divider */}
+          <div
+            className={`mx-2 h-5 w-px ${
+              transparentHome ? "bg-white/15" : "bg-black/10"
+            }`}
+          />
 
           {/* Contact */}
           <Button>
-            <Link href={"/contact"}>Contact</Link>
+            <Link href="/contact">Contact</Link>
           </Button>
         </div>
 
@@ -158,11 +185,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden border-t border-white/15 bg-[var(--charcoal)] px-5 transition-all duration-500 md:hidden ${
+        className={`overflow-hidden px-5 transition-all duration-500 md:hidden ${
           open
-            ? "max-h-screen py-6 opacity-100"
+            ? "max-h-screen border-t border-white/10 py-6 opacity-100"
             : "max-h-0 border-t-0 py-0 opacity-0"
-        }`}
+        } bg-[var(--charcoal)] text-[var(--ivory)]`}
       >
         <div className="mb-6 space-y-1">
           {mainLinks.map(([label, href]) => (
@@ -179,7 +206,11 @@ export default function Navbar() {
 
         {/* Mobile Actions */}
         <div className="space-y-3 border-t border-white/15 pt-6">
-          <button className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]">
+          {/* Search */}
+          <button
+            type="button"
+            className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]"
+          >
             <svg
               className="h-5 w-5"
               fill="none"
@@ -196,7 +227,11 @@ export default function Navbar() {
             Search
           </button>
 
-          <button className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]">
+          {/* Cart */}
+          <button
+            type="button"
+            className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]"
+          >
             <svg
               className="h-5 w-5"
               fill="none"
@@ -213,8 +248,11 @@ export default function Navbar() {
             Cart
           </button>
 
+          {/* Contact */}
           <Button className="w-full justify-center">
-            <Link href={"/contact"}>Contact</Link>
+            <Link href="/contact" onClick={() => setOpen(false)}>
+              Contact
+            </Link>
           </Button>
         </div>
       </div>
