@@ -11,11 +11,11 @@ export default function Button({
     dark: "bg-[var(--charcoal)] text-[var(--ivory)] hover:bg-[var(--brown)]",
   };
   return (
-    <a
+    <p
       href={href}
       className={`inline-flex min-h-12 items-center justify-center px-6 text-[0.68rem] font-bold uppercase tracking-[0.16em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brass)] ${styles[variant]} ${className}`}
     >
       {children}
-    </a>
+    </p>
   );
 }

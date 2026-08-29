@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import { images } from "@/components/data";
+import Link from "next/link";
 
 const customization = [
   {
@@ -138,12 +139,9 @@ export default function BespokeHighlight() {
               <Reveal delay={200} className="col-span-4 sm:col-span-4">
                 <div className="group relative flex h-full min-h-[180px] flex-col justify-between overflow-hidden border border-white/15 bg-white/[0.025] p-5 transition-all duration-500 hover:border-[var(--brass)]/50 hover:bg-white/[0.05] sm:min-h-[220px] sm:p-6">
                   {/* Decorative background number */}
-                  
 
                   {/* Top */}
                   <div className="relative z-10 flex items-center justify-between">
-                    
-
                     <span className="h-px w-10 bg-[var(--brass)]/50 transition-all duration-500 group-hover:w-16 group-hover:bg-[var(--brass)]" />
                   </div>
 
@@ -222,15 +220,13 @@ export default function BespokeHighlight() {
 
               {/* CTA */}
               <div className="mt-10">
-                <Button href="#contact" variant="secondary">
-                  Start Your Custom Piece
+                <Button>
+                  <Link href={"/contact"}>Start Your Custom Piece</Link>
                 </Button>
               </div>
             </div>
           </Reveal>
         </div>
-
-        
       </div>
     </section>
   );

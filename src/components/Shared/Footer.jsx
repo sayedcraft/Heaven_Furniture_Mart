@@ -1,10 +1,10 @@
 import Container from "@/components/ui/Container";
 
 const footerLinks = [
-  { label: "Products", href: "#products" },
-  { label: "About", href: "#about" },
-  { label: "Showroom", href: "#showroom" },
-  { label: "Contact", href: "#contact" },
+  { label: "Products", href: "/products" },
+  { label: "About", href: "/about" },
+  { label: "Showroom", href: "/showroom" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const socials = [
@@ -28,7 +28,6 @@ export default function Footer() {
       <Container>
         {/* Main Footer */}
         <div className="grid gap-12 border-b border-white/10 py-16 sm:py-20 lg:grid-cols-12 lg:gap-8">
-          
           {/* Brand */}
           <div className="lg:col-span-5">
             <a href="#top" className="group inline-block">
@@ -37,8 +36,8 @@ export default function Footer() {
               </span>
 
               <span className="text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[var(--brass)] sm:text-[0.54rem]">
-            Furniture Mart
-          </span>
+                Furniture Mart
+              </span>
             </a>
 
             <p className="mt-8 text-xs uppercase tracking-[0.16em] text-white/40">
@@ -100,7 +99,6 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col gap-6 py-7 sm:flex-row sm:items-center sm:justify-between">
-          
           <p className="text-[0.6rem] uppercase tracking-[0.16em] text-white/35">
             © 2026 Heaven Furniture Mart
           </p>
@@ -118,7 +116,6 @@ export default function Footer() {
               </a>
             ))}
           </div>
-
         </div>
       </Container>
     </footer>

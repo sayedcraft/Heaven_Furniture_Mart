@@ -2,6 +2,7 @@ import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { getProductsByCollection } from "@/data/products";
+import Link from "next/link";
 
 export default function ArtisticFurniture() {
   const products = getProductsByCollection("Artistic");
@@ -17,20 +18,16 @@ export default function ArtisticFurniture() {
       className="relative overflow-hidden border-t border-[var(--line)] bg-[#f4f0e9] py-24 sm:py-32 lg:py-40"
     >
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
-
         {/* Header */}
         <Reveal className="mb-14 sm:mb-20 lg:mb-24">
           <div className="grid items-end gap-8 lg:grid-cols-12">
             <div className="lg:col-span-7">
-             
               <h2 className="serif max-w-3xl text-5xl leading-[0.92] text-[var(--charcoal)] sm:text-6xl lg:text-7xl">
                 When furniture
                 <br />
                 becomes
                 <br />
-                <em className="font-normal text-[var(--brass)]">
-                  art.
-                </em>
+                <em className="font-normal text-[var(--brass)]">art.</em>
               </h2>
             </div>
 
@@ -45,13 +42,8 @@ export default function ArtisticFurniture() {
 
         {/* Editorial composition */}
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
-
           {/* Featured artwork */}
-          <Reveal
-            variant="clip"
-            delay={0}
-            className="relative lg:col-span-7"
-          >
+          <Reveal variant="clip" delay={0} className="relative lg:col-span-7">
             <article className="group relative">
               <div className="image-wrap relative aspect-[0.92] overflow-hidden bg-[#d6cabb] sm:aspect-[1.05] lg:aspect-[0.98]">
                 <Image
@@ -112,7 +104,6 @@ export default function ArtisticFurniture() {
 
           {/* Right editorial column */}
           <div className="flex flex-col lg:col-span-5">
-
             {/* Intro text */}
             <Reveal delay={120}>
               <div className="max-w-md pb-10 lg:ml-8 lg:pb-14">
@@ -137,11 +128,7 @@ export default function ArtisticFurniture() {
 
             {/* Secondary artwork */}
             {secondary && (
-              <Reveal
-                variant="clip"
-                delay={220}
-                className="lg:ml-8"
-              >
+              <Reveal variant="clip" delay={220} className="lg:ml-8">
                 <article className="group">
                   <div className="image-wrap relative aspect-[1.15] overflow-hidden bg-[#d6cabb] sm:aspect-[1.35] lg:aspect-[1.28]">
                     <Image
@@ -202,12 +189,11 @@ export default function ArtisticFurniture() {
               </span>
             </div>
 
-            <Button href="#products">
-              View Artistic Collection
+            <Button>
+              <Link href={"/products"}>View Artistic Collection</Link>
             </Button>
           </div>
         </Reveal>
-
       </div>
     </section>
   );

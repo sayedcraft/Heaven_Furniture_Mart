@@ -4,6 +4,7 @@ import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { getProductsByCollection } from "@/data/products";
+import Link from "next/link";
 
 export default function PopularFurniture() {
   const products = getProductsByCollection("Popular");
@@ -167,8 +168,8 @@ export default function PopularFurniture() {
               </span>
             </div>
 
-            <Button href="/products">
-              View All Pieces
+            <Button>
+              <Link href={'/products'}>View All Pieces</Link>
             </Button>
           </div>
         </Reveal>

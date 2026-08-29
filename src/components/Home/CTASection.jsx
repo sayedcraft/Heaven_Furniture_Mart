@@ -1,5 +1,6 @@
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
@@ -71,10 +72,9 @@ export default function CTASection() {
 
               <div className="flex flex-col items-start gap-5 sm:items-end">
                 <Button
-                  href="mailto:heavenfurnituremart@gmail.com"
-                  variant="primary"
+                  
                 >
-                  Request a Quote
+                  <Link href={'/contact'}>Request a Quote</Link>
                 </Button>
 
                 <a

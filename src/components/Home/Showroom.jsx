@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import { images } from "@/components/data";
+import Link from "next/link";
 
 export default function Showroom() {
   return (
@@ -85,13 +86,10 @@ export default function Showroom() {
             </span>
           </div>
 
-          <Button
-            href="#contact"
-            variant="secondary"
-            className="mt-8"
-          >
-            Visit Our Showroom
-          </Button>
+          <Button>
+                  <Link href={"/showroom"}>Visit Our Showroom</Link>
+                </Button>
+            
         </Reveal>
 
         {/* Floating side information */}

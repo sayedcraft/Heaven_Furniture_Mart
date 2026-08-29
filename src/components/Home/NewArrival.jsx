@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 const newArrivals = [
   {
@@ -43,12 +44,10 @@ export default function NewArrival() {
   return (
     <section className="relative overflow-hidden border-t border-[var(--line)] bg-white py-24 sm:py-32 lg:py-40">
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
-
         {/* Header */}
         <Reveal className="mb-14 sm:mb-20 lg:mb-24">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-
               <h2 className="serif text-5xl leading-[0.9] text-[var(--charcoal)] sm:text-6xl lg:text-7xl">
                 Fresh pieces.
                 <br />
@@ -65,8 +64,8 @@ export default function NewArrival() {
               </p>
 
               <div className="hidden lg:block">
-                <Button href="#products">
-                  View All
+                <Button>
+                  <Link href={"/products"}>View All</Link>
                 </Button>
               </div>
             </div>
@@ -75,16 +74,10 @@ export default function NewArrival() {
 
         {/* Featured arrival */}
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
-
           {/* Large image */}
-          <Reveal
-            variant="clip"
-            delay={0}
-            className="lg:col-span-8"
-          >
+          <Reveal variant="clip" delay={0} className="lg:col-span-8">
             <article className="group relative">
               <div className="image-wrap relative aspect-[1.15] overflow-hidden bg-[#e8e2d8] sm:aspect-[1.35] lg:aspect-[1.42]">
-
                 <Image
                   src={hero.image}
                   alt={hero.name}
@@ -144,7 +137,6 @@ export default function NewArrival() {
             className="flex flex-col justify-end lg:col-span-4"
           >
             <div className="border-t border-[var(--line)] pt-7 lg:mb-5">
-
               <span className="mb-5 block text-[0.58rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)]">
                 The latest piece
               </span>
@@ -168,7 +160,6 @@ export default function NewArrival() {
 
         {/* Supporting arrivals */}
         <div className="mt-16 sm:mt-20 lg:mt-24">
-
           <Reveal className="mb-8 flex items-center justify-between border-b border-[var(--line)] pb-4">
             <span className="text-[0.58rem] font-bold uppercase tracking-[0.2em] text-[var(--charcoal)]">
               More new arrivals
@@ -180,17 +171,11 @@ export default function NewArrival() {
           </Reveal>
 
           <div className="grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-
             {rest.map((item, index) => (
-              <Reveal
-                key={item.id}
-                delay={180 + index * 90}
-              >
+              <Reveal key={item.id} delay={180 + index * 90}>
                 <article className="group cursor-pointer">
-
                   {/* Product image */}
                   <div className="image-wrap relative aspect-[0.92] overflow-hidden bg-[#e8e2d8] sm:aspect-[1.02]">
-
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -222,7 +207,6 @@ export default function NewArrival() {
 
                   {/* Product information */}
                   <div className="mt-5">
-
                     <div className="flex items-start justify-between gap-4">
                       <div>
                         <p className="mb-2 text-[0.55rem] font-bold uppercase tracking-[0.16em] text-[var(--brass)]">
@@ -251,9 +235,7 @@ export default function NewArrival() {
 
         {/* Mobile CTA */}
         <Reveal delay={400} className="mt-14 lg:hidden">
-          <Button href="#products">
-            View All New Pieces
-          </Button>
+          <Button href="#products">View All New Pieces</Button>
         </Reveal>
 
         {/* Bottom statement */}
@@ -268,7 +250,6 @@ export default function NewArrival() {
             </span>
           </div>
         </Reveal>
-
       </div>
     </section>
   );

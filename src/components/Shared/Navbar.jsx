@@ -111,7 +111,9 @@ export default function Navbar() {
           <div className="mx-2 h-5 w-px bg-white/15" />
 
           {/* Contact */}
-          <Button href="/contact">Contact</Button>
+          <Button>
+            <Link href={"/contact"}>Contact</Link>
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -177,9 +179,7 @@ export default function Navbar() {
 
         {/* Mobile Actions */}
         <div className="space-y-3 border-t border-white/15 pt-6">
-          <button
-            className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]"
-          >
+          <button className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]">
             <svg
               className="h-5 w-5"
               fill="none"
@@ -196,9 +196,7 @@ export default function Navbar() {
             Search
           </button>
 
-          <button
-            className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]"
-          >
+          <button className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]">
             <svg
               className="h-5 w-5"
               fill="none"
@@ -215,8 +213,8 @@ export default function Navbar() {
             Cart
           </button>
 
-          <Button href="/contact" className="w-full justify-center">
-            Contact
+          <Button className="w-full justify-center">
+            <Link href={"/contact"}>Contact</Link>
           </Button>
         </div>
       </div>
