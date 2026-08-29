@@ -5,45 +5,97 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[var(--charcoal)] py-28 sm:py-40 lg:py-52 text-[var(--ivory)] border-t border-[var(--brass)]/20"
+      className="relative overflow-hidden bg-[#e8e1d6] text-[var(--charcoal)]"
     >
-      <div className="mx-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12">
-        <span className="serif pointer-events-none absolute -right-12 sm:-right-8 top-0 lg:top-12 text-[20rem] sm:text-[25rem] lg:text-[32rem] leading-none text-white/[.04] font-light z-0">
-          HEAVEN
-        </span>
+      {/* Decorative vertical line */}
+      <div className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-px bg-[var(--charcoal)]/[0.06] lg:block" />
 
-        <Reveal className="relative z-10 max-w-3xl">
-          <span className="eyebrow block mb-8">Ready to begin</span>
-          <h2 className="serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05] mb-12">
-            Let's create something made for you.
-          </h2>
-          <p className="text-sm leading-8 text-white/80 mb-12 max-w-xl">
-            Visit our Agrabad showroom or speak with our team about a piece
-            designed around your space and lifestyle.
-          </p>
+      {/* Large background number */}
+      
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 mb-16 pb-12 border-b border-white/15">
-            <Button
-              href="mailto:heavenfurnituremart@gmail.com"
-              variant="secondary"
-            >
-              Request a Quote
-            </Button>
-            <a
-              href="tel:+8801960481983"
-              className="text-sm font-normal text-white hover:text-[var(--brass)] transition-colors duration-300 flex items-center gap-2"
-            >
-              <span>📞</span>
-              (+880) 1960-481983
-            </a>
+      <div className="relative mx-auto w-full max-w-[1400px] px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+
+        {/* Top label */}
+        <Reveal>
+          <div className="mb-16 flex items-center gap-4 sm:mb-20">
+            <span className="h-px w-10 bg-[var(--brass)]" />
+
+            <span className="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-[var(--brown)]">
+              Begin your journey
+            </span>
           </div>
+        </Reveal>
 
-          <div className="text-xs uppercase tracking-[0.16em] text-white/60">
-            <p className="mb-2">Agrabad, Chattogram</p>
-            <p>
-              Visit our showroom or email us for consultations, custom orders,
-              or to learn more about our furniture collection.
-            </p>
+        {/* Main editorial content */}
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">
+
+          {/* Heading */}
+          <Reveal className="lg:col-span-8">
+            <h2 className="serif text-5xl leading-[0.95] sm:text-7xl lg:text-[7.5rem]">
+              Your space.
+              <br />
+              <em className="font-normal text-[var(--brass)]">
+                Your story.
+              </em>
+            </h2>
+          </Reveal>
+
+          {/* Intro */}
+          <Reveal delay={120} className="lg:col-span-4 lg:flex lg:items-end">
+            <div className="max-w-sm">
+              <p className="text-sm leading-7 text-[var(--brown)]">
+                Tell us about your space, your ideas and the way you live.
+                We ll help turn them into furniture designed specifically
+                for you.
+              </p>
+
+              <div className="mt-8 h-px w-12 bg-[var(--brass)]" />
+            </div>
+          </Reveal>
+        </div>
+
+        {/* CTA panel */}
+        <Reveal delay={180}>
+          <div className="mt-20 border-y border-[var(--charcoal)]/10 py-8 sm:mt-28 sm:py-10">
+            <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+
+              <div>
+                <p className="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[var(--brass)]">
+                  Custom furniture
+                </p>
+
+                <p className="serif mt-2 text-2xl sm:text-3xl">
+                  Lets make something extraordinary.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-start gap-5 sm:items-end">
+                <Button
+                  href="mailto:heavenfurnituremart@gmail.com"
+                  variant="primary"
+                >
+                  Request a Quote
+                </Button>
+
+                <a
+                  href="tel:+8801960481983"
+                  className="text-xs uppercase tracking-[0.12em] text-[var(--brown)] transition-colors hover:text-[var(--brass)]"
+                >
+                  +880 1960-481983
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Location */}
+        <Reveal delay={260}>
+          <div className="mt-10 flex flex-col gap-3 text-[0.6rem] uppercase tracking-[0.16em] text-[var(--brown)] sm:flex-row sm:items-center sm:justify-between">
+            <span>Agrabad Access Road · Chattogram</span>
+
+            <span>
+              Consultations · Custom Orders · Showroom Visits
+            </span>
           </div>
         </Reveal>
       </div>

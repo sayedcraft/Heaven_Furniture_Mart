@@ -2,163 +2,230 @@ import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import { categories } from "@/data/categories";
 
+function CategoryCard({
+  category,
+  className = "",
+  featured = false,
+  compact = false,
+}) {
+  return (
+    <a
+      href={`#${category.slug}`}
+      className={`group relative block h-full overflow-hidden ${className}`}
+    >
+      <div
+        className={`image-wrap relative h-full min-h-[220px] overflow-hidden bg-[#d6cabb] ${
+          featured
+            ? "aspect-[0.95] sm:aspect-[1.05] lg:aspect-auto"
+            : compact
+              ? "aspect-[1.15] lg:aspect-auto"
+              : "aspect-[1]"
+        }`}
+      >
+        <Image
+          src={category.image}
+          alt={category.name}
+          fill
+          sizes={
+            featured
+              ? "(max-width: 1024px) 100vw, 42vw"
+              : "(max-width: 1024px) 50vw, 28vw"
+          }
+          className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
+        />
+
+        {/* Permanent subtle overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
+
+        {/* Hover atmosphere */}
+        <div className="absolute inset-0 bg-[var(--charcoal)]/10 opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+
+        {/* Explore indicator */}
+        <div className="absolute right-5 top-5 flex h-10 w-10 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+          ↗
+        </div>
+
+        {/* Content over image */}
+        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
+          <div className="translate-y-2 transition-transform duration-500 group-hover:translate-y-0">
+            <p className="mb-2 text-[0.58rem] font-medium uppercase tracking-[0.22em] text-white/70">
+              Collection
+            </p>
+
+            <h3
+              className={`serif text-white ${
+                featured
+                  ? "text-3xl sm:text-4xl lg:text-5xl"
+                  : "text-2xl sm:text-3xl"
+              }`}
+            >
+              {category.name}
+            </h3>
+
+            {category.description && (
+              <p className="mt-2 max-w-sm text-xs leading-5 text-white/75 sm:text-sm">
+                {category.description}
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+}
+
 export default function ShopByCategory() {
   return (
-    <section id="categories" className="bg-[#f4f0e9] py-28 sm:py-40 lg:py-52">
-      <div className="mx-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12">
-        <Reveal className="mb-20 sm:mb-28">
-          <div className="max-w-2xl">
-            <span className="eyebrow block mb-4">Shop by category</span>
-            <h2 className="serif text-5xl sm:text-6xl leading-[1] text-[var(--charcoal)]">
-              Explore our collections
-            </h2>
+    <section
+      id="categories"
+      className="border-t border-[var(--line)] bg-[#f4f0e9] py-24 sm:py-32 lg:py-44"
+    >
+      <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
+        {/* Section heading */}
+        <Reveal className="mb-14 sm:mb-20 lg:mb-24">
+          <div className="grid items-end gap-8 lg:grid-cols-12">
+            <div className="lg:col-span-7">
+              <span className="eyebrow mb-5 block">
+                Shop by category
+              </span>
+
+              <h2 className="serif max-w-3xl text-5xl leading-[0.95] text-[var(--charcoal)] sm:text-6xl lg:text-7xl">
+                Pieces for every
+                <br />
+                <em className="font-normal text-[var(--brass)]">
+                  kind of living.
+                </em>
+              </h2>
+            </div>
+
+            <div className="lg:col-span-4 lg:col-start-9">
+              <p className="max-w-sm text-sm leading-7 text-[var(--brown)]">
+                Discover furniture designed around the way you live —
+                from everyday comfort to distinctive statement pieces.
+              </p>
+            </div>
           </div>
         </Reveal>
 
-        {/* Asymmetric Bento Grid */}
-        <div className="grid gap-4 sm:gap-6 lg:gap-8 grid-cols-2 lg:grid-cols-12 lg:grid-rows-3">
-          {/* Large Sofa - spans 2 cols, 2 rows */}
+        {/* Desktop editorial grid */}
+        <div className="hidden lg:grid lg:grid-cols-12 lg:grid-rows-[260px_260px] gap-5 xl:gap-7">
+          {/* Large featured sofa */}
           <Reveal
             delay={0}
-            className="lg:col-span-5 lg:row-span-2 group cursor-pointer"
+            className="col-span-5 row-span-2"
           >
-            <a href={`#${categories[0].slug}`} className="block h-full">
-              <div className="image-wrap relative bg-[#d6cabb] aspect-[0.95] sm:aspect-[1.05] lg:aspect-auto lg:h-[420px] overflow-hidden">
-                <Image
-                  src={categories[0].image}
-                  alt={categories[0].name}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 40vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
-              <div className="mt-4 sm:mt-6">
-                <h3 className="serif text-2xl sm:text-3xl lg:text-4xl group-hover:text-[var(--brass)] transition-colors">
-                  {categories[0].name}
-                </h3>
-                <p className="mt-2 text-xs text-[var(--brown)]">
-                  {categories[0].description}
-                </p>
-              </div>
-            </a>
+            <CategoryCard
+              category={categories[0]}
+              featured
+              className="h-full"
+            />
           </Reveal>
 
-          {/* Bed - spans 1 col, 1 row */}
+          {/* Bed */}
           <Reveal
             delay={80}
-            className="lg:col-span-3 lg:row-span-1 group cursor-pointer"
+            className="col-span-3"
           >
-            <a href={`#${categories[1].slug}`} className="block h-full">
-              <div className="image-wrap relative bg-[#d6cabb] aspect-[0.9] lg:h-[200px] overflow-hidden">
-                <Image
-                  src={categories[1].image}
-                  alt={categories[1].name}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="mt-3 sm:mt-4">
-                <h3 className="serif text-lg sm:text-xl lg:text-2xl group-hover:text-[var(--brass)] transition-colors">
-                  {categories[1].name}
-                </h3>
-              </div>
-            </a>
+            <CategoryCard
+              category={categories[1]}
+              compact
+              className="h-full"
+            />
           </Reveal>
 
-          {/* Dining Table - spans 1 col, 1 row */}
+          {/* Dining */}
           <Reveal
-            delay={120}
-            className="lg:col-span-4 lg:row-span-1 group cursor-pointer"
+            delay={140}
+            className="col-span-4"
           >
-            <a href={`#${categories[2].slug}`} className="block h-full">
-              <div className="image-wrap relative bg-[#d6cabb] aspect-[0.9] lg:h-[200px] overflow-hidden">
-                <Image
-                  src={categories[2].image}
-                  alt={categories[2].name}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="mt-3 sm:mt-4">
-                <h3 className="serif text-lg sm:text-xl lg:text-2xl group-hover:text-[var(--brass)] transition-colors">
-                  {categories[2].name}
-                </h3>
-              </div>
-            </a>
+            <CategoryCard
+              category={categories[2]}
+              compact
+              className="h-full"
+            />
           </Reveal>
 
-          {/* Chair - spans 1 col, 1 row */}
-          <Reveal
-            delay={160}
-            className="lg:col-span-3 lg:row-span-1 group cursor-pointer"
-          >
-            <a href={`#${categories[3].slug}`} className="block h-full">
-              <div className="image-wrap relative bg-[#d6cabb] aspect-[0.9] lg:h-[200px] overflow-hidden">
-                <Image
-                  src={categories[3].image}
-                  alt={categories[3].name}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="mt-3 sm:mt-4">
-                <h3 className="serif text-lg sm:text-xl lg:text-2xl group-hover:text-[var(--brass)] transition-colors">
-                  {categories[3].name}
-                </h3>
-              </div>
-            </a>
-          </Reveal>
-
-          {/* Mirror - spans 1 col, 1 row */}
+          {/* Chair */}
           <Reveal
             delay={200}
-            className="lg:col-span-2 lg:row-span-1 group cursor-pointer"
+            className="col-span-3"
           >
-            <a href={`#${categories[4].slug}`} className="block h-full">
-              <div className="image-wrap relative bg-[#d6cabb] aspect-[0.9] lg:h-[200px] overflow-hidden">
-                <Image
-                  src={categories[4].image}
-                  alt={categories[4].name}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 17vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="mt-3 sm:mt-4">
-                <h3 className="serif text-lg sm:text-xl group-hover:text-[var(--brass)] transition-colors">
-                  {categories[4].name}
-                </h3>
-              </div>
-            </a>
+            <CategoryCard
+              category={categories[3]}
+              compact
+              className="h-full"
+            />
           </Reveal>
 
-          {/* Other - spans 2 cols, 1 row */}
+          {/* Mirror */}
           <Reveal
             delay={240}
-            className="lg:col-span-5 lg:row-span-1 group cursor-pointer"
+            className="col-span-2"
           >
-            <a href={`#${categories[5].slug}`} className="block h-full">
-              <div className="image-wrap relative bg-[#d6cabb] aspect-[1.2] lg:h-[200px] overflow-hidden">
-                <Image
-                  src={categories[5].image}
-                  alt={categories[5].name}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="mt-3 sm:mt-4">
-                <h3 className="serif text-lg sm:text-xl lg:text-2xl group-hover:text-[var(--brass)] transition-colors">
-                  {categories[5].name}
-                </h3>
-              </div>
-            </a>
+            <CategoryCard
+              category={categories[4]}
+              compact
+              className="h-full"
+            />
+          </Reveal>
+
+          {/* Other - wider editorial card */}
+          <Reveal
+            delay={280}
+            className="col-span-2"
+          >
+            <CategoryCard
+              category={categories[5]}
+              compact
+              className="h-full"
+            />
           </Reveal>
         </div>
+
+        {/* Tablet */}
+        <div className="hidden sm:grid sm:grid-cols-2 sm:gap-5 lg:hidden">
+          {categories.map((category, index) => (
+            <Reveal
+              key={category.id}
+              delay={index * 60}
+              className={index === 0 ? "sm:col-span-2" : ""}
+            >
+              <CategoryCard
+                category={category}
+                featured={index === 0}
+              />
+            </Reveal>
+          ))}
+        </div>
+
+        {/* Mobile */}
+        <div className="grid grid-cols-2 gap-3 sm:hidden">
+          {categories.map((category, index) => (
+            <Reveal
+              key={category.id}
+              delay={index * 50}
+              className={index === 0 ? "col-span-2" : ""}
+            >
+              <CategoryCard
+                category={category}
+                featured={index === 0}
+              />
+            </Reveal>
+          ))}
+        </div>
+
+        {/* Bottom editorial line */}
+        <Reveal delay={300} className="mt-10 sm:mt-14">
+          <div className="flex items-center justify-between border-t border-[var(--line)] pt-5">
+            <span className="text-[0.6rem] uppercase tracking-[0.2em] text-[var(--brown)]">
+              Six collections
+            </span>
+
+            <span className="text-[0.6rem] uppercase tracking-[0.2em] text-[var(--brass)]">
+              Designed · Crafted · Customized
+            </span>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -9,17 +10,19 @@ export default function Navbar() {
 
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 36);
+
     update();
     window.addEventListener("scroll", update, { passive: true });
+
     return () => window.removeEventListener("scroll", update);
   }, []);
 
   const mainLinks = [
-    ["Products", "#products"],
-    ["About", "#about"],
-    ["Collections", "#collections"],
-    ["Bespoke", "#bespoke"],
-    ["Showroom", "#showroom"],
+    ["Products", "/products"],
+    ["About", "/about"],
+    ["Collections", "/collections"],
+    ["Bespoke", "/bespoke"],
+    ["Showroom", "/showroom"],
   ];
 
   return (
@@ -37,38 +40,42 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <a href="#top" className="leading-none flex-shrink-0">
-          <p className="serif block text-xl sm:text-2xl font-extrabold tracking-wide">
-            Heaven
-          </p>
-          <span className="text-[0.5rem] sm:text-[0.54rem] font-bold uppercase tracking-[0.28em] text-[var(--brass)]">
+        <Link
+          href="/"
+          className="group flex-shrink-0 leading-none"
+          onClick={() => setOpen(false)}
+        >
+          <span className="serif block text-4xl font-bold leading-none tracking-wide transition-colors duration-300 group-hover:text-[var(--brass)]">
+            HE<span className="text-[var(--brass)]">A</span>VEN
+          </span>
+
+          <span className="text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[var(--brass)] sm:text-[0.54rem]">
             Furniture Mart
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden items-center gap-10 lg:flex">
           {mainLinks.map(([label, href]) => (
-            <a
+            <Link
               key={label}
               href={href}
-              className="text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300 hover:text-[var(--brass)] line-link"
+              className="line-link text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300 hover:text-[var(--brass)]"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4">
-          {/* Search Icon */}
+        <div className="hidden items-center gap-4 md:flex">
+          {/* Search */}
           <button
-            type="button"
             aria-label="Search"
             className="p-2 transition-colors hover:text-[var(--brass)]"
           >
             <svg
-              className="w-5 h-5"
+              className="h-5 w-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -82,14 +89,13 @@ export default function Navbar() {
             </svg>
           </button>
 
-          {/* Cart Icon */}
+          {/* Cart */}
           <button
-            type="button"
             aria-label="Shopping cart"
             className="p-2 transition-colors hover:text-[var(--brass)]"
           >
             <svg
-              className="w-5 h-5"
+              className="h-5 w-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -103,11 +109,10 @@ export default function Navbar() {
             </svg>
           </button>
 
-          {/* Divider */}
-          <div className="w-px h-5 bg-white/15 mx-2"></div>
+          <div className="mx-2 h-5 w-px bg-white/15" />
 
-          {/* CTA Button */}
-          <Button href="#contact">Contact</Button>
+          {/* Contact */}
+          <Button href="/contact">Contact</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -120,7 +125,7 @@ export default function Navbar() {
         >
           {open ? (
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -134,7 +139,7 @@ export default function Navbar() {
             </svg>
           ) : (
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -158,28 +163,26 @@ export default function Navbar() {
             : "max-h-0 border-t-0 py-0 opacity-0"
         }`}
       >
-        <div className="space-y-1 mb-6">
+        <div className="mb-6 space-y-1">
           {mainLinks.map(([label, href]) => (
-            <a
+            <Link
               key={label}
               href={href}
               onClick={() => setOpen(false)}
-              className="block px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)] rounded"
+              className="block rounded px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Mobile Actions */}
         <div className="space-y-3 border-t border-white/15 pt-6">
           <button
-            type="button"
-            aria-label="Search"
-            className="flex items-center gap-3 w-full px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]"
+            className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]"
           >
             <svg
-              className="w-5 h-5"
+              className="h-5 w-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -195,12 +198,10 @@ export default function Navbar() {
           </button>
 
           <button
-            type="button"
-            aria-label="Shopping cart"
-            className="flex items-center gap-3 w-full px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]"
+            className="flex w-full items-center gap-3 px-3 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:text-[var(--brass)]"
           >
             <svg
-              className="w-5 h-5"
+              className="h-5 w-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -215,7 +216,7 @@ export default function Navbar() {
             Cart
           </button>
 
-          <Button href="#contact" className="w-full justify-center">
+          <Button href="/contact" className="w-full justify-center">
             Contact
           </Button>
         </div>

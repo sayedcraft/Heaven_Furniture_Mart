@@ -31,12 +31,12 @@ export default function Hero() {
             your space, style, and everyday life.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-6">
-            <Button href="#contact">Request a Quote</Button>
+            <Button href="#products">Explore Collection</Button>
             <a
-              href="#collections"
+              href="#bespoke"
               className="line-link text-xs font-bold uppercase tracking-[0.15em]"
             >
-              Explore Collections{" "}
+              Start a Custom Design{" "}
               <span className="ml-2 text-[var(--brass)]">↘</span>
             </a>
           </div>

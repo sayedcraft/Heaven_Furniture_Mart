@@ -2,6 +2,13 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 
+const stats = [
+  { value: "5+", label: "Years of craft" },
+  { value: "500+", label: "Happy clients" },
+  { value: "100%", label: "Bespoke pieces" },
+  { value: "6", label: "Collections" },
+];
+
 export default function BrandIntro() {
   return (
     <section
@@ -32,6 +39,23 @@ export default function BrandIntro() {
             </SectionHeading>
           </Reveal>
         </div>
+
+        {/* Stats strip */}
+        <Reveal delay={200} className="relative z-[1]">
+          <div className="mt-20 sm:mt-28 border-t border-[var(--line)] pt-12 grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-0">
+            {stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`sm:px-8 ${i > 0 ? "sm:border-l border-[var(--line)]" : ""}`}
+              >
+                <p className="serif text-4xl sm:text-5xl text-[var(--charcoal)]">{stat.value}</p>
+                <p className="mt-2 text-xs uppercase tracking-[0.12em] text-[var(--brown)]">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </Container>
     </section>
   );
