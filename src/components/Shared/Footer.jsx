@@ -36,9 +36,9 @@ export default function Footer() {
                 HE<span className="text-[var(--brass)]">A</span>VEN
               </span>
 
-              <span className="mt-2 block text-[0.6rem] font-bold uppercase tracking-[0.25em] text-white/60">
-                Furniture Mart
-              </span>
+              <span className="text-[0.5rem] font-bold uppercase tracking-[0.28em] text-[var(--brass)] sm:text-[0.54rem]">
+            Furniture Mart
+          </span>
             </a>
 
             <p className="mt-8 text-xs uppercase tracking-[0.16em] text-white/40">

@@ -39,8 +39,6 @@ export default function BespokeHighlight() {
         <Reveal className="mb-14 sm:mb-20 lg:mb-24">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-              <span className="eyebrow mb-5 block">Made to order</span>
-
               <h2 className="serif max-w-3xl text-5xl leading-[0.9] sm:text-6xl lg:text-7xl">
                 Your space.
                 <br />
@@ -51,7 +49,7 @@ export default function BespokeHighlight() {
             </div>
 
             <div className="lg:col-span-4 lg:col-start-9">
-              <p className="max-w-sm text-sm leading-7 text-white/65">
+              <p className="max-w-sm text-xl leading-7 text-white/65">
                 Bespoke furniture designed around your dimensions, your
                 lifestyle and the character of your home.
               </p>
@@ -232,18 +230,7 @@ export default function BespokeHighlight() {
           </Reveal>
         </div>
 
-        {/* Bottom statement */}
-        <Reveal delay={350} className="mt-14 sm:mt-20">
-          <div className="flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
-            <span className="text-[0.55rem] uppercase tracking-[0.2em] text-white/40">
-              Designed · Crafted · Customized
-            </span>
-
-            <span className="text-[0.55rem] uppercase tracking-[0.2em] text-[var(--brass)]">
-              One piece. Your way.
-            </span>
-          </div>
-        </Reveal>
+        
       </div>
     </section>
   );

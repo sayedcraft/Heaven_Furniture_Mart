@@ -48,9 +48,6 @@ export default function NewArrival() {
         <Reveal className="mb-14 sm:mb-20 lg:mb-24">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-              <span className="eyebrow mb-5 block">
-                Just arrived
-              </span>
 
               <h2 className="serif text-5xl leading-[0.9] text-[var(--charcoal)] sm:text-6xl lg:text-7xl">
                 Fresh pieces.
@@ -62,7 +59,7 @@ export default function NewArrival() {
             </div>
 
             <div className="flex items-end justify-between gap-6 lg:col-span-5">
-              <p className="max-w-sm text-sm leading-7 text-[var(--brown)]">
+              <p className="max-w-sm text-xl leading-7 text-[var(--brown)]">
                 Discover our latest furniture — thoughtfully designed,
                 beautifully crafted and ready for your space.
               </p>

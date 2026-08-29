@@ -41,9 +41,6 @@ export default function SmartInnovation() {
 
           {/* Heading */}
           <Reveal className="lg:col-span-5">
-            <span className="eyebrow mb-5 block">
-              Modern thinking
-            </span>
 
             <h2 className="serif max-w-xl text-5xl leading-[0.9] text-[var(--charcoal)] sm:text-6xl lg:text-7xl">
               Intelligent
@@ -55,7 +52,7 @@ export default function SmartInnovation() {
               </em>
             </h2>
 
-            <p className="mt-7 max-w-md text-sm leading-7 text-[var(--brown)]">
+            <p className="mt-7 max-w-md text-xl leading-7 text-[var(--brown)]">
               Every Heaven Furniture Mart piece combines timeless design
               principles with contemporary thinking — creating furniture that
               works beautifully in modern life.
@@ -189,21 +186,7 @@ export default function SmartInnovation() {
           </div>
         </div>
 
-        {/* Bottom statement */}
-        <Reveal delay={350} className="mt-12 sm:mt-16">
-          <div className="grid gap-5 border-t border-[var(--line)] pt-5 sm:grid-cols-2 sm:items-center">
-
-            <p className="text-[0.58rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)]">
-              Innovation + Heritage
-            </p>
-
-            <p className="max-w-md text-xs leading-6 text-[var(--brown)] sm:justify-self-end">
-              Creating furniture that serves your life today and stands for
-              decades to come.
-            </p>
-
-          </div>
-        </Reveal>
+        
 
       </div>
     </section>

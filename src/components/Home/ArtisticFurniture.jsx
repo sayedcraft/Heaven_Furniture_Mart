@@ -22,10 +22,7 @@ export default function ArtisticFurniture() {
         <Reveal className="mb-14 sm:mb-20 lg:mb-24">
           <div className="grid items-end gap-8 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <span className="eyebrow mb-5 block">
-                Boundary pushing
-              </span>
-
+             
               <h2 className="serif max-w-3xl text-5xl leading-[0.92] text-[var(--charcoal)] sm:text-6xl lg:text-7xl">
                 When furniture
                 <br />
@@ -38,7 +35,7 @@ export default function ArtisticFurniture() {
             </div>
 
             <div className="lg:col-span-4 lg:col-start-9">
-              <p className="max-w-sm text-sm leading-7 text-[var(--brown)]">
+              <p className="max-w-sm text-xl leading-7 text-[var(--brown)]">
                 Statement pieces created for those who see furniture as more
                 than function — as form, character and expression.
               </p>

@@ -48,9 +48,6 @@ function CategoryCard({
         {/* Content over image */}
         <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
           <div className="translate-y-2 transition-transform duration-500 group-hover:translate-y-0">
-            <p className="mb-2 text-[0.58rem] font-medium uppercase tracking-[0.22em] text-white/70">
-              Collection
-            </p>
 
             <h3
               className={`serif text-white ${
@@ -85,9 +82,6 @@ export default function ShopByCategory() {
         <Reveal className="mb-14 sm:mb-20 lg:mb-24">
           <div className="grid items-end gap-8 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <span className="eyebrow mb-5 block">
-                Shop by category
-              </span>
 
               <h2 className="serif max-w-3xl text-5xl leading-[0.95] text-[var(--charcoal)] sm:text-6xl lg:text-7xl">
                 Pieces for every
@@ -99,7 +93,7 @@ export default function ShopByCategory() {
             </div>
 
             <div className="lg:col-span-4 lg:col-start-9">
-              <p className="max-w-sm text-sm leading-7 text-[var(--brown)]">
+              <p className="max-w-sm text-xl leading-7 text-[var(--brown)]">
                 Discover furniture designed around the way you live —
                 from everyday comfort to distinctive statement pieces.
               </p>

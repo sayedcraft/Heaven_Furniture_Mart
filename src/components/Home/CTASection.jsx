@@ -20,7 +20,7 @@ export default function CTASection() {
           <div className="mb-16 flex items-center gap-4 sm:mb-20">
             <span className="h-px w-10 bg-[var(--brass)]" />
 
-            <span className="text-[0.6rem] font-bold uppercase tracking-[0.22em] text-[var(--brown)]">
+            <span className="text-[1.2rem] font-bold uppercase tracking-[0.22em] text-[var(--brown)]">
               Begin your journey
             </span>
           </div>
@@ -43,7 +43,7 @@ export default function CTASection() {
           {/* Intro */}
           <Reveal delay={120} className="lg:col-span-4 lg:flex lg:items-end">
             <div className="max-w-sm">
-              <p className="text-sm leading-7 text-[var(--brown)]">
+              <p className="text-xl leading-7 text-[var(--brown)]">
                 Tell us about your space, your ideas and the way you live.
                 We ll help turn them into furniture designed specifically
                 for you.
@@ -60,11 +60,11 @@ export default function CTASection() {
             <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
 
               <div>
-                <p className="text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[var(--brass)]">
+                <p className="text-[0.9rem] font-bold uppercase tracking-[0.18em] text-[var(--brass)]">
                   Custom furniture
                 </p>
 
-                <p className="serif mt-2 text-2xl sm:text-3xl">
+                <p className="serif mt-2 text-3xl sm:text-3xl">
                   Lets make something extraordinary.
                 </p>
               </div>
@@ -90,7 +90,7 @@ export default function CTASection() {
 
         {/* Location */}
         <Reveal delay={260}>
-          <div className="mt-10 flex flex-col gap-3 text-[0.6rem] uppercase tracking-[0.16em] text-[var(--brown)] sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-10 flex flex-col gap-3 text-[0.8rem] uppercase tracking-[0.16em] text-[var(--brown)] sm:flex-row sm:items-center sm:justify-between">
             <span>Agrabad Access Road · Chattogram</span>
 
             <span>

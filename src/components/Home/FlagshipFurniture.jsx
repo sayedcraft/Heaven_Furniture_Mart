@@ -22,9 +22,6 @@ export default function FlagshipFurniture() {
           <div className="grid items-end gap-8 lg:grid-cols-12">
 
             <div className="lg:col-span-7">
-              <span className="eyebrow mb-5 block">
-                Heritage collection
-              </span>
 
               <h2 className="serif max-w-3xl text-5xl leading-[0.92] text-[var(--charcoal)] sm:text-6xl lg:text-7xl">
                 Furniture that
@@ -36,7 +33,7 @@ export default function FlagshipFurniture() {
             </div>
 
             <div className="lg:col-span-4 lg:col-start-9">
-              <p className="max-w-sm text-sm leading-7 text-[var(--brown)]">
+              <p className="max-w-sm text-xl leading-7 text-[var(--brown)]">
                 A considered selection of signature pieces, shaped by
                 proportion, material and craftsmanship.
               </p>

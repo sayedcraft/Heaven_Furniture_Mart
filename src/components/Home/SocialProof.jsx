@@ -36,7 +36,7 @@ export default function SocialProof() {
               </span>
 
               <blockquote className="mb-12">
-                <p className="serif text-3xl leading-[1.2] text-[var(--charcoal)] sm:text-4xl lg:text-5xl">
+                <p className="serif text-2xl leading-[1.2] text-[var(--charcoal)] sm:text-3xl lg:text-4xl">
                   &ldquo;At Heaven Furniture Mart, we believe furniture is
                   more than just function; it is a reflection of lifestyle,
                   taste, and comfort. Every piece we create is designed to

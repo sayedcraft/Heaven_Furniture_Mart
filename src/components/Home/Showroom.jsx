@@ -45,7 +45,7 @@ export default function Showroom() {
           <div className="flex items-center gap-3">
             <span className="h-px w-8 bg-[var(--brass)]" />
 
-            <span className="text-[0.55rem] font-bold uppercase tracking-[0.22em] text-white/75">
+            <span className="text-[0.8rem] font-bold uppercase tracking-[0.22em] text-white/75">
               Heaven Furniture Mart
             </span>
           </div>
@@ -60,7 +60,7 @@ export default function Showroom() {
             Chattogram showroom
           </span>
 
-          <h2 className="serif text-5xl leading-[0.9] sm:text-6xl lg:text-8xl">
+          <h2 className="serif text-4xl leading-[0.9] sm:text-6xl lg:text-8xl">
             See it.
             <br />
             Feel it.
@@ -120,9 +120,6 @@ export default function Showroom() {
               Showroom
             </span>
 
-            <span className="serif text-2xl text-white/80">
-              01
-            </span>
           </div>
         </div>
       </div>
