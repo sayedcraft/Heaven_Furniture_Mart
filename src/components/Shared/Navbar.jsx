@@ -20,8 +20,7 @@ export default function Navbar() {
   const mainLinks = [
     ["Products", "/products"],
     ["About", "/about"],
-    ["Collections", "/collections"],
-    ["Bespoke", "/bespoke"],
+    ["Bespoke", "/"],
     ["Showroom", "/showroom"],
   ];
 
