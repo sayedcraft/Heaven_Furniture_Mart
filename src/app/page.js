@@ -13,6 +13,7 @@ import SocialProof from "@/components/Home/SocialProof";
 import BrandIntro from "@/components/Home/BrandIntro";
 import CTASection from "@/components/Home/CTASection";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+import BeforeAfter from "@/components/Home/BeforeAfter";
 
 export const metadata = {
   title: "Heaven Furniture Mart | Premium Bespoke Furniture in Chattogram",
@@ -51,6 +52,7 @@ export default function Home() {
 
       {/* Video Showcase — cinematic brand video */}
       <VideoShowcase />
+      <BeforeAfter></BeforeAfter>
 
       {/* Smart Innovation — "Intelligent furniture." + "The innovation system" */}
       <SmartInnovation />
