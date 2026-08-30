@@ -220,9 +220,7 @@ export default function BespokeHighlight() {
 
               {/* CTA */}
               <div className="mt-10">
-                <Button>
-                  <Link href={"/contact"}>Start Your Custom Piece</Link>
-                </Button>
+                <Button href="/contact">Start Your Custom Piece</Button>
               </div>
             </div>
           </Reveal>

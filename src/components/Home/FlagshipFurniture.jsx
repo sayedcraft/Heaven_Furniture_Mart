@@ -152,9 +152,7 @@ export default function FlagshipFurniture() {
               </span>
             </div>
 
-            <Button>
-              <Link href={"/products"}>Explore Collection</Link>
-            </Button>
+            <Button href="/products">Explore Collection</Button>
           </div>
         </Reveal>
       </div>

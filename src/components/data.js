@@ -1,16 +1,11 @@
 export const images = {
-  hero1:
-    "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2200&q=85",
-
-  hero2:
-    "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=2200&q=85",
-
-  hero3:
-    "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2200&q=85",
+  hero1: "/image/Livingroom.jpg",
+  hero2: "/image/Bedroom.jpg",
+  hero3: "/image/Diningroom.jpg",
 
   bespoke: "/image/bes.jpg",
   proof: "/image/Founder.jpg",
-  showroom: "/image/Livingroom.jpg",
+  showroom: "/image/Bespoke.jpg",
 };
 
 export const collections = [

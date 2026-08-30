@@ -64,9 +64,7 @@ export default function NewArrival() {
               </p>
 
               <div className="hidden lg:block">
-                <Button>
-                  <Link href={"/products"}>View All</Link>
-                </Button>
+                <Button href="/products">View All</Button>
               </div>
             </div>
           </div>

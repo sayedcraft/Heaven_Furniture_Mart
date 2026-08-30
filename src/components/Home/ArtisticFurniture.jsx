@@ -189,9 +189,7 @@ export default function ArtisticFurniture() {
               </span>
             </div>
 
-            <Button>
-              <Link href={"/products"}>View Artistic Collection</Link>
-            </Button>
+            <Button href="/products">View Artistic Collection</Button>
           </div>
         </Reveal>
       </div>

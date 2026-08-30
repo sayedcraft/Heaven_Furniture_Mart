@@ -168,9 +168,7 @@ export default function PopularFurniture() {
               </span>
             </div>
 
-            <Button>
-              <Link href={'/products'}>View All Pieces</Link>
-            </Button>
+            <Button href="/products">View All Pieces</Button>
           </div>
         </Reveal>
 

@@ -86,9 +86,7 @@ export default function Showroom() {
             </span>
           </div>
 
-          <Button>
-                  <Link href={"/showroom"}>Visit Our Showroom</Link>
-                </Button>
+          <Button href="/showroom">Visit Our Showroom</Button>
             
         </Reveal>
 
