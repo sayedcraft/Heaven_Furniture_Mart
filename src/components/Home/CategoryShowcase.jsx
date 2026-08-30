@@ -31,9 +31,7 @@ function ShowcaseCard({ category, index }) {
           <div className="cat-card-overlay absolute inset-0 bg-[var(--charcoal)]/20" />
 
           {/* Top corner index */}
-          <span className="absolute left-4 top-4 text-[0.5rem] font-bold uppercase tracking-[0.2em] text-white/60 sm:left-5 sm:top-5">
-            0{index + 1}
-          </span>
+          
 
           {/* Explore arrow — appears on hover */}
           <div className="absolute right-4 top-4 flex h-9 w-9 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-5 sm:top-5">
@@ -74,15 +72,14 @@ export default function CategoryShowcase() {
         {/* Label row */}
         <Reveal className="mb-8 flex items-center justify-between sm:mb-10">
           <div className="flex items-center gap-4">
-            <span className="h-px w-8 bg-[var(--brass)]" />
-            <span className="text-[0.58rem] font-bold uppercase tracking-[0.2em] text-white/60">
+            <span className="text-[1.5rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)]">
               Shop by category
             </span>
           </div>
 
           <Link
             href="/products"
-            className="group flex items-center gap-2 text-[0.58rem] font-bold uppercase tracking-[0.18em] text-[var(--brass)] transition-colors hover:text-white"
+            className="group flex items-center gap-2 text-[0.9rem] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:text-[var(--brass)]"
           >
             View all
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -99,12 +96,7 @@ export default function CategoryShowcase() {
         {/* Bottom editorial line */}
         <Reveal delay={360} className="mt-8 sm:mt-10">
           <div className="flex items-center justify-between border-t border-white/10 pt-5">
-            <span className="text-[0.55rem] uppercase tracking-[0.2em] text-white/35">
-              Sofas · Beds · Dining · Chairs
-            </span>
-            <span className="text-[0.55rem] uppercase tracking-[0.2em] text-[var(--brass)]/70">
-              Chattogram, Bangladesh
-            </span>
+            
           </div>
         </Reveal>
       </div>

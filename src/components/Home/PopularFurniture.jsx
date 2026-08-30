@@ -69,8 +69,8 @@ export default function PopularFurniture() {
 
                 {/* Product number */}
                 <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
-                  <span className="text-[0.6rem] tracking-[0.2em] text-white/80">
-                    01 / POPULAR
+                  <span className="text-[0.9rem] tracking-[0.2em] text-white/80">
+                     POPULAR
                   </span>
                 </div>
 
@@ -90,11 +90,6 @@ export default function PopularFurniture() {
                       {featured.name}
                     </h3>
 
-                    {featured.description && (
-                      <p className="mt-4 max-w-md text-xs leading-6 text-white/75 sm:text-sm">
-                        {featured.description}
-                      </p>
-                    )}
                   </div>
                 </div>
               </div>
@@ -123,9 +118,7 @@ export default function PopularFurniture() {
                     <div className="absolute inset-0 bg-black/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                     {/* Number */}
-                    <span className="absolute left-4 top-4 text-[0.55rem] font-medium tracking-[0.18em] text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                      0{index + 2}
-                    </span>
+                    
 
                     {/* Arrow */}
                     <span className="absolute right-4 top-4 flex h-8 w-8 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-black/10 text-xs text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
@@ -160,14 +153,6 @@ export default function PopularFurniture() {
         {/* Bottom CTA */}
         <Reveal delay={450} className="mt-12 sm:mt-16">
           <div className="flex flex-col gap-5 border-t border-[var(--line)] pt-5 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-4">
-              <span className="h-px w-8 bg-[var(--brass)]" />
-
-              <span className="text-[0.58rem] uppercase tracking-[0.2em] text-[var(--brown)]">
-                Most loved pieces
-              </span>
-            </div>
-
             <Button href="/products">View All Pieces</Button>
           </div>
         </Reveal>

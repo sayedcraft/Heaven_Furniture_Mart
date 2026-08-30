@@ -128,19 +128,7 @@ export default function VideoShowcase() {
       </div>
 
       {/* Below-video editorial strip — desktop/tablet only */}
-      <div className="hidden border-t border-white/10 sm:block">
-        <div className="mx-auto w-full max-w-[1500px] px-5 py-5 sm:px-8 sm:py-6 lg:px-12">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <span className="text-[0.55rem] uppercase tracking-[0.2em] text-white/35">
-              Since 2020 · Agrabad, Chattogram
-            </span>
-
-            <span className="text-[0.55rem] uppercase tracking-[0.2em] text-[var(--brass)]/60">
-              Designed · Crafted · Customized
-            </span>
-          </div>
-        </div>
-      </div>
+      
     </section>
   );
 }

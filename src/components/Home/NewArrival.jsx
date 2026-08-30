@@ -89,15 +89,12 @@ export default function NewArrival() {
 
                 {/* Tag */}
                 <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
-                  <span className="bg-[var(--brass)] px-3 py-2 text-[0.55rem] font-bold uppercase tracking-[0.2em] text-[var(--charcoal)]">
+                  <span className="bg-[var(--brass)] px-3 py-2 text-[0.9rem] font-bold uppercase tracking-[0.2em] text-[var(--charcoal)]">
                     {hero.tag}
                   </span>
                 </div>
 
-                {/* Number */}
-                <span className="absolute right-5 top-5 text-[0.55rem] tracking-[0.2em] text-white/70 sm:right-7 sm:top-7">
-                  01 / 04
-                </span>
+               
 
                 {/* Arrow */}
                 <div className="absolute bottom-5 right-5 flex h-11 w-11 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:bottom-7 sm:right-7">
@@ -117,15 +114,7 @@ export default function NewArrival() {
               </div>
 
               {/* Image caption */}
-              <div className="mt-4 flex items-center justify-between">
-                <span className="text-[0.55rem] uppercase tracking-[0.18em] text-[var(--brown)]">
-                  Featured arrival
-                </span>
-
-                <span className="text-[0.55rem] uppercase tracking-[0.18em] text-[var(--brass)]">
-                  01
-                </span>
-              </div>
+              
             </article>
           </Reveal>
 
@@ -159,13 +148,11 @@ export default function NewArrival() {
         {/* Supporting arrivals */}
         <div className="mt-16 sm:mt-20 lg:mt-24">
           <Reveal className="mb-8 flex items-center justify-between border-b border-[var(--line)] pb-4">
-            <span className="text-[0.58rem] font-bold uppercase tracking-[0.2em] text-[var(--charcoal)]">
+            <span className="text-[1.5rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)]">
               More new arrivals
             </span>
 
-            <span className="text-[0.55rem] uppercase tracking-[0.18em] text-[var(--brown)]">
-              02 — 04
-            </span>
+            
           </Reveal>
 
           <div className="grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
@@ -187,15 +174,13 @@ export default function NewArrival() {
 
                     {/* Tag */}
                     <div className="absolute left-4 top-4">
-                      <span className="bg-white/90 px-2.5 py-1.5 text-[0.5rem] font-bold uppercase tracking-[0.18em] text-[var(--charcoal)] backdrop-blur-sm">
+                      <span className="bg-white/90 px-2.5 py-1.5 text-[0.9rem] font-bold uppercase tracking-[0.18em] text-[var(--charcoal)] backdrop-blur-sm">
                         {item.tag}
                       </span>
                     </div>
 
                     {/* Number */}
-                    <span className="absolute right-4 top-4 text-[0.55rem] tracking-[0.15em] text-white/80 mix-blend-difference">
-                      0{index + 2}
-                    </span>
+                    
 
                     {/* Hover arrow */}
                     <div className="absolute bottom-4 right-4 flex h-9 w-9 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">

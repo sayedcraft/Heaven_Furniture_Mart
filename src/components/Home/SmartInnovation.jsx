@@ -81,15 +81,13 @@ export default function SmartInnovation() {
 
                 {/* Top label */}
                 <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
-                  <span className="border border-white/30 bg-black/10 px-3 py-2 text-[0.55rem] uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm">
+                  <span className="border border-white/30 bg-black/10 px-3 py-2 text-[0.9rem] uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm">
                     Modern workspace
                   </span>
                 </div>
 
                 {/* Number */}
-                <span className="absolute right-5 top-5 text-[0.55rem] tracking-[0.2em] text-white/70 sm:right-7 sm:top-7">
-                  04 / 04
-                </span>
+                
 
                 {/* Bottom caption */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
@@ -120,11 +118,11 @@ export default function SmartInnovation() {
           {/* Section label */}
           <Reveal>
             <div className="flex items-center justify-between border-b border-[var(--line)] py-5">
-              <span className="text-[0.58rem] font-bold uppercase tracking-[0.2em] text-[var(--charcoal)]">
+              <span className="text-[1.5rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)]">
                 The innovation system
               </span>
 
-              <span className="text-[0.55rem] uppercase tracking-[0.18em] text-[var(--brown)]">
+              <span className="text-[1rem] uppercase tracking-[0.18em] text-[var(--brown)]">
                 04 principles
               </span>
             </div>

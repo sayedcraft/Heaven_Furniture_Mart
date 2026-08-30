@@ -79,7 +79,7 @@ export default function BespokeHighlight() {
 
                   {/* Corner label */}
                   <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
-                    <span className="border border-white/30 bg-black/10 px-3 py-2 text-[0.55rem] uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm">
+                    <span className="border border-white/30 bg-black/10 px-3 py-2 text-[0.9rem] uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm">
                       Bespoke studio
                     </span>
                   </div>
@@ -102,9 +102,7 @@ export default function BespokeHighlight() {
                         </p>
                       </div>
 
-                      <span className="hidden text-[0.55rem] uppercase tracking-[0.18em] text-white/60 sm:block">
-                        01 / 02
-                      </span>
+                     
                     </div>
                   </div>
                 </div>

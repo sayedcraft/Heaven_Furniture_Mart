@@ -44,7 +44,7 @@ export default function Showroom() {
           className="absolute left-8 top-8 z-10 sm:left-12 sm:top-12 lg:left-16 lg:top-16"
         >
           <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-[var(--brass)]" />
+            
 
             <span className="text-[0.8rem] font-bold uppercase tracking-[0.22em] text-white/75">
               Heaven Furniture Mart
@@ -112,7 +112,7 @@ export default function Showroom() {
         {/* Bottom corner index */}
         <div className="absolute bottom-8 right-8 z-10 hidden sm:block lg:bottom-12 lg:right-14">
           <div className="flex items-center gap-4 text-white/50">
-            <span className="text-[0.55rem] uppercase tracking-[0.2em]">
+            <span className="text-[1.5rem] uppercase tracking-[0.2em]">
               Showroom
             </span>
 

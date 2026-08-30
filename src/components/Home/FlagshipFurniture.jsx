@@ -58,7 +58,7 @@ export default function FlagshipFurniture() {
 
                 {/* Label */}
                 <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
-                  <span className="border border-white/40 bg-black/10 px-3 py-2 text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
+                  <span className="border border-white/40 bg-black/10 px-3 py-2 text-[0.9rem] font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
                     Signature piece
                   </span>
                 </div>
@@ -79,11 +79,7 @@ export default function FlagshipFurniture() {
                       {featured.name}
                     </h3>
 
-                    {featured.description && (
-                      <p className="mt-3 max-w-md text-xs leading-6 text-white/75 sm:text-sm">
-                        {featured.description}
-                      </p>
-                    )}
+                    
                   </div>
                 </div>
               </div>
@@ -109,9 +105,7 @@ export default function FlagshipFurniture() {
                     <div className="absolute inset-0 bg-black/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                     {/* Number */}
-                    <span className="absolute left-3 top-3 text-[0.55rem] font-medium tracking-[0.18em] text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100 sm:left-4 sm:top-4">
-                      0{index + 2}
-                    </span>
+                    
 
                     {/* Arrow */}
                     <span className="absolute right-3 top-3 flex h-8 w-8 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-black/10 text-xs text-white opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-4 sm:top-4">
@@ -144,14 +138,6 @@ export default function FlagshipFurniture() {
         {/* ───────────────── Bottom Navigation ───────────────── */}
         <Reveal delay={400} className="mt-12 sm:mt-16">
           <div className="flex flex-col gap-5 border-t border-[var(--line)] pt-5 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-4">
-              <span className="h-px w-8 bg-[var(--brass)]" />
-
-              <span className="text-[0.58rem] uppercase tracking-[0.2em] text-[var(--brown)]">
-                Selected pieces
-              </span>
-            </div>
-
             <Button href="/products">Explore Collection</Button>
           </div>
         </Reveal>

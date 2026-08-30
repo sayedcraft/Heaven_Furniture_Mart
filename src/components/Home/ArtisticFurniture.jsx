@@ -59,8 +59,8 @@ export default function ArtisticFurniture() {
 
                 {/* Number */}
                 <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
-                  <span className="text-[0.58rem] tracking-[0.2em] text-white/80">
-                    01 / ARTISTIC
+                  <span className="text-[0.9rem] tracking-[0.2em] text-white/80">
+                    ARTISTIC
                   </span>
                 </div>
 
@@ -79,27 +79,12 @@ export default function ArtisticFurniture() {
                     <h3 className="serif text-3xl leading-none text-white sm:text-4xl lg:text-5xl">
                       {featured.name}
                     </h3>
-
-                    {featured.description && (
-                      <p className="mt-4 max-w-md text-xs leading-6 text-white/75 sm:text-sm">
-                        {featured.description}
-                      </p>
-                    )}
                   </div>
                 </div>
               </div>
             </article>
 
             {/* Small editorial caption */}
-            <div className="mt-5 flex items-start justify-between gap-6">
-              <span className="text-[0.58rem] uppercase tracking-[0.18em] text-[var(--brown)]">
-                Designed as a statement
-              </span>
-
-              <span className="text-[0.58rem] uppercase tracking-[0.18em] text-[var(--brass)]">
-                01
-              </span>
-            </div>
           </Reveal>
 
           {/* Right editorial column */}
@@ -142,9 +127,6 @@ export default function ArtisticFurniture() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
                     {/* Product number */}
-                    <span className="absolute left-5 top-5 text-[0.58rem] tracking-[0.2em] text-white/80">
-                      02
-                    </span>
 
                     {/* Arrow */}
                     <span className="absolute right-5 top-5 flex h-9 w-9 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
@@ -181,14 +163,6 @@ export default function ArtisticFurniture() {
         {/* Bottom CTA */}
         <Reveal delay={350} className="mt-12 sm:mt-16">
           <div className="flex flex-col gap-5 border-t border-[var(--line)] pt-5 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-4">
-              <span className="h-px w-8 bg-[var(--brass)]" />
-
-              <span className="text-[0.58rem] uppercase tracking-[0.2em] text-[var(--brown)]">
-                Crafted beyond convention
-              </span>
-            </div>
-
             <Button href="/products">View Artistic Collection</Button>
           </div>
         </Reveal>
