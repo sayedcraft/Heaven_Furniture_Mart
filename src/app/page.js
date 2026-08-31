@@ -51,14 +51,14 @@ export default function Home() {
       <NewArrival />
 
       {/* Video Showcase — cinematic brand video */}
-      <VideoShowcase />
+      {/* <VideoShowcase /> */}
       <BeforeAfter></BeforeAfter>
 
       {/* Smart Innovation — "Intelligent furniture." + "The innovation system" */}
       <SmartInnovation />
 
       {/* Showroom — "Chattogram showroom" + "See it. Feel it." */}
-      <Showroom />
+      {/* <Showroom /> */}
 
       {/* Social Proof — "A note from our founder" */}
       <SocialProof />
