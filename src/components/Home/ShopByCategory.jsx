@@ -71,7 +71,7 @@ export default function ShopByCategory() {
   return (
     <section
       id="categories"
-      className="border-t border-[var(--line)] bg-[#f4f0e9] py-10 sm:py-15 lg:py-20"
+      className="border-t border-[var(--line)] bg-[#f4f0e9] py-5 sm:py-8 lg:py-10"
     >
       {" "}
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">

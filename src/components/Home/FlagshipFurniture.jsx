@@ -17,10 +17,8 @@ export default function FlagshipFurniture() {
     >
       {" "}
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
-        {/* =====================================================
-        SECTION HEADER
-    ===================================================== */}
-
+      
+{/* text */}
         <Reveal className="mb-10 text-center sm:mb-16 lg:mb-20">
           <h2
             className="
@@ -43,16 +41,10 @@ export default function FlagshipFurniture() {
             <em className="font-normal text-[var(--brass)]">defines a room.</em>
           </h2>
         </Reveal>
-
-        {/* =====================================================
-        EDITORIAL GRID
-    ===================================================== */}
+{/* pic */}
 
         <div className="grid gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-7">
-          {/* =================================================
-          FEATURED PRODUCT
-      ================================================= */}
-
+          
           <Reveal variant="clip" delay={0} className="lg:col-span-7">
             <article className="group">
               <div className="image-wrap relative aspect-[1/1.05] overflow-hidden bg-[#d6cabb] sm:aspect-[1.15] lg:aspect-[0.98]">
@@ -95,9 +87,7 @@ export default function FlagshipFurniture() {
             </article>
           </Reveal>
 
-          {/* =================================================
-          SUPPORTING PRODUCTS
-      ================================================= */}
+          
 
           <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-10 lg:col-span-5 lg:gap-x-6 lg:gap-y-9">
             {supporting.map((product, index) => (
@@ -148,10 +138,8 @@ export default function FlagshipFurniture() {
           </div>
         </div>
 
-        {/* =====================================================
-        BOTTOM NAVIGATION
-    ===================================================== */}
-
+        
+{/* btn */}
         <Reveal delay={400} className="mt-12 sm:mt-16">
           <div className="flex justify-center border-t border-[var(--line)] pt-6 sm:pt-7">
             <Button href="/products">Explore Collection</Button>
