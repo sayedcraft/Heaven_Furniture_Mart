@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect } from "react";
-import { ArrowLeftRight, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { useState, useRef, useCallback, useEffect } from "react";
+import { ArrowLeftRight } from "lucide-react";
 
 export default function BeforeAfter() {
   const [sliderPos, setSliderPos] = useState(50);
@@ -10,16 +10,15 @@ export default function BeforeAfter() {
 
   const containerRef = useRef(null);
 
-  const stylingPoints = [
-    "Thoughtfully curated furniture",
-    "Custom-made for your space",
-    "Premium materials & craftsmanship",
-    "A timeless, refined finish",
-  ];
+  const beforeImage =
+    "https://images.unsplash.com/photo-1721395286465-47f3a47b40a1?auto=format&fit=crop&w=2200&q=85";
 
-  /* ================================
+  const afterImage =
+    "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2200&q=85";
+
+  /* =====================================================
      UPDATE SLIDER POSITION
-  ================================= */
+  ===================================================== */
 
   const updateSliderPosition = useCallback((clientX) => {
     const container = containerRef.current;
@@ -28,18 +27,17 @@ export default function BeforeAfter() {
 
     const rect = container.getBoundingClientRect();
 
-    if (rect.width === 0) return;
+    if (!rect.width) return;
 
     const x = clientX - rect.left;
-
     const percentage = (x / rect.width) * 100;
 
     setSliderPos(Math.max(0, Math.min(100, percentage)));
   }, []);
 
-  /* ================================
+  /* =====================================================
      MOUSE
-  ================================= */
+  ===================================================== */
 
   const handleMouseDown = useCallback(
     (e) => {
@@ -48,7 +46,7 @@ export default function BeforeAfter() {
       setIsDragging(true);
       updateSliderPosition(e.clientX);
     },
-    [updateSliderPosition],
+    [updateSliderPosition]
   );
 
   const handleMouseMove = useCallback(
@@ -57,44 +55,44 @@ export default function BeforeAfter() {
 
       updateSliderPosition(e.clientX);
     },
-    [isDragging, updateSliderPosition],
+    [isDragging, updateSliderPosition]
   );
 
-  /* ================================
+  /* =====================================================
      TOUCH
-  ================================= */
+  ===================================================== */
 
   const handleTouchStart = useCallback(
     (e) => {
       if (!e.touches?.[0]) return;
 
       setIsDragging(true);
-
       updateSliderPosition(e.touches[0].clientX);
     },
-    [updateSliderPosition],
+    [updateSliderPosition]
   );
 
   const handleTouchMove = useCallback(
     (e) => {
       if (!isDragging || !e.touches?.[0]) return;
 
+      e.preventDefault();
       updateSliderPosition(e.touches[0].clientX);
     },
-    [isDragging, updateSliderPosition],
+    [isDragging, updateSliderPosition]
   );
 
-  /* ================================
+  /* =====================================================
      STOP DRAGGING
-  ================================= */
+  ===================================================== */
 
   const stopDragging = useCallback(() => {
     setIsDragging(false);
   }, []);
 
-  /* ================================
+  /* =====================================================
      GLOBAL EVENTS
-  ================================= */
+  ===================================================== */
 
   useEffect(() => {
     if (!isDragging) return;
@@ -115,7 +113,12 @@ export default function BeforeAfter() {
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", stopDragging);
     };
-  }, [isDragging, handleMouseMove, handleTouchMove, stopDragging]);
+  }, [
+    isDragging,
+    handleMouseMove,
+    handleTouchMove,
+    stopDragging,
+  ]);
 
   return (
     <section
@@ -124,78 +127,67 @@ export default function BeforeAfter() {
         relative
         overflow-hidden
         bg-bone
-        py-16
-        sm:py-20
-        md:py-28
-        lg:py-32
+        py-10
+        sm:py-15
+        lg:py-20
       "
     >
       <div
         className="
           mx-auto
+          w-full
           max-w-[1500px]
           px-5
           sm:px-8
           lg:px-12
         "
       >
-        {/* =====================================
-            HEADER
-        ====================================== */}
+        {/* =====================================================
+            SECTION HEADER
+        ===================================================== */}
 
-        <div
-          className="
-            mb-10
-            grid
-            gap-8
-            md:mb-14
-            lg:grid-cols-12
-            lg:items-end
-          "
-        >
-          {/* LEFT */}
-
-          <div className="lg:col-span-8">
-            
-
-            <h2
-             className="serif max-w-3xl text-5xl leading-[0.95] text-[var(--charcoal)] sm:text-6xl lg:text-7xl"
-            >
-              From empty space to{" "}
-              <em className="font-normal text-[var(--brass)]">beautifully lived.</em>
-            </h2>
-          </div>
-
-          {/* RIGHT */}
-
-          <div className="lg:col-span-4 lg:pb-1">
-            <div className="flex gap-4">
-              <div className="mt-1 h-10 w-px shrink-0 bg-brass/50" />
-
-              <p
-                className="max-w-sm text-xl leading-7 text-[var(--brown)]"
-              >
-                See how thoughtful furniture, refined materials and bespoke
-                craftsmanship can completely transform a living space.
-              </p>
-            </div>
-          </div>
+        <div className="mb-10 sm:mb-16 lg:mb-20">
+          <h2
+            className="
+              serif
+              mx-auto
+              max-w-4xl
+              text-center
+              text-4xl
+              leading-[0.95]
+              tracking-tight
+              text-[var(--charcoal)]
+              sm:text-5xl
+              md:text-6xl
+              lg:text-7xl
+              xl:text-[5.5rem]
+            "
+          >
+            From empty space to{" "}
+            <em className="font-normal text-[var(--brass)]">
+              beautifully lived.
+            </em>
+          </h2>
         </div>
 
-        {/* =====================================
+        {/* =====================================================
             BEFORE / AFTER SLIDER
-        ====================================== */}
+        ===================================================== */}
 
         <div
           ref={containerRef}
           onMouseDown={handleMouseDown}
           onTouchStart={handleTouchStart}
           onContextMenu={(e) => e.preventDefault()}
-          className={`
+          style={{
+            touchAction: "none",
+          }}
+          className="
             group
             relative
             aspect-[4/3]
             w-full
+            cursor-ew-resize
             select-none
             overflow-hidden
             rounded-sm
@@ -205,24 +197,23 @@ export default function BeforeAfter() {
             shadow-[0_30px_80px_rgba(0,0,0,0.14)]
             sm:aspect-[16/9]
             lg:aspect-[21/10]
-            ${isDragging ? "cursor-ew-resize" : "cursor-ew-resize"}
-          `}
-          style={{
-            touchAction: "none",
-          }}
+          "
         >
-          {/* =====================================
+          {/* =================================================
               AFTER IMAGE
-          ====================================== */}
+          ================================================= */}
 
           <div className="absolute inset-0">
             <Image
-              src="/image/after.png"
+              src={afterImage}
+              alt="Fully styled luxury living room"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 1400px"
-              alt="Fully styled luxury living room"
-              className="object-cover object-center"
+              className="
+                object-cover
+                object-center
+              "
               draggable={false}
             />
 
@@ -271,9 +262,9 @@ export default function BeforeAfter() {
             </div>
           </div>
 
-          {/* =====================================
+          {/* =================================================
               BEFORE IMAGE
-          ====================================== */}
+          ================================================= */}
 
           <div
             className="absolute inset-0"
@@ -283,11 +274,14 @@ export default function BeforeAfter() {
             }}
           >
             <Image
-              src="/image/before.png"
+              src={beforeImage}
+              alt="Empty living room before styling"
               fill
               sizes="(max-width: 768px) 100vw, 1400px"
-              alt="Empty living room before styling"
-              className="object-cover object-center"
+              className="
+                object-cover
+                object-center
+              "
               draggable={false}
             />
 
@@ -332,9 +326,9 @@ export default function BeforeAfter() {
             </div>
           </div>
 
-          {/* =====================================
+          {/* =================================================
               SLIDER DIVIDER
-          ====================================== */}
+          ================================================= */}
 
           <div
             className="
@@ -351,9 +345,9 @@ export default function BeforeAfter() {
               left: `${sliderPos}%`,
             }}
           >
-            {/* =====================================
+            {/* =================================================
                 SLIDER HANDLE
-            ====================================== */}
+            ================================================= */}
 
             <div
               className={`
@@ -376,7 +370,11 @@ export default function BeforeAfter() {
                 duration-200
                 sm:h-14
                 sm:w-14
-                ${isDragging ? "scale-110" : "group-hover:scale-105"}
+                ${
+                  isDragging
+                    ? "scale-110"
+                    : "group-hover:scale-105"
+                }
               `}
             >
               <ArrowLeftRight
@@ -390,8 +388,6 @@ export default function BeforeAfter() {
               />
             </div>
           </div>
-
-        
         </div>
       </div>
     </section>

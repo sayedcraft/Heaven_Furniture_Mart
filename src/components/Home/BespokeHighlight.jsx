@@ -2,7 +2,6 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import { images } from "@/components/data";
-import Link from "next/link";
 
 const customization = [
   {
@@ -31,39 +30,51 @@ export default function BespokeHighlight() {
   return (
     <section
       id="bespoke"
-      className="relative overflow-hidden border-t border-[var(--brass)]/20 bg-[var(--charcoal)] py-24 text-[var(--ivory)] sm:py-32 lg:py-40"
+      className="relative overflow-hidden border-t border-[var(--brass)]/20 bg-[var(--charcoal)] py-10 text-[var(--ivory)] sm:py-15 lg:py-20"
     >
-      {/* Oversized background number */}
-
+      {" "}
       <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
-        {/* Section intro */}
-        <Reveal className="mb-14 sm:mb-20 lg:mb-24">
-          <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
-            <div className="lg:col-span-7">
-              <h2 className="serif max-w-3xl text-5xl leading-[0.9] sm:text-6xl lg:text-7xl">
-                Your space.
-                <br />
-                Your vision.
-                <br />
-                <em className="font-normal text-[var(--brass)]">Your piece.</em>
-              </h2>
-            </div>
+        {/* =====================================================
+        SECTION HEADER
+    ===================================================== */}
 
-            <div className="lg:col-span-4 lg:col-start-9">
-              <p className="max-w-sm text-xl leading-7 text-white/65">
-                Bespoke furniture designed around your dimensions, your
-                lifestyle and the character of your home.
-              </p>
-            </div>
-          </div>
+        <Reveal className="mb-10 text-center sm:mb-16 lg:mb-20">
+          <h2
+            className="
+          serif
+          mx-auto
+          max-w-4xl
+          text-center
+          text-4xl
+          leading-[0.95]
+          tracking-tight
+          sm:text-5xl
+          md:text-6xl
+          lg:text-7xl
+          xl:text-[5.5rem]
+        "
+          >
+            Your space.
+            <br />
+            Your vision.
+            <br />
+            <em className="font-normal text-[var(--brass)]">Your piece.</em>
+          </h2>
         </Reveal>
 
-        {/* Main editorial composition */}
-        <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
-          {/* Image composition */}
+        {/* =====================================================
+        MAIN EDITORIAL COMPOSITION
+    ===================================================== */}
+
+        <div className="grid gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-7">
+          {/* =================================================
+          IMAGE COMPOSITION
+      ================================================= */}
+
           <div className="lg:col-span-7">
             <div className="grid grid-cols-12 gap-3 sm:gap-5">
               {/* Main image */}
+
               <Reveal variant="clip" delay={0} className="col-span-12">
                 <div className="group relative aspect-[1.12] overflow-hidden bg-[#28595a] sm:aspect-[1.18] lg:aspect-[1.15]">
                   <Image
@@ -75,21 +86,25 @@ export default function BespokeHighlight() {
                   />
 
                   {/* Cinematic overlay */}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
 
                   {/* Corner label */}
-                  <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
-                    <span className="border border-white/30 bg-black/10 px-3 py-2 text-[0.9rem] uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm">
-                      Bespoke studio
+
+                  <div className="absolute left-4 top-4 sm:left-7 sm:top-7">
+                    <span className="border border-white/30 bg-black/10 px-3 py-2 text-[0.58rem] uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm sm:text-[0.62rem]">
+                      Bespoke Studio
                     </span>
                   </div>
 
                   {/* Arrow */}
-                  <div className="absolute right-5 top-5 flex h-10 w-10 translate-y-2 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-7 sm:top-7">
+
+                  <div className="absolute right-4 top-4 flex h-9 w-9 translate-y-2 items-center justify-center rounded-full border border-white/30 bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-7 sm:top-7 sm:h-10 sm:w-10">
                     ↗
                   </div>
 
                   {/* Image caption */}
+
                   <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
                     <div className="flex items-end justify-between gap-6">
                       <div>
@@ -101,14 +116,13 @@ export default function BespokeHighlight() {
                           Nothing off the shelf.
                         </p>
                       </div>
-
-                     
                     </div>
                   </div>
                 </div>
               </Reveal>
 
               {/* Secondary detail image */}
+
               <Reveal
                 variant="clip"
                 delay={140}
@@ -127,23 +141,24 @@ export default function BespokeHighlight() {
 
                   <div className="absolute bottom-4 left-5 sm:bottom-5 sm:left-6">
                     <span className="text-[0.55rem] uppercase tracking-[0.2em] text-white/80">
-                      Handcrafted detail
+                      Handcrafted Detail
                     </span>
                   </div>
                 </div>
               </Reveal>
 
               {/* Small editorial block */}
+
               <Reveal delay={200} className="col-span-4 sm:col-span-4">
                 <div className="group relative flex h-full min-h-[180px] flex-col justify-between overflow-hidden border border-white/15 bg-white/[0.025] p-5 transition-all duration-500 hover:border-[var(--brass)]/50 hover:bg-white/[0.05] sm:min-h-[220px] sm:p-6">
-                  {/* Decorative background number */}
+                  {/* Top accent */}
 
-                  {/* Top */}
                   <div className="relative z-10 flex items-center justify-between">
                     <span className="h-px w-10 bg-[var(--brass)]/50 transition-all duration-500 group-hover:w-16 group-hover:bg-[var(--brass)]" />
                   </div>
 
                   {/* Content */}
+
                   <div className="relative z-10 mt-10">
                     <h3 className="serif text-2xl leading-[1.05] text-white/90 sm:text-3xl">
                       Crafted
@@ -160,6 +175,7 @@ export default function BespokeHighlight() {
                   </div>
 
                   {/* Bottom accent */}
+
                   <div className="relative z-10 mt-6 flex items-center gap-2 text-[0.5rem] uppercase tracking-[0.18em] text-white/35">
                     <span className="h-1 w-1 rounded-full bg-[var(--brass)]" />
                     Heaven Furniture Mart
@@ -169,27 +185,31 @@ export default function BespokeHighlight() {
             </div>
           </div>
 
-          {/* Editorial content */}
+          {/* =================================================
+          EDITORIAL CONTENT
+      ================================================= */}
+
           <Reveal delay={180} className="lg:col-span-5">
             <div className="flex h-full flex-col justify-center lg:pl-6 xl:pl-10">
-              <span className="mb-6 text-[0.58rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)]">
-                The bespoke process
+              <span className="mb-5 text-[0.55rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)] sm:mb-6 sm:text-[0.58rem]">
+                The Bespoke Process
               </span>
 
-              <h3 className="serif max-w-lg text-4xl leading-[1] sm:text-5xl lg:text-6xl">
+              <h3 className="serif max-w-lg text-3xl leading-[1] sm:text-4xl lg:text-5xl xl:text-6xl">
                 Made for your space.
                 <br />
                 <span className="text-[var(--brass)]">Made for you.</span>
               </h3>
 
-              <p className="mt-7 max-w-md text-sm leading-7 text-white/65">
+              <p className="mt-6 max-w-md text-sm leading-7 text-white/65 sm:mt-7">
                 Your home is not one-size-fits-all. We shape every piece around
                 the way you live — from its dimensions and materials to its
                 finish, color and functionality.
               </p>
 
               {/* Customization list */}
-              <div className="mt-10 border-t border-white/15">
+
+              <div className="mt-8 border-t border-white/15 sm:mt-10">
                 {customization.map((item) => (
                   <div
                     key={item.number}
@@ -217,7 +237,8 @@ export default function BespokeHighlight() {
               </div>
 
               {/* CTA */}
-              <div className="mt-10">
+
+              <div className="mt-8 sm:mt-10">
                 <Button href="/contact">Start Your Custom Piece</Button>
               </div>
             </div>

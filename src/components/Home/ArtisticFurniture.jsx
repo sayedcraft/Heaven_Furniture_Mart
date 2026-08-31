@@ -2,7 +2,6 @@ import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { getProductsByCollection } from "@/data/products";
-import Link from "next/link";
 
 export default function ArtisticFurniture() {
   const products = getProductsByCollection("Artistic");
@@ -15,34 +14,48 @@ export default function ArtisticFurniture() {
   return (
     <section
       id="artistic"
-      className="relative overflow-hidden border-t border-[var(--line)] bg-[#f4f0e9] py-24 sm:py-32 lg:py-40"
+      className="relative overflow-hidden border-t border-[var(--line)] bg-[#f4f0e9] py-10 sm:py-15 lg:py-20"
     >
+      {" "}
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
-        {/* Header */}
-        <Reveal className="mb-14 sm:mb-20 lg:mb-24">
-          <div className="grid items-end gap-8 lg:grid-cols-12">
-            <div className="lg:col-span-7">
-              <h2 className="serif max-w-3xl text-5xl leading-[0.92] text-[var(--charcoal)] sm:text-6xl lg:text-7xl">
-                When furniture
-                <br />
-                becomes
-                <br />
-                <em className="font-normal text-[var(--brass)]">art.</em>
-              </h2>
-            </div>
+        {/* =====================================================
+        SECTION HEADER
+    ===================================================== */}
 
-            <div className="lg:col-span-4 lg:col-start-9">
-              <p className="max-w-sm text-xl leading-7 text-[var(--brown)]">
-                Statement pieces created for those who see furniture as more
-                than function — as form, character and expression.
-              </p>
-            </div>
-          </div>
+        <Reveal className="mb-10 text-center sm:mb-16 lg:mb-20">
+          <h2
+            className="
+          serif
+          mx-auto
+          max-w-4xl
+          text-center
+          text-4xl
+          leading-[0.95]
+          tracking-tight
+          text-[var(--charcoal)]
+          sm:text-5xl
+          md:text-6xl
+          lg:text-7xl
+          xl:text-[5.5rem]
+        "
+          >
+            When furniture
+            <br />
+            becomes
+            <br />
+            <em className="font-normal text-[var(--brass)]">art.</em>
+          </h2>
         </Reveal>
 
-        {/* Editorial composition */}
-        <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
-          {/* Featured artwork */}
+        {/* =====================================================
+        EDITORIAL COMPOSITION
+    ===================================================== */}
+
+        <div className="grid gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-7">
+          {/* =================================================
+          FEATURED ARTWORK
+      ================================================= */}
+
           <Reveal variant="clip" delay={0} className="relative lg:col-span-7">
             <article className="group relative">
               <div className="image-wrap relative aspect-[0.92] overflow-hidden bg-[#d6cabb] sm:aspect-[1.05] lg:aspect-[0.98]">
@@ -55,24 +68,28 @@ export default function ArtisticFurniture() {
                 />
 
                 {/* Cinematic overlay */}
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent" />
 
-                {/* Number */}
-                <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
-                  <span className="text-[0.9rem] tracking-[0.2em] text-white/80">
-                    ARTISTIC
+                {/* Collection label */}
+
+                <div className="absolute left-4 top-4 sm:left-7 sm:top-7">
+                  <span className="text-[0.58rem] font-medium uppercase tracking-[0.2em] text-white/80 sm:text-[0.62rem]">
+                    Artistic
                   </span>
                 </div>
 
                 {/* Floating arrow */}
-                <div className="absolute right-5 top-5 flex h-11 w-11 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-7 sm:top-7">
+
+                <div className="absolute right-4 top-4 flex h-9 w-9 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-7 sm:top-7 sm:h-10 sm:w-10">
                   ↗
                 </div>
 
                 {/* Product info */}
-                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7 lg:p-9">
+
+                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7 lg:p-8">
                   <div className="max-w-xl translate-y-2 transition-transform duration-700 group-hover:translate-y-0">
-                    <p className="mb-2 text-[0.58rem] font-bold uppercase tracking-[0.2em] text-white/70">
+                    <p className="mb-2 text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white/70 sm:text-[0.58rem]">
                       {featured.category}
                     </p>
 
@@ -83,17 +100,19 @@ export default function ArtisticFurniture() {
                 </div>
               </div>
             </article>
-
-            {/* Small editorial caption */}
           </Reveal>
 
-          {/* Right editorial column */}
+          {/* =================================================
+          RIGHT EDITORIAL COLUMN
+      ================================================= */}
+
           <div className="flex flex-col lg:col-span-5">
             {/* Intro text */}
+
             <Reveal delay={120}>
-              <div className="max-w-md pb-10 lg:ml-8 lg:pb-14">
-                <span className="mb-5 block text-[0.58rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)]">
-                  The artistic collection
+              <div className="max-w-md pb-8 lg:ml-8 lg:pb-10">
+                <span className="mb-4 block text-[0.55rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)] sm:mb-5 sm:text-[0.58rem]">
+                  The Artistic Collection
                 </span>
 
                 <p className="serif text-2xl leading-[1.15] text-[var(--charcoal)] sm:text-3xl">
@@ -101,9 +120,9 @@ export default function ArtisticFurniture() {
                   view.
                 </p>
 
-                <div className="mt-6 h-px w-10 bg-[var(--brass)]" />
+                <div className="mt-5 h-px w-10 bg-[var(--brass)] sm:mt-6" />
 
-                <p className="mt-6 text-sm leading-7 text-[var(--brown)]">
+                <p className="mt-5 text-sm leading-7 text-[var(--brown)] sm:mt-6">
                   We bring together expressive silhouettes and thoughtful
                   craftsmanship to create pieces that become part of the
                   architecture of a room.
@@ -111,7 +130,10 @@ export default function ArtisticFurniture() {
               </div>
             </Reveal>
 
-            {/* Secondary artwork */}
+            {/* =================================================
+            SECONDARY ARTWORK
+        ================================================= */}
+
             {secondary && (
               <Reveal variant="clip" delay={220} className="lg:ml-8">
                 <article className="group">
@@ -124,18 +146,20 @@ export default function ArtisticFurniture() {
                       className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.055]"
                     />
 
+                    {/* Overlay */}
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
-                    {/* Product number */}
-
                     {/* Arrow */}
-                    <span className="absolute right-5 top-5 flex h-9 w-9 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+
+                    <span className="absolute right-4 top-4 flex h-8 w-8 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-xs text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-5 sm:top-5 sm:h-9 sm:w-9 sm:text-sm">
                       ↗
                     </span>
 
                     {/* Product title */}
+
                     <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
-                      <p className="mb-1 text-[0.58rem] font-bold uppercase tracking-[0.18em] text-white/70">
+                      <p className="mb-1 text-[0.55rem] font-medium uppercase tracking-[0.18em] text-white/70 sm:text-[0.58rem]">
                         {secondary.category}
                       </p>
 
@@ -145,9 +169,11 @@ export default function ArtisticFurniture() {
                     </div>
                   </div>
 
-                  <div className="mt-4 flex items-center justify-between">
-                    <span className="text-[0.58rem] uppercase tracking-[0.18em] text-[var(--brown)]">
-                      Statement piece
+                  {/* Caption */}
+
+                  <div className="mt-3 flex items-center justify-between sm:mt-4">
+                    <span className="text-[0.55rem] uppercase tracking-[0.18em] text-[var(--brown)] sm:text-[0.58rem]">
+                      Statement Piece
                     </span>
 
                     <span className="text-sm text-[var(--brass)] transition-transform duration-300 group-hover:translate-x-1">
@@ -160,9 +186,12 @@ export default function ArtisticFurniture() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
+        {/* =====================================================
+        BOTTOM CTA
+    ===================================================== */}
+
         <Reveal delay={350} className="mt-12 sm:mt-16">
-          <div className="flex flex-col gap-5 border-t border-[var(--line)] pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex justify-center border-t border-[var(--line)] pt-6 sm:pt-7">
             <Button href="/products">View Artistic Collection</Button>
           </div>
         </Reveal>

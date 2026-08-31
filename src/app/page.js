@@ -14,6 +14,7 @@ import BrandIntro from "@/components/Home/BrandIntro";
 import CTASection from "@/components/Home/CTASection";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import BeforeAfter from "@/components/Home/BeforeAfter";
+import MapSection from "@/components/Home/MapSection";
 
 export const metadata = {
   title: "Heaven Furniture Mart | Premium Bespoke Furniture in Chattogram",
@@ -26,48 +27,35 @@ export default function Home() {
     <>
       <ScrollProgress />
 
-      {/* Hero — full-screen image slider */}
       <Hero />
 
-      {/* Category Showcase — premium 4-card strip below hero */}
       <CategoryShowcase />
 
-      {/* Shop by Category — editorial 12-column category grid */}
       <ShopByCategory />
 
-      {/* Flagship Furniture — large featured + supporting asymmetric grid */}
       <FlagshipFurniture />
 
-      {/* Popular Furniture — editorial product layout */}
       <PopularFurniture />
 
-      {/* Artistic Furniture — statement split composition */}
       <ArtisticFurniture />
 
-      {/* Bespoke Highlight — "Your space. Your vision. Your piece." */}
       <BespokeHighlight />
 
-      {/* New Arrivals — "Fresh pieces." + "More new arrivals" */}
       <NewArrival />
 
-      {/* Video Showcase — cinematic brand video */}
-      {/* <VideoShowcase /> */}
+      <VideoShowcase />
       <BeforeAfter></BeforeAfter>
 
-      {/* Smart Innovation — "Intelligent furniture." + "The innovation system" */}
       <SmartInnovation />
 
-      {/* Showroom — "Chattogram showroom" + "See it. Feel it." */}
-      {/* <Showroom /> */}
+      <Showroom />
 
-      {/* Social Proof — "A note from our founder" */}
+
+      <BrandIntro />
       <SocialProof />
 
-      {/* Brand Intro — stats + brand story */}
-      <BrandIntro />
 
-      {/* CTA — final call to action */}
-      <CTASection />
+      <MapSection></MapSection>
     </>
   );
 }
