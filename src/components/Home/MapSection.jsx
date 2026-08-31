@@ -26,25 +26,25 @@ export default function MapSection() {
   const embedSrc = `https://www.google.com/maps?q=${PLACE.lat},${PLACE.lng}&z=17&output=embed`;
 
   return (
-    <section className="relative overflow-hidden bg-depth py-16 text-bone sm:py-20 md:py-28">
+    <section className="relative overflow-hidden bg-[var(--deep-brown)] py-16 text-[var(--ivory)] sm:py-20 md:py-28">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 md:px-10">
         {/* Section Header */}
         <div className="mb-8 flex flex-col gap-5 sm:mb-12 md:mb-14 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="mb-3 flex items-center font-bold gap-2 text-[2.5rem] uppercase tracking-[0.1em] text-[var(--brass)] sm:mb-4">
+            <h2 className="mb-3 flex items-center gap-2 text-xl font-bold uppercase tracking-[0.1em] text-[var(--brass)] sm:mb-4 sm:text-2xl">
               <MapPin className="h-5.5 w-5.5" />
               Visit Us
-            </p>
+            </h2>
           </div>
 
-          <p className="max-w-md text-xl font-light leading-relaxed text-bone/55 sm:text-base">
+          <p className="max-w-md text-xl font-light leading-relaxed text-[var(--ivory)]/55 sm:text-base">
             Visit our showroom in Chattogram and experience our furniture,
             materials and craftsmanship in person.
           </p>
         </div>
 
         {/* Main Card */}
-        <div className="overflow-hidden rounded-sm border border-bone/10 bg-depth shadow-2xl">
+        <div className="overflow-hidden rounded-sm border border-[var(--ivory)]/10 bg-[var(--deep-brown)] shadow-2xl">
           <div className="grid md:grid-cols-12">
             {/* MAP */}
             <a
@@ -62,32 +62,32 @@ export default function MapSection() {
               />
 
               {/* Map Overlay */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-depth/70 via-transparent to-depth/10" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--deep-brown)]/70 via-transparent to-[var(--deep-brown)]/10" />
 
               {/* Map Label */}
-              <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-sm border border-bone/10 bg-depth/85 px-3 py-2 text-[0.62rem] uppercase tracking-[0.18em] text-bone backdrop-blur-md sm:bottom-6 sm:left-6">
-                <ExternalLink className="h-3.5 w-3.5 text-brass" />
+              <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-sm border border-[var(--ivory)]/10 bg-[var(--deep-brown)]/85 px-3 py-2 text-[0.62rem] uppercase tracking-[0.18em] text-[var(--ivory)] backdrop-blur-md sm:bottom-6 sm:left-6">
+                <ExternalLink className="h-3.5 w-3.5 text-[var(--brass)]" />
                 Open in Maps
               </div>
 
               {/* Location Pin */}
-              <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-brass/40 bg-depth/80 text-brass backdrop-blur-md sm:right-6 sm:top-6">
+              <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-[var(--brass)]/40 bg-[var(--deep-brown)]/80 text-[var(--brass)] backdrop-blur-md sm:right-6 sm:top-6">
                 <MapPin className="h-4 w-4" />
               </div>
             </a>
 
             {/* CONTENT */}
-            <div className="relative flex flex-col justify-between border-t border-bone/10 p-6 sm:p-8 md:col-span-5 md:border-l md:border-t-0 md:p-10 lg:p-12">
+            <div className="relative flex flex-col justify-between border-t border-[var(--ivory)]/10 p-6 sm:p-8 md:col-span-5 md:border-l md:border-t-0 md:p-10 lg:p-12">
               {/* Decorative Corner */}
-              <div className="pointer-events-none absolute right-5 top-5 h-8 w-8 border-r border-t border-brass/30" />
+              <div className="pointer-events-none absolute right-5 top-5 h-8 w-8 border-r border-t border-[var(--brass)]/30" />
 
               <div>
                 {/* Title */}
-                <h3 className="font-heading text-2xl font-light leading-tight text-bone sm:text-3xl md:text-4xl">
+                <h3 className="font-heading text-2xl font-light leading-tight text-[var(--ivory)] sm:text-3xl md:text-4xl">
                   {PLACE.name}
                 </h3>
 
-                <p className="mt-4 max-w-md text-sm font-light leading-relaxed text-bone/50">
+                <p className="mt-4 max-w-md text-sm font-light leading-relaxed text-[var(--ivory)]/50">
                   Step into our showroom and discover furniture crafted for
                   beautiful, lived-in spaces.
                 </p>
@@ -95,8 +95,8 @@ export default function MapSection() {
                 {/* Details */}
                 <div className="mt-8 space-y-6 sm:mt-10">
                   {/* Address */}
-                  <div className="border-t border-bone/10 pt-4">
-                    <p className="mb-2 flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.2em] text-brass">
+                  <div className="border-t border-[var(--ivory)]/10 pt-4">
+                    <p className="mb-2 flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.2em] text-[var(--brass)]">
                       <MapPin className="h-3.5 w-3.5" />
                       Address
                     </p>
@@ -105,7 +105,7 @@ export default function MapSection() {
                       href={PLACE.mapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-light leading-relaxed text-bone/75 transition-colors hover:text-brass"
+                      className="text-sm font-light leading-relaxed text-[var(--ivory)]/75 transition-colors hover:text-[var(--brass)]"
                     >
                       {PLACE.address.map((line, index) => (
                         <span key={line}>
@@ -117,28 +117,28 @@ export default function MapSection() {
                   </div>
 
                   {/* Phone */}
-                  <div className="border-t border-bone/10 pt-4">
-                    <p className="mb-2 flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.2em] text-brass">
+                  <div className="border-t border-[var(--ivory)]/10 pt-4">
+                    <p className="mb-2 flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.2em] text-[var(--brass)]">
                       <Phone className="h-3.5 w-3.5" />
                       Phone
                     </p>
 
                     <a
                       href={`tel:${PLACE.phone.replace(/\s/g, "")}`}
-                      className="text-sm font-light text-bone/75 transition-colors hover:text-brass"
+                      className="text-sm font-light text-[var(--ivory)]/75 transition-colors hover:text-[var(--brass)]"
                     >
                       {PLACE.phone}
                     </a>
                   </div>
 
                   {/* Hours */}
-                  <div className="border-t border-bone/10 pt-4">
-                    <p className="mb-2 flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.2em] text-brass">
+                  <div className="border-t border-[var(--ivory)]/10 pt-4">
+                    <p className="mb-2 flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.2em] text-[var(--brass)]">
                       <Clock3 className="h-3.5 w-3.5" />
                       Opening Hours
                     </p>
 
-                    <p className="text-sm font-light text-bone/75">
+                    <p className="text-sm font-light text-[var(--ivory)]/75">
                       {PLACE.hours}
                     </p>
                   </div>
@@ -150,7 +150,7 @@ export default function MapSection() {
                 href={PLACE.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-10 inline-flex w-full items-center justify-between rounded-full border border-brass/50 bg-brass px-5 py-3.5 text-xs font-medium uppercase tracking-[0.16em] text-depth transition-all duration-300 hover:bg-brassBright hover:shadow-[0_10px_30px_rgba(184,137,79,0.25)] sm:w-fit sm:min-w-[190px]"
+                className="mt-10 inline-flex w-full items-center justify-between rounded-full border border-[var(--brass)]/50 bg-[var(--brass)] px-5 py-3.5 text-xs font-medium uppercase tracking-[0.16em] text-[var(--deep-brown)] transition-all duration-300 hover:bg-[var(--wood-tan)] hover:shadow-[0_10px_30px_rgba(168,138,88,0.25)] sm:w-fit sm:min-w-[190px]"
               >
                 <span>Get Directions</span>
 

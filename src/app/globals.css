@@ -2,12 +2,14 @@
 
 :root {
   --background: #f4f0e9;
-  --foreground: #193536;
+  --foreground: #302923;
   --ivory: #f4f0e9;
-  --charcoal: #193536;
-  --brown: #6c4d3b;
-  --brass: #b18b52;
-  --line: rgba(25, 53, 54, 0.18);
+  --deep-brown: #302923;
+  --brown: #765f4a;
+  --wood-tan: #b5a18b;
+  --surface: #e8e1d6;
+  --brass: #a88a58;
+  --line: rgba(48, 41, 35, 0.18);
 }
 
 @theme inline {
@@ -73,12 +75,12 @@ body {
 .hero-copy > :nth-child(4) { animation-delay: 600ms; }
 .hero-meta { animation: hero-copy-in 900ms 900ms cubic-bezier(.2,.7,.2,1) both; }
 
-.scroll-progress { position: fixed; right: 14px; top: 50%; z-index: 40; width: 1px; height: 72px; background: rgba(177,139,82,.25); transform: translateY(-50%); }
+.scroll-progress { position: fixed; right: 14px; top: 50%; z-index: 40; width: 1px; height: 72px; background: rgba(168,138,88,.25); transform: translateY(-50%); }
 .scroll-progress span { display: block; width: 1px; background: var(--brass); transition: height 180ms ease-out; }
 
 .benefit-row { position: relative; transition: padding-left 400ms cubic-bezier(.2,.7,.2,1), background-color 400ms ease; }
 .benefit-row::before { content: ""; position: absolute; inset: -1px auto -1px 0; width: 2px; background: var(--brass); transform: scaleY(0); transform-origin: bottom; transition: transform 400ms ease; }
-.benefit-row:hover, .benefit-row:focus-within { padding-left: 12px; background: rgba(177,139,82,.06); }
+.benefit-row:hover, .benefit-row:focus-within { padding-left: 12px; background: rgba(168,138,88,.06); }
 .benefit-row:hover::before, .benefit-row:focus-within::before { transform: scaleY(1); }
 .benefit-row > span { transition: transform 400ms ease; }
 .benefit-row:hover > span { transform: translateX(4px); }
@@ -136,3 +138,5 @@ body {
   .hero-image { animation-duration: 900ms; }
   .hero-copy > * { animation-delay: 0ms !important; animation-duration: 650ms; }
 }
+
+

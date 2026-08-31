@@ -8,15 +8,11 @@ export default function Showroom() {
   return (
     <section
       id="showroom"
-      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--charcoal)]"
+      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--deep-brown)]"
     >
       {/* Main showroom image */}
-      <div className="relative min-h-[720px] sm:min-h-[780px] lg:min-h-[850px]">
-
-        <Reveal
-          variant="clip"
-          className="absolute inset-0"
-        >
+      <div className="relative min-h-[560px] sm:min-h-[720px] lg:min-h-[850px]">
+        <Reveal variant="clip" className="absolute inset-0">
           <div className="relative h-full w-full">
             <Image
               src={images.showroom}
@@ -27,7 +23,7 @@ export default function Showroom() {
             />
 
             {/* Cinematic overlays */}
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-[var(--deep-brown)]/20" />
 
             <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
 
@@ -44,8 +40,6 @@ export default function Showroom() {
           className="absolute left-8 top-8 z-10 sm:left-12 sm:top-12 lg:left-16 lg:top-16"
         >
           <div className="flex items-center gap-3">
-            
-
             <span className="text-[0.8rem] font-bold uppercase tracking-[0.22em] text-white/75">
               Heaven Furniture Mart
             </span>
@@ -66,28 +60,21 @@ export default function Showroom() {
             <br />
             Feel it.
             <br />
-            <em className="font-normal text-[var(--brass)]">
-              Make it yours.
-            </em>
+            <em className="font-normal text-[var(--brass)]">Make it yours.</em>
           </h2>
 
           <p className="mt-7 max-w-md text-sm leading-7 text-white/75 sm:mt-8">
-            Experience the materials, proportions and details in person at
-            our showroom on Agrabad Access Road.
+            Experience the materials, proportions and details in person at our
+            showroom on Agrabad Access Road.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/20 pt-5 text-[0.6rem] uppercase tracking-[0.16em]">
-            <span className="text-white/70">
-              Agrabad, Chattogram
-            </span>
+            <span className="text-white/70">Agrabad, Chattogram</span>
 
-            <span className="text-[var(--brass)]">
-              +880 1960-481983
-            </span>
+            <span className="text-[var(--brass)]">+880 1960-481983</span>
           </div>
 
           <Button href="/showroom">Visit Our Showroom</Button>
-            
         </Reveal>
 
         {/* Floating side information */}
@@ -115,7 +102,6 @@ export default function Showroom() {
             <span className="text-[1.5rem] uppercase tracking-[0.2em]">
               Showroom
             </span>
-
           </div>
         </div>
       </div>

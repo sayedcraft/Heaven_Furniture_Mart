@@ -30,7 +30,7 @@ export default function BespokeHighlight() {
   return (
     <section
       id="bespoke"
-      className="relative overflow-hidden border-t border-[var(--brass)]/20 bg-[var(--charcoal)] py-10 text-[var(--ivory)] sm:py-15 lg:py-20"
+      className="relative overflow-hidden border-t border-[var(--brass)]/20 bg-[var(--deep-brown)] py-10 text-[var(--ivory)] sm:py-15 lg:py-20"
     >
       {" "}
       <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
@@ -76,7 +76,7 @@ export default function BespokeHighlight() {
               {/* Main image */}
 
               <Reveal variant="clip" delay={0} className="col-span-12">
-                <div className="group relative aspect-[1.12] overflow-hidden bg-[#28595a] sm:aspect-[1.18] lg:aspect-[1.15]">
+                <div className="group relative aspect-[1.12] overflow-hidden bg-[var(--wood-tan)] sm:aspect-[1.18] lg:aspect-[1.15]">
                   <Image
                     src={images.bespoke}
                     alt="Bespoke custom furniture design"
@@ -92,7 +92,7 @@ export default function BespokeHighlight() {
                   {/* Corner label */}
 
                   <div className="absolute left-4 top-4 sm:left-7 sm:top-7">
-                    <span className="border border-white/30 bg-black/10 px-3 py-2 text-[0.58rem] uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm sm:text-[0.62rem]">
+                    <span className="border-[var(--ivory)]/30 bg-[var(--deep-brown)]/10 px-3 py-2 text-[0.58rem] uppercase tracking-[0.2em] text-[var(--ivory)]/90 backdrop-blur-sm sm:text-[0.62rem]">
                       Bespoke Studio
                     </span>
                   </div>
@@ -128,7 +128,7 @@ export default function BespokeHighlight() {
                 delay={140}
                 className="col-span-8 sm:col-span-8"
               >
-                <div className="group relative aspect-[1.7] overflow-hidden bg-[#28595a]">
+                <div className="group relative aspect-[1.7] overflow-hidden bg-[var(--wood-tan)]">
                   <Image
                     src="/image/Custom.jpg"
                     alt="Custom bespoke furniture detail"
@@ -137,7 +137,7 @@ export default function BespokeHighlight() {
                     className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
                   />
 
-                  <div className="absolute inset-0 bg-black/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-[var(--deep-brown)]/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                   <div className="absolute bottom-4 left-5 sm:bottom-5 sm:left-6">
                     <span className="text-[0.55rem] uppercase tracking-[0.2em] text-white/80">
@@ -202,9 +202,8 @@ export default function BespokeHighlight() {
               </h3>
 
               <p className="mt-6 max-w-md text-sm leading-7 text-white/65 sm:mt-7">
-                Your home is not one-size-fits-all. We shape every piece around
-                the way you live — from its dimensions and materials to its
-                finish, color and functionality.
+                Every detail is shaped around your space, materials, finish, and
+                the way you live.
               </p>
 
               {/* Customization list */}

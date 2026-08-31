@@ -5,11 +5,12 @@ export default function SectionHeading({
   light = false,
 }) {
   return (
-    <div className={light ? "text-[var(--ivory)]" : "text-[var(--charcoal)]"}>
+    <div className={light ? "text-[var(--ivory)]" : "text-[var(--deep-brown)]"}>
       <span className="eyebrow">{eyebrow}</span>
       <h2 className="serif mt-4 max-w-3xl text-4xl leading-[0.95] sm:text-5xl lg:text-6xl">
         {title}
       </h2>
+      <span className="mt-6 block h-px w-12 bg-[var(--brass)]" />
       {children && (
         <p className="mt-6 max-w-lg text-sm leading-7 opacity-75">{children}</p>
       )}

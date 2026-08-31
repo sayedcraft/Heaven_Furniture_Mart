@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[680px] items-center overflow-hidden bg-[var(--charcoal)] text-[var(--ivory)] sm:min-h-[760px] lg:min-h-[820px]"
+      className="relative flex min-h-[680px] items-center overflow-hidden bg-[var(--deep-brown)] text-[var(--ivory)] sm:min-h-[760px] lg:min-h-[820px]"
     >
       {/* Background Image Slider */}
       <div className="absolute inset-0 overflow-hidden">
@@ -50,7 +50,7 @@ export default function Hero() {
       </div>
 
       {/* Main Dark Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,42,43,.93)_0%,rgba(18,42,43,.72)_32%,rgba(18,42,43,.35)_65%,rgba(18,42,43,.12)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(48,41,35,.93)_0%,rgba(48,41,35,.72)_32%,rgba(48,41,35,.35)_65%,rgba(48,41,35,.12)_100%)]" />
 
       {/* Bottom Gradient */}
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
@@ -58,30 +58,23 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <div className="max-w-2xl">
-
           {/* Main Heading */}
           <h1 className="serif max-w-2xl text-[3.7rem] leading-[0.9] tracking-[-0.025em] sm:text-7xl lg:text-[5.5rem]">
             Furniture,
             <br />
-
-            <em className="font-normal text-[var(--brass)]">
-              crafted
-            </em>{" "}
-            around you.
+            <em className="font-normal text-[var(--brass)]">crafted</em> around
+            you.
           </h1>
 
           {/* Actions */}
           <div className="mt-8 flex flex-wrap items-center gap-7 sm:mt-9">
-            <Button href="/collections">
-              Explore Collection
-            </Button>
+            <Button href="#categories">Explore Collection</Button>
 
             <Link
-              href="/bespoke"
+              href="#bespoke"
               className="group inline-flex items-center text-xs font-bold uppercase tracking-[0.16em] text-white transition-colors duration-300 hover:text-[var(--brass)]"
             >
               Start a Custom Design
-
               <span className="ml-3 text-[var(--brass)] transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
@@ -117,9 +110,7 @@ export default function Hero() {
       {/* Location */}
       <div className="absolute bottom-7 left-5 z-10 hidden text-[0.55rem] uppercase tracking-[0.2em] text-white/50 sm:block lg:left-12">
         <span className="text-[var(--brass)]">Since 2020</span>
-
         <span className="mx-2">·</span>
-
         Chattogram, Bangladesh
       </div>
     </section>

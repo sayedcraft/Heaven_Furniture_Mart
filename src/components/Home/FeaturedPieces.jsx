@@ -10,7 +10,7 @@ export default function FeaturedPieces() {
   const [expanded, setExpanded] = useState(false);
   const visiblePieces = expanded ? featuredPieces : featuredPieces.slice(0, 4);
   return (
-    <section id="collections" className="bg-[#e8e2d8] py-24 sm:py-32">
+    <section id="collections" className="bg-[var(--surface)] py-24 sm:py-32">
       <Container>
         <div className="mb-14 flex items-end justify-between gap-8">
           <div>
@@ -32,7 +32,7 @@ export default function FeaturedPieces() {
             >
               <article>
                 <div
-                  className={`image-wrap relative bg-[#d6cabb] ${index % 4 === 0 ? "aspect-[1.03]" : index % 4 === 1 ? "aspect-[.78]" : "aspect-[.9]"}`}
+                  className={`image-wrap relative bg-[var(--wood-tan)] ${index % 4 === 0 ? "aspect-[1.03]" : index % 4 === 1 ? "aspect-[.78]" : "aspect-[.9]"}`}
                 >
                   <Image
                     src={piece.image}
@@ -64,7 +64,7 @@ export default function FeaturedPieces() {
           <button
             type="button"
             onClick={() => setExpanded(!expanded)}
-            className="line-link text-xs font-bold uppercase tracking-[0.16em] text-[var(--charcoal)]"
+            className="line-link text-xs font-bold uppercase tracking-[0.16em] text-[var(--deep-brown)]"
           >
             {expanded ? "Show Less" : "Show More"}
             <span className="ml-3 text-[var(--brass)]">

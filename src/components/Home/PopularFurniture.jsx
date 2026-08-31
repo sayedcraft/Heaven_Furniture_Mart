@@ -16,7 +16,7 @@ export default function PopularFurniture() {
   return (
     <section
       id="popular"
-      className="relative overflow-hidden border-t border-[var(--line)] bg-white py-10 sm:py-15 lg:py-20"
+      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--ivory)] py-10 sm:py-15 lg:py-20"
     >
       {" "}
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
@@ -34,7 +34,7 @@ export default function PopularFurniture() {
           text-4xl
           leading-[0.95]
           tracking-tight
-          text-[var(--charcoal)]
+          text-[var(--deep-brown)]
           sm:text-5xl
           md:text-6xl
           lg:text-7xl
@@ -60,7 +60,7 @@ export default function PopularFurniture() {
 
           <Reveal variant="clip" delay={0} className="lg:col-span-7">
             <article className="group">
-              <div className="image-wrap relative aspect-[1.08] overflow-hidden bg-[#e8e2d8] sm:aspect-[1.2] lg:aspect-[1.12]">
+              <div className="image-wrap relative aspect-[1.08] overflow-hidden bg-[var(--surface)] sm:aspect-[1.2] lg:aspect-[1.12]">
                 <Image
                   src={featured.image}
                   alt={featured.name}
@@ -114,7 +114,7 @@ export default function PopularFurniture() {
                 <article className="group cursor-pointer">
                   {/* Product image */}
 
-                  <div className="image-wrap relative aspect-[0.9] overflow-hidden bg-[#e8e2d8]">
+                  <div className="image-wrap relative aspect-[0.9] overflow-hidden bg-[var(--surface)]">
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -125,11 +125,11 @@ export default function PopularFurniture() {
 
                     {/* Hover overlay */}
 
-                    <div className="absolute inset-0 bg-black/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-[var(--deep-brown)]/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                     {/* Arrow */}
 
-                    <span className="absolute right-3 top-3 flex h-8 w-8 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-black/10 text-xs text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-4 sm:top-4">
+                    <span className="absolute right-3 top-3 flex h-8 w-8 translate-y-2 items-center justify-center rounded-full border-[var(--ivory)]/40 bg-[var(--deep-brown)]/10 text-xs text-[var(--ivory)] opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-4 sm:top-4">
                       ↗
                     </span>
                   </div>
@@ -139,7 +139,7 @@ export default function PopularFurniture() {
                   <div className="mt-3 sm:mt-4">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h3 className="serif text-base leading-tight text-[var(--charcoal)] transition-colors duration-300 group-hover:text-[var(--brass)] sm:text-lg">
+                        <h3 className="serif text-base leading-tight text-[var(--deep-brown)] transition-colors duration-300 group-hover:text-[var(--brass)] sm:text-lg">
                           {product.name}
                         </h3>
 

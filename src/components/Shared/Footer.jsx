@@ -24,7 +24,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--charcoal)] text-[var(--ivory)]">
+    <footer className="bg-[var(--deep-brown)] text-[var(--ivory)]">
       <Container>
         {/* Main Footer */}
         <div className="grid gap-12 border-b border-white/10 py-16 sm:py-20 lg:grid-cols-12 lg:gap-8">

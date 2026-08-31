@@ -1,5 +1,4 @@
 import Hero from "@/components/Home/Hero";
-import CategoryShowcase from "@/components/Home/CategoryShowcase";
 import ShopByCategory from "@/components/Home/ShopByCategory";
 import FlagshipFurniture from "@/components/Home/FlagshipFurniture";
 import PopularFurniture from "@/components/Home/PopularFurniture";
@@ -11,10 +10,10 @@ import SmartInnovation from "@/components/Home/SmartInnovation";
 import Showroom from "@/components/Home/Showroom";
 import SocialProof from "@/components/Home/SocialProof";
 import BrandIntro from "@/components/Home/BrandIntro";
-import CTASection from "@/components/Home/CTASection";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import BeforeAfter from "@/components/Home/BeforeAfter";
 import MapSection from "@/components/Home/MapSection";
+import IntroSplash from "@/components/ui/IntroSplash";
 
 export const metadata = {
   title: "Heaven Furniture Mart | Premium Bespoke Furniture in Chattogram",
@@ -25,11 +24,10 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      <IntroSplash />
       <ScrollProgress />
 
       <Hero />
-
-      <CategoryShowcase />
 
       <ShopByCategory />
 
@@ -50,10 +48,8 @@ export default function Home() {
 
       <Showroom />
 
-
       <BrandIntro />
       <SocialProof />
-
 
       <MapSection></MapSection>
     </>

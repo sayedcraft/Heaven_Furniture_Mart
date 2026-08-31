@@ -15,7 +15,7 @@ function ShowcaseCard({ category, index }) {
         aria-label={`Explore ${category.name} collection`}
       >
         {/* Image container */}
-        <div className="relative aspect-[3/4] overflow-hidden bg-[#d6cabb] sm:aspect-[2/3] lg:aspect-[3/4]">
+        <div className="relative aspect-[3/4] overflow-hidden bg-[var(--wood-tan)] sm:aspect-[2/3] lg:aspect-[3/4]">
           <Image
             src={category.image}
             alt={`${category.name} furniture collection`}
@@ -28,10 +28,9 @@ function ShowcaseCard({ category, index }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
 
           {/* Hover atmosphere overlay */}
-          <div className="cat-card-overlay absolute inset-0 bg-[var(--charcoal)]/20" />
+          <div className="cat-card-overlay absolute inset-0 bg-[var(--deep-brown)]/20" />
 
           {/* Top corner index */}
-          
 
           {/* Explore arrow — appears on hover */}
           <div className="absolute right-4 top-4 flex h-9 w-9 translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-5 sm:top-5">
@@ -65,24 +64,25 @@ export default function CategoryShowcase() {
   return (
     <section
       id="category-showcase"
-      className="border-t border-[var(--line)] bg-[var(--charcoal)] py-12 sm:py-16 lg:py-20"
+      className="border-t border-[var(--line)]  py-12 sm:py-16 lg:py-20"
     >
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
-
         {/* Label row */}
         <Reveal className="mb-8 flex items-center justify-between sm:mb-10">
           <div className="flex items-center gap-4">
-            <span className="text-[1.5rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)]">
+            <span className="text-[1.5rem] font-extrabold uppercase tracking-[0.1em] text-[var(--brass)]">
               Shop by category
             </span>
           </div>
 
           <Link
             href="/products"
-            className="group flex items-center gap-2 text-[0.9rem] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:text-[var(--brass)]"
+            className="group flex items-center gap-2 text-[0.9rem] font-bold uppercase tracking-[0.18em] text-black transition-colors hover:text-[var(--brass)]"
           >
             View all
-            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
           </Link>
         </Reveal>
 
@@ -95,9 +95,7 @@ export default function CategoryShowcase() {
 
         {/* Bottom editorial line */}
         <Reveal delay={360} className="mt-8 sm:mt-10">
-          <div className="flex items-center justify-between border-t border-white/10 pt-5">
-            
-          </div>
+          <div className="flex items-center justify-between border-t border-white/10 pt-5"></div>
         </Reveal>
       </div>
     </section>

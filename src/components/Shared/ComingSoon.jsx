@@ -5,16 +5,13 @@ export default function ComingSoon({
   description = "We are carefully preparing something special for you.",
 }) {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#f4f0e9] px-5 py-24 sm:px-8">
+    <main className="flex min-h-screen items-center justify-center bg-[var(--ivory)] px-5 py-24 sm:px-8">
       <section className="w-full max-w-3xl text-center">
-
         {/* Small label */}
-        <span className="eyebrow mb-6 block">
-          Heaven Furniture Mart
-        </span>
+        <span className="eyebrow mb-6 block">Heaven Furniture Mart</span>
 
         {/* Main heading */}
-        <h1 className="serif text-6xl leading-[0.95] text-[var(--charcoal)] sm:text-7xl lg:text-8xl">
+        <h1 className="serif text-6xl leading-[0.95] text-[var(--deep-brown)] sm:text-7xl lg:text-8xl">
           {title}
         </h1>
 
@@ -29,14 +26,13 @@ export default function ComingSoon({
         {/* Back home */}
         <Link
           href="/"
-          className="mt-10 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[var(--charcoal)] transition-colors duration-300 hover:text-[var(--brass)]"
+          className="mt-10 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[var(--deep-brown)] transition-colors duration-300 hover:text-[var(--brass)]"
         >
           Back to Home
           <span className="text-[var(--brass)] transition-transform duration-300 hover:translate-x-1">
             →
           </span>
         </Link>
-
       </section>
     </main>
   );

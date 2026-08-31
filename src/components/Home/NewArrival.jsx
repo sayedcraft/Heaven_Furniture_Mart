@@ -41,7 +41,7 @@ export default function NewArrival() {
   const [hero, ...rest] = newArrivals;
 
   return (
-    <section className="relative overflow-hidden border-t border-[var(--line)] bg-white py-10 sm:py-15 lg:py-20">
+    <section className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--ivory)] py-10 sm:py-15 lg:py-20">
       {" "}
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
         {/* =====================================================
@@ -58,7 +58,7 @@ export default function NewArrival() {
           text-4xl
           leading-[0.95]
           tracking-tight
-          text-[var(--charcoal)]
+          text-[var(--deep-brown)]
           sm:text-5xl
           md:text-6xl
           lg:text-7xl
@@ -82,7 +82,7 @@ export default function NewArrival() {
 
           <Reveal variant="clip" delay={0} className="lg:col-span-8">
             <article className="group relative">
-              <div className="image-wrap relative aspect-[1.15] overflow-hidden bg-[#e8e2d8] sm:aspect-[1.35] lg:aspect-[1.42]">
+              <div className="image-wrap relative aspect-[1.15] overflow-hidden bg-[var(--surface)] sm:aspect-[1.35] lg:aspect-[1.42]">
                 <Image
                   src={hero.image}
                   alt={hero.name}
@@ -99,7 +99,7 @@ export default function NewArrival() {
                 {/* Tag */}
 
                 <div className="absolute left-4 top-4 sm:left-7 sm:top-7">
-                  <span className="bg-[var(--brass)] px-3 py-2 text-[0.58rem] font-bold uppercase tracking-[0.2em] text-[var(--charcoal)] sm:text-[0.62rem]">
+                  <span className="bg-[var(--brass)] px-3 py-2 text-[0.58rem] font-bold uppercase tracking-[0.2em] text-[var(--deep-brown)] sm:text-[0.62rem]">
                     {hero.tag}
                   </span>
                 </div>
@@ -139,7 +139,7 @@ export default function NewArrival() {
 
               {/* Title */}
 
-              <h3 className="serif text-3xl leading-[1] text-[var(--charcoal)] sm:text-4xl lg:text-5xl">
+              <h3 className="serif text-3xl leading-[1] text-[var(--deep-brown)] sm:text-4xl lg:text-5xl">
                 {hero.name}
               </h3>
 
@@ -203,7 +203,7 @@ export default function NewArrival() {
                 <article className="group cursor-pointer">
                   {/* Product Image */}
 
-                  <div className="image-wrap relative aspect-[0.92] overflow-hidden bg-[#e8e2d8] sm:aspect-[1.02]">
+                  <div className="image-wrap relative aspect-[0.92] overflow-hidden bg-[var(--surface)] sm:aspect-[1.02]">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -219,7 +219,7 @@ export default function NewArrival() {
                     {/* Tag */}
 
                     <div className="absolute left-4 top-4">
-                      <span className="bg-white/90 px-2.5 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-[var(--charcoal)] backdrop-blur-sm sm:text-[0.7rem]">
+                      <span className="bg-[var(--ivory)]/90 px-2.5 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-[var(--deep-brown)] backdrop-blur-sm sm:text-[0.7rem]">
                         {item.tag}
                       </span>
                     </div>
@@ -240,7 +240,7 @@ export default function NewArrival() {
                           {item.category}
                         </p>
 
-                        <h3 className="serif text-xl leading-none text-[var(--charcoal)] transition-colors duration-300 group-hover:text-[var(--brass)] sm:text-2xl lg:text-3xl">
+                        <h3 className="serif text-xl leading-none text-[var(--deep-brown)] transition-colors duration-300 group-hover:text-[var(--brass)] sm:text-2xl lg:text-3xl">
                           {item.name}
                         </h3>
                       </div>

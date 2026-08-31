@@ -14,7 +14,7 @@ export default function ArtisticFurniture() {
   return (
     <section
       id="artistic"
-      className="relative overflow-hidden border-t border-[var(--line)] bg-[#f4f0e9] py-10 sm:py-15 lg:py-20"
+      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--ivory)] py-10 sm:py-15 lg:py-20"
     >
       {" "}
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
@@ -32,7 +32,7 @@ export default function ArtisticFurniture() {
           text-4xl
           leading-[0.95]
           tracking-tight
-          text-[var(--charcoal)]
+          text-[var(--deep-brown)]
           sm:text-5xl
           md:text-6xl
           lg:text-7xl
@@ -58,7 +58,7 @@ export default function ArtisticFurniture() {
 
           <Reveal variant="clip" delay={0} className="relative lg:col-span-7">
             <article className="group relative">
-              <div className="image-wrap relative aspect-[0.92] overflow-hidden bg-[#d6cabb] sm:aspect-[1.05] lg:aspect-[0.98]">
+              <div className="image-wrap relative aspect-[0.92] overflow-hidden bg-[var(--wood-tan)] sm:aspect-[1.05] lg:aspect-[0.98]">
                 <Image
                   src={featured.image}
                   alt={featured.name}
@@ -115,7 +115,7 @@ export default function ArtisticFurniture() {
                   The Artistic Collection
                 </span>
 
-                <p className="serif text-2xl leading-[1.15] text-[var(--charcoal)] sm:text-3xl">
+                <p className="serif text-2xl leading-[1.15] text-[var(--deep-brown)] sm:text-3xl">
                   Bold forms. Unexpected details. Furniture with a point of
                   view.
                 </p>
@@ -137,7 +137,7 @@ export default function ArtisticFurniture() {
             {secondary && (
               <Reveal variant="clip" delay={220} className="lg:ml-8">
                 <article className="group">
-                  <div className="image-wrap relative aspect-[1.15] overflow-hidden bg-[#d6cabb] sm:aspect-[1.35] lg:aspect-[1.28]">
+                  <div className="image-wrap relative aspect-[1.15] overflow-hidden bg-[var(--wood-tan)] sm:aspect-[1.35] lg:aspect-[1.28]">
                     <Image
                       src={secondary.image}
                       alt={secondary.name}

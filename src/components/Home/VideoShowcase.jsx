@@ -17,7 +17,7 @@ export default function VideoShowcase() {
   return (
     <section
       id="video-showcase"
-      className="video-section relative overflow-hidden bg-[var(--charcoal)]"
+      className="video-section relative overflow-hidden bg-[var(--deep-brown)]"
       aria-label="Brand experience video"
     >
       {/* Cinematic video container */}
@@ -36,7 +36,7 @@ export default function VideoShowcase() {
         </video>
 
         {/* Cinematic overlays */}
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-[var(--deep-brown)]/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
 
@@ -64,9 +64,9 @@ export default function VideoShowcase() {
 
           {/* Desktop / Tablet only */}
           <p className="mt-6 hidden max-w-md text-sm leading-7 text-white/70 sm:block sm:mt-7">
-            Every piece we create is born from the belief that furniture
-            should fit you — your space, your rhythm, your story. Come
-            experience it in person at our Agrabad showroom.
+            Every piece we create is born from the belief that furniture should
+            fit you — your space, your rhythm, your story. Come experience it in
+            person at our Agrabad showroom.
           </p>
         </Reveal>
 
@@ -128,7 +128,6 @@ export default function VideoShowcase() {
       </div>
 
       {/* Below-video editorial strip — desktop/tablet only */}
-      
     </section>
   );
 }

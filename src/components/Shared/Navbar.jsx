@@ -24,15 +24,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", update);
   }, []);
 
-  // Close mobile menu when route changes
-  useEffect(() => {
-    // setOpen(false);
-  }, [pathname]);
-
   const mainLinks = [
     ["Products", "/products"],
     ["About", "/about"],
-    ["Bespoke", "/"],
+    ["Bespoke", isHomePage ? "#bespoke" : "/"],
     ["Showroom", "/showroom"],
   ];
 
@@ -43,7 +38,7 @@ export default function Navbar() {
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
         transparentHome
           ? "bg-transparent text-[var(--ivory)]"
-          : "border-b border-black/10 bg-[#f4f0e9]/95 text-[var(--charcoal)] shadow-[0_8px_30px_rgba(0,0,0,.08)] backdrop-blur-md"
+          : "border-b border-[var(--deep-brown)]/10 bg-[var(--ivory)]/95 text-[var(--deep-brown)] shadow-[0_8px_30px_rgba(48,41,35,.08)] backdrop-blur-md"
       }`}
     >
       <nav
@@ -62,7 +57,7 @@ export default function Navbar() {
             className={`serif block text-4xl font-bold leading-none tracking-wide transition-colors duration-300 ${
               transparentHome
                 ? "text-[var(--ivory)]"
-                : "text-[var(--charcoal)]"
+                : "text-[var(--deep-brown)]"
             } group-hover:text-[var(--brass)]`}
           >
             HE<span className="text-[var(--brass)]">A</span>VEN
@@ -133,14 +128,14 @@ export default function Navbar() {
           {/* Divider */}
           <div
             className={`mx-2 h-5 w-px ${
-              transparentHome ? "bg-white/15" : "bg-black/10"
+              transparentHome
+                ? "bg-[var(--ivory)]/15"
+                : "bg-[var(--deep-brown)]/10"
             }`}
           />
 
           {/* Contact */}
-          <Button>
-            <Link href="/contact">Contact</Link>
-          </Button>
+          <Button href="/contact">Contact</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -189,7 +184,7 @@ export default function Navbar() {
           open
             ? "max-h-screen border-t border-white/10 py-6 opacity-100"
             : "max-h-0 border-t-0 py-0 opacity-0"
-        } bg-[var(--charcoal)] text-[var(--ivory)]`}
+        } bg-[var(--deep-brown)] text-[var(--ivory)]`}
       >
         <div className="mb-6 space-y-1">
           {mainLinks.map(([label, href]) => (

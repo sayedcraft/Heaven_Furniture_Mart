@@ -15,7 +15,7 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-[#e8e2d8] py-24 sm:py-32">
+    <section className="bg-[var(--surface)] py-24 sm:py-32">
       <Container>
         <div className="grid gap-16 lg:grid-cols-[.8fr_1.4fr]">
           <Reveal>

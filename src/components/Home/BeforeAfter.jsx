@@ -10,7 +10,7 @@ export default function BeforeAfter() {
 
   const containerRef = useRef(null);
 
-  const beforeImage =
+    const beforeImage =
     "https://images.unsplash.com/photo-1721395286465-47f3a47b40a1?auto=format&fit=crop&w=2200&q=85";
 
   const afterImage =
@@ -35,6 +35,16 @@ export default function BeforeAfter() {
     setSliderPos(Math.max(0, Math.min(100, percentage)));
   }, []);
 
+  const handleKeyDown = useCallback((event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      const direction = event.key === "ArrowRight" ? 1 : -1;
+      setSliderPos((current) =>
+        Math.max(0, Math.min(100, current + direction * 5)),
+      );
+    }
+  }, []);
+
   /* =====================================================
      MOUSE
   ===================================================== */
@@ -46,7 +56,7 @@ export default function BeforeAfter() {
       setIsDragging(true);
       updateSliderPosition(e.clientX);
     },
-    [updateSliderPosition]
+    [updateSliderPosition],
   );
 
   const handleMouseMove = useCallback(
@@ -55,7 +65,7 @@ export default function BeforeAfter() {
 
       updateSliderPosition(e.clientX);
     },
-    [isDragging, updateSliderPosition]
+    [isDragging, updateSliderPosition],
   );
 
   /* =====================================================
@@ -69,7 +79,7 @@ export default function BeforeAfter() {
       setIsDragging(true);
       updateSliderPosition(e.touches[0].clientX);
     },
-    [updateSliderPosition]
+    [updateSliderPosition],
   );
 
   const handleTouchMove = useCallback(
@@ -79,7 +89,7 @@ export default function BeforeAfter() {
       e.preventDefault();
       updateSliderPosition(e.touches[0].clientX);
     },
-    [isDragging, updateSliderPosition]
+    [isDragging, updateSliderPosition],
   );
 
   /* =====================================================
@@ -113,12 +123,7 @@ export default function BeforeAfter() {
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", stopDragging);
     };
-  }, [
-    isDragging,
-    handleMouseMove,
-    handleTouchMove,
-    stopDragging,
-  ]);
+  }, [isDragging, handleMouseMove, handleTouchMove, stopDragging]);
 
   return (
     <section
@@ -126,7 +131,7 @@ export default function BeforeAfter() {
       className="
         relative
         overflow-hidden
-        bg-bone
+        bg-[var(--ivory)]
         py-10
         sm:py-15
         lg:py-20
@@ -156,7 +161,7 @@ export default function BeforeAfter() {
               text-4xl
               leading-[0.95]
               tracking-tight
-              text-[var(--charcoal)]
+              text-[var(--deep-brown)]
               sm:text-5xl
               md:text-6xl
               lg:text-7xl
@@ -178,7 +183,14 @@ export default function BeforeAfter() {
           ref={containerRef}
           onMouseDown={handleMouseDown}
           onTouchStart={handleTouchStart}
+          onKeyDown={handleKeyDown}
           onContextMenu={(e) => e.preventDefault()}
+          role="slider"
+          tabIndex={0}
+          aria-label="Compare the room before and after styling"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(sliderPos)}
           style={{
             touchAction: "none",
           }}
@@ -192,8 +204,8 @@ export default function BeforeAfter() {
             overflow-hidden
             rounded-sm
             border
-            border-ink/10
-            bg-sand
+            border-[var(--deep-brown)]/10
+            bg-[var(--surface)]
             shadow-[0_30px_80px_rgba(0,0,0,0.14)]
             sm:aspect-[16/9]
             lg:aspect-[21/10]
@@ -219,7 +231,7 @@ export default function BeforeAfter() {
 
             {/* Subtle overlay */}
 
-            <div className="pointer-events-none absolute inset-0 bg-black/[0.03]" />
+            <div className="pointer-events-none absolute inset-0 bg-[var(--deep-brown)]/[0.03]" />
 
             {/* AFTER LABEL */}
 
@@ -237,8 +249,8 @@ export default function BeforeAfter() {
               <div
                 className="
                   border
-                  border-bone/20
-                  bg-depth/80
+                  border-[var(--ivory)]/20
+                  bg-[var(--deep-brown)]/80
                   px-3
                   py-1.5
                   backdrop-blur-md
@@ -252,7 +264,7 @@ export default function BeforeAfter() {
                     font-medium
                     uppercase
                     tracking-[0.3em]
-                    text-bone
+                    text-[var(--ivory)]
                     sm:text-[10px]
                   "
                 >
@@ -301,8 +313,8 @@ export default function BeforeAfter() {
               <div
                 className="
                   border
-                  border-ink/10
-                  bg-bone/90
+                  border-[var(--deep-brown)]/10
+                  bg-[var(--ivory)]/90
                   px-3
                   py-1.5
                   backdrop-blur-md
@@ -316,7 +328,7 @@ export default function BeforeAfter() {
                     font-medium
                     uppercase
                     tracking-[0.3em]
-                    text-ink
+                    text-[var(--deep-brown)]
                     sm:text-[10px]
                   "
                 >
@@ -338,7 +350,7 @@ export default function BeforeAfter() {
               top-0
               z-20
               w-px
-              bg-bone
+              bg-[var(--ivory)]
               shadow-[0_0_18px_rgba(0,0,0,0.5)]
             "
             style={{
@@ -363,25 +375,21 @@ export default function BeforeAfter() {
                 justify-center
                 rounded-full
                 border
-                border-brass
-                bg-bone
+                border-[var(--brass)]
+                bg-[var(--ivory)]
                 shadow-[0_8px_30px_rgba(0,0,0,0.25)]
                 transition-transform
                 duration-200
                 sm:h-14
                 sm:w-14
-                ${
-                  isDragging
-                    ? "scale-110"
-                    : "group-hover:scale-105"
-                }
+                ${isDragging ? "scale-110" : "group-hover:scale-105"}
               `}
             >
               <ArrowLeftRight
                 className="
                   h-4
                   w-4
-                  text-bronze
+                  text-[var(--brown)]
                   sm:h-5
                   sm:w-5
                 "

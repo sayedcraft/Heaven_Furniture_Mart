@@ -6,7 +6,7 @@ export default function CategoryCard({ category, className = "" }) {
       href={`#${category.slug}`}
       className={`category-card block group ${className}`}
     >
-      <div className="image-wrap relative bg-[#d6cabb] overflow-hidden aspect-[1.1]">
+      <div className="image-wrap relative bg-[var(--wood-tan)] overflow-hidden aspect-[1.1]">
         <Image
           src={category.image}
           alt={`${category.name} collection at Heaven Furniture Mart`}
