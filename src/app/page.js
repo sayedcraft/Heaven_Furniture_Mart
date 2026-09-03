@@ -24,7 +24,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <IntroSplash />
+      {/* <IntroSplash /> */}
       <ScrollProgress />
 
       <Hero />

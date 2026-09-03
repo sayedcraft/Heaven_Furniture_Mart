@@ -17,7 +17,7 @@ export default function Showroom() {
         <div className="mx-auto max-w-[1400px]">
           <Reveal className="max-w-5xl">
             <p className="eyebrow">Chattogram · In person</p>
-            <h1 className="serif mt-5 text-5xl leading-[0.9] sm:text-7xl lg:text-[7rem]">
+            <h1 className="serif mt-5 text-5xl leading-[0.92] text-[var(--deep-brown)] sm:text-6xl lg:text-7xl">
               Visit our{" "}
               <em className="font-normal text-[var(--brass)]">showroom.</em>
             </h1>

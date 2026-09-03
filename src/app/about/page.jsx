@@ -26,7 +26,7 @@ export default function About() {
         <div className="mx-auto max-w-[1400px]">
           <Reveal className="max-w-4xl">
             <p className="eyebrow">The Heaven approach</p>
-            <h1 className="serif mt-5 text-5xl leading-[0.92] sm:text-7xl lg:text-[7rem]">
+            <h1 className="serif mt-5 text-5xl leading-[0.92] text-[var(--deep-brown)] sm:text-6xl lg:text-7xl">
               Furniture with a sense of{" "}
               <em className="font-normal text-[var(--brass)]">belonging.</em>
             </h1>

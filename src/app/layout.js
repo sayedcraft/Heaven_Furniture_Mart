@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Shared/Navbar";
 import Footer from "@/components/Shared/Footer";
+import IntroSplash from "@/components/ui/IntroSplash";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -28,9 +29,15 @@ export default function RootLayout({ children }) {
       className={`${manrope.variable} ${dmSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        {/* INTRO FIRST */}
+        <IntroSplash />
+
+        {/* WEBSITE */}
         <Navbar />
 
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          {children}
+        </main>
 
         <Footer />
       </body>
