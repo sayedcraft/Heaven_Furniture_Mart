@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState, useRef, useCallback, useEffect } from "react";
-import { ArrowLeftRight } from "lucide-react";
 
 export default function BeforeAfter() {
   const [sliderPos, setSliderPos] = useState(50);
@@ -10,7 +9,7 @@ export default function BeforeAfter() {
 
   const containerRef = useRef(null);
 
-    const beforeImage =
+  const beforeImage =
     "https://images.unsplash.com/photo-1721395286465-47f3a47b40a1?auto=format&fit=crop&w=2200&q=85";
 
   const afterImage =
@@ -202,7 +201,7 @@ export default function BeforeAfter() {
             cursor-ew-resize
             select-none
             overflow-hidden
-            rounded-sm
+            rounded-[var(--image-radius)]
             border
             border-[var(--deep-brown)]/10
             bg-[var(--surface)]
@@ -385,15 +384,9 @@ export default function BeforeAfter() {
                 ${isDragging ? "scale-110" : "group-hover:scale-105"}
               `}
             >
-              <ArrowLeftRight
-                className="
-                  h-4
-                  w-4
-                  text-[var(--brown)]
-                  sm:h-5
-                  sm:w-5
-                "
-              />
+              <span className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[var(--brown)]">
+                ↔
+              </span>
             </div>
           </div>
         </div>

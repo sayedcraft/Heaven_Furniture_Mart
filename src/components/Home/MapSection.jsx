@@ -44,7 +44,7 @@ export default function MapSection() {
         </div>
 
         {/* Main Card */}
-        <div className="overflow-hidden rounded-sm border border-[var(--ivory)]/10 bg-[var(--deep-brown)] shadow-2xl">
+        <div className="overflow-hidden rounded-[var(--image-radius)] border border-[var(--ivory)]/10 bg-[var(--deep-brown)] shadow-2xl">
           <div className="grid md:grid-cols-12">
             {/* MAP */}
             <a
@@ -65,7 +65,7 @@ export default function MapSection() {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--deep-brown)]/70 via-transparent to-[var(--deep-brown)]/10" />
 
               {/* Map Label */}
-              <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-sm border border-[var(--ivory)]/10 bg-[var(--deep-brown)]/85 px-3 py-2 text-[0.62rem] uppercase tracking-[0.18em] text-[var(--ivory)] backdrop-blur-md sm:bottom-6 sm:left-6">
+              <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-[var(--image-radius)] border border-[var(--ivory)]/10 bg-[var(--deep-brown)]/85 px-3 py-2 text-[0.62rem] uppercase tracking-[0.18em] text-[var(--ivory)] backdrop-blur-md sm:bottom-6 sm:left-6">
                 <ExternalLink className="h-3.5 w-3.5 text-[var(--brass)]" />
                 Open in Maps
               </div>

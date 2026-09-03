@@ -4,7 +4,7 @@ import Reveal from "@/components/ui/Reveal";
 
 const categories = [
   {
-    id: "living",
+    id: "living-room",
     name: "Living Room",
     description: "Comfort, character and considered design.",
     image: "/image/Livingroom.jpg",
@@ -21,18 +21,18 @@ const categories = [
   },
   {
     id: "dining",
-    name: "Dining Room",
+    name: "Dining",
     description: "Gather, share and make every moment matter.",
     image: "/image/Diningroom.jpg",
     href: "/products?category=dining",
     number: "03",
   },
   {
-    id: "storage",
-    name: "Storage",
-    description: "Beautifully crafted solutions for every space.",
+    id: "all",
+    name: "All Pieces",
+    description: "Curated pieces for beautifully lived spaces.",
     image: "/image/Wardrobe.jpg",
-    href: "/products?category=storage",
+    href: "/products",
     number: "04",
   },
 ];
@@ -44,27 +44,20 @@ export default function ShopByCategory() {
       className="relative overflow-hidden border-t border-[var(--line)] bg-[#f8f6f2] py-20 sm:py-24 lg:py-32"
     >
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
-
         {/* Section Header */}
         <Reveal className="mb-10 sm:mb-14 lg:mb-16">
           <div className="flex items-end justify-between gap-6">
-
             {/* Left — Main Title */}
             <div>
-              <h2 className="serif text-4xl leading-[0.9] tracking-[-0.025em] text-[var(--charcoal)] sm:text-4xl lg:text-[3.5rem]">
-                <span className="relative inline-block">
-                 
-                    Category
-                  
-                 
-                </span>
+              <h2 className="serif text-4xl leading-[0.9] tracking-[-0.025em] text-[var(--deep-brown)] sm:text-4xl lg:text-[3.5rem]">
+                <span className="relative inline-block">Category</span>
               </h2>
             </div>
 
             {/* Right — View All */}
             <Link
               href="/products"
-              className="group mb-1 inline-flex shrink-0 items-center gap-3 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[var(--charcoal)] transition-colors duration-300 hover:text-[var(--brass)] sm:text-xl"
+              className="group mb-1 inline-flex shrink-0 items-center gap-3 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[var(--deep-brown)] transition-colors duration-300 hover:text-[var(--brass)] sm:text-xl"
             >
               <span>View All</span>
 
@@ -72,25 +65,15 @@ export default function ShopByCategory() {
                 →
               </span>
             </Link>
-
           </div>
         </Reveal>
 
         {/* Category Grid */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-
           {categories.map((category, index) => (
-            <Reveal
-              key={category.id}
-              delay={index * 90}
-              variant="clip"
-            >
-              <Link
-                href={category.href}
-                className="group block"
-              >
-                <div className="image-wrap relative aspect-[0.82] overflow-hidden bg-[#e8e2d8]">
-
+            <Reveal key={category.id} delay={index * 90} variant="clip">
+              <Link href={category.href} className="group block">
+                <div className="image-wrap relative aspect-[0.82] overflow-hidden rounded-[var(--image-radius)] bg-[#e8e2d8]">
                   {/* Image */}
                   <Image
                     src={category.image}
@@ -116,7 +99,6 @@ export default function ShopByCategory() {
                   {/* Card Content */}
                   <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
                     <div className="translate-y-1 transition-transform duration-500 group-hover:translate-y-0">
-
                       {/* Category Name */}
                       <h3 className="serif text-2xl leading-tight text-white sm:text-3xl">
                         {category.name}
@@ -126,19 +108,13 @@ export default function ShopByCategory() {
                       <p className="mt-2 max-w-[220px] text-xs leading-5 text-white/70 sm:text-sm">
                         {category.description}
                       </p>
-
-                      
-
                     </div>
                   </div>
-
                 </div>
               </Link>
             </Reveal>
           ))}
-
         </div>
-
       </div>
     </section>
   );

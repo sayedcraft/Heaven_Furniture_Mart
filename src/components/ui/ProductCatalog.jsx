@@ -15,18 +15,18 @@ export default function ProductCatalog() {
       : products.filter((product) => product.category === selectedCategory);
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[230px_1fr] lg:gap-16">
+    <div className="grid gap-8 sm:gap-10 lg:grid-cols-[230px_1fr] lg:gap-16">
       {/* CATEGORY SIDEBAR */}
       <aside className="lg:sticky lg:top-28 lg:self-start">
-        <p className="eyebrow mb-5">Browse by room</p>
+        <p className="eyebrow mb-4 sm:mb-5">Browse by room</p>
 
-        <div className="flex gap-2 overflow-x-auto pb-3 lg:block lg:space-y-2 lg:overflow-visible lg:pb-0">
+        <div className="flex flex-wrap gap-2 sm:gap-2.5 lg:block lg:space-y-2">
           {/* ALL PIECES */}
           <button
             type="button"
             onClick={() => setSelectedCategory("all")}
             aria-pressed={selectedCategory === "all"}
-            className={`group flex shrink-0 items-center justify-between border px-4 py-3.5 text-left text-xs font-medium uppercase tracking-[0.12em] transition-all duration-300 lg:w-full ${
+            className={`group flex shrink-0 items-center justify-between border px-4 py-3.5 text-left text-[10px] font-medium uppercase tracking-[0.12em] transition-all duration-300 sm:text-xs lg:w-full ${
               selectedCategory === "all"
                 ? "border-[var(--deep-brown)] bg-[var(--deep-brown)] text-white"
                 : "border-[var(--line)] bg-white/40 text-[var(--brown)] hover:border-[var(--brass)] hover:bg-white hover:text-[var(--deep-brown)]"
@@ -55,7 +55,7 @@ export default function ProductCatalog() {
                 type="button"
                 onClick={() => setSelectedCategory(category.id)}
                 aria-pressed={isActive}
-                className={`group flex shrink-0 items-center justify-between border px-4 py-3.5 text-left text-xs font-medium uppercase tracking-[0.12em] transition-all duration-300 lg:w-full ${
+                className={`group flex shrink-0 items-center justify-between border px-4 py-3.5 text-left text-[10px] font-medium uppercase tracking-[0.12em] transition-all duration-300 sm:text-xs lg:w-full ${
                   isActive
                     ? "border-[var(--brass)] bg-[var(--brass)] text-[var(--deep-brown)]"
                     : "border-[var(--line)] bg-white/40 text-[var(--brown)] hover:border-[var(--brass)] hover:bg-white hover:text-[var(--deep-brown)]"
@@ -80,13 +80,13 @@ export default function ProductCatalog() {
 
       {/* PRODUCTS */}
       <div>
-        <div className="mb-8 flex items-end justify-between border-b border-[var(--line)] pb-5">
+        <div className="mb-7 flex flex-col items-start gap-3 border-b border-[var(--line)] pb-5 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.16em] text-[var(--brown)]">
+            <p className="text-[0.64rem] uppercase tracking-[0.16em] text-[var(--brown)] sm:text-xs">
               {visibleProducts.length} pieces
             </p>
 
-            <h2 className="serif mt-2 text-3xl text-[var(--deep-brown)] sm:text-4xl">
+            <h2 className="serif mt-2 text-2xl text-[var(--deep-brown)] sm:text-3xl lg:text-4xl">
               {selectedCategory === "all"
                 ? "The collection"
                 : categories.find(
@@ -99,7 +99,7 @@ export default function ProductCatalog() {
         </div>
 
         {visibleProducts.length > 0 ? (
-          <div className="grid grid-cols-1 gap-x-5 gap-y-12 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 sm:gap-y-12 xl:grid-cols-3">
             {visibleProducts.map((product, index) => (
               <Reveal key={product.id} delay={(index % 3) * 70}>
                 <ProductCard product={product} />

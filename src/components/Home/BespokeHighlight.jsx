@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
@@ -85,9 +84,7 @@ export default function BespokeHighlight() {
             <br />
             Your vision.
             <br />
-            <em className="font-normal text-[var(--brass)]">
-              Our piece.
-            </em>
+            <em className="font-normal text-[var(--brass)]">Our piece.</em>
           </h2>
         </Reveal>
 
@@ -120,13 +117,10 @@ export default function BespokeHighlight() {
             >
               {/* Main image */}
 
-              <Reveal
-                variant="clip"
-                delay={0}
-                className="col-span-12 min-w-0"
-              >
+              <Reveal variant="clip" delay={0} className="col-span-12 min-w-0">
                 <div
                   className="
+                  rounded-[var(--image-radius)]
                     group
                     relative
                     aspect-[1.05]
@@ -152,6 +146,7 @@ export default function BespokeHighlight() {
                       duration-[1400ms]
                       ease-out
                       group-hover:scale-[1.045]
+                      
                     "
                   />
 
@@ -288,6 +283,7 @@ export default function BespokeHighlight() {
               >
                 <div
                   className="
+                  rounded-[var(--image-radius)]
                     group
                     relative
                     aspect-[1.55]
@@ -356,12 +352,10 @@ export default function BespokeHighlight() {
 
               {/* Small editorial block */}
 
-              <Reveal
-                delay={200}
-                className="col-span-4 min-w-0 sm:col-span-4"
-              >
+              <Reveal delay={200} className="col-span-4 min-w-0 sm:col-span-4">
                 <div
                   className="
+                  rounded-[var(--image-radius)]
                     group
                     relative
                     flex
@@ -404,9 +398,10 @@ export default function BespokeHighlight() {
 
                   {/* Content */}
 
-                  <div className="relative z-10 mt-6 sm:mt-8 md:mt-10">
+                  <div className="relative z-10 mt-6 sm:mt-8 md:mt-10 ">
                     <h3
                       className="
+                      
                         serif
                         text-lg
                         leading-[1.05]
@@ -460,9 +455,7 @@ export default function BespokeHighlight() {
                     "
                   >
                     <span className="h-1 w-1 shrink-0 rounded-full bg-[var(--brass)]" />
-                    <span className="truncate">
-                      Heaven Furniture Mart
-                    </span>
+                    <span className="truncate">Heaven Furniture Mart</span>
                   </div>
                 </div>
               </Reveal>
@@ -522,9 +515,7 @@ export default function BespokeHighlight() {
               >
                 Made for your space.
                 <br />
-                <span className="text-[var(--brass)]">
-                  Made for you.
-                </span>
+                <span className="text-[var(--brass)]">Made for you.</span>
               </h3>
 
               <p
@@ -540,8 +531,8 @@ export default function BespokeHighlight() {
                   md:mt-7
                 "
               >
-                Every detail is shaped around your space, materials, finish,
-                and the way you live.
+                Every detail is shaped around your space, materials, finish, and
+                the way you live.
               </p>
 
               {/* Customization list */}
@@ -644,9 +635,7 @@ export default function BespokeHighlight() {
                   md:mt-10
                 "
               >
-                <Button href="/contact">
-                  Start Your Custom Piece
-                </Button>
+                <Button href="/contact">Start Your Custom Piece</Button>
               </div>
             </div>
           </Reveal>
@@ -655,4 +644,3 @@ export default function BespokeHighlight() {
     </section>
   );
 }
-
