@@ -25,7 +25,6 @@ export default function About() {
       <section className="px-5 pb-20 pt-36 sm:px-8 sm:pb-28 sm:pt-44 lg:px-12 lg:pb-36">
         <div className="mx-auto max-w-[1400px]">
           <Reveal className="max-w-4xl">
-  
             <h1 className="serif mt-5 text-5xl leading-[0.92] text-[var(--deep-brown)] sm:text-6xl lg:text-7xl">
               Furniture with a sense of{" "}
               <em className="font-normal text-[var(--brass)]">belonging.</em>
@@ -44,7 +43,7 @@ export default function About() {
           <Reveal variant="clip" className="lg:col-span-7">
             <div className="image-wrap relative aspect-[1.05] bg-[var(--wood-tan)] sm:aspect-[1.2]">
               <Image
-                src="/image/Livingroom.jpg"
+                src="/image/Livingroom.avif"
                 alt="Warm living room interior furnished by Heaven Furniture Mart"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"

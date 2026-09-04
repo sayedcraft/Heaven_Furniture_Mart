@@ -8,7 +8,7 @@ export const products = [
     name: "The Signature Sofa",
     slug: "the-signature-sofa",
     category: "sofa",
-    image: "/image/Sofa/sofa1.jpg",
+    image: "/image/Sofa/sofa1.avif",
     collection: "Flagship",
 
     description: "A considered centerpiece for everyday life",
@@ -66,7 +66,7 @@ export const products = [
     name: "The Haven Bed",
     slug: "the-haven-bed",
     category: "bed",
-    image: "/image/Bed/bed1.jpg",
+    image: "/image/Bed/bed1.avif",
     collection: "Flagship",
 
     description: "A calm foundation for the room you return to",
@@ -124,7 +124,7 @@ export const products = [
     name: "The Dining Statement",
     slug: "the-dining-statement",
     category: "dining-table",
-    image: "/image/Dining_table/dinin2.jpg",
+    image: "/image/Dining_table/dinin2.avif",
     collection: "Flagship",
 
     description: "Made for long conversations and shared meals",
@@ -182,7 +182,7 @@ export const products = [
     name: "The Executive Desk",
     slug: "the-executive-desk",
     category: "other",
-    image: "/image/Office.jpg",
+    image: "/image/Office.avif",
     collection: "Flagship",
 
     description: "A focused surface, made to fit the way you work",
@@ -240,7 +240,7 @@ export const products = [
     name: "The Media Console",
     slug: "the-media-console",
     category: "other",
-    image: "/image/TV_Unit.jpg",
+    image: "/image/TV_Unit.avif",
     collection: "Flagship",
 
     description: "Quiet utility with a strong architectural line",
@@ -302,7 +302,7 @@ export const products = [
     name: "The Lounge Chair",
     slug: "the-lounge-chair",
     category: "chair",
-    image: "/image/Custom.jpg",
+    image: "/image/Custom.avif",
     collection: "Popular",
 
     description: "Comfort meets contemporary design",
@@ -361,7 +361,7 @@ export const products = [
     name: "The Wardrobe",
     slug: "the-wardrobe",
     category: "other",
-    image: "/image/Wardrobe.jpg",
+    image: "/image/Wardrobe.avif",
     collection: "Popular",
 
     description: "Storage shaped around the character of your space",
@@ -420,7 +420,7 @@ export const products = [
     name: "The Accent Mirror",
     slug: "the-accent-mirror",
     category: "mirror",
-    image: "/image/Mirror/mirror1.jpg",
+    image: "/image/Mirror/mirror1.avif",
     collection: "Popular",
 
     description: "A tailored detail that completes a room",
@@ -477,7 +477,7 @@ export const products = [
     name: "The Corner Console",
     slug: "the-corner-console",
     category: "other",
-    image: "/image/bes.jpg",
+    image: "/image/bes.avif",
     collection: "Popular",
 
     description: "Elegant utility for refined spaces",
@@ -538,7 +538,7 @@ export const products = [
     name: "The Sculptural Sofa",
     slug: "the-sculptural-sofa",
     category: "sofa",
-    image: "/image/Sofa/sofa2.jpg",
+    image: "/image/Sofa/sofa2.avif",
     collection: "Artistic",
 
     description: "Where form and function become art",
@@ -596,7 +596,7 @@ export const products = [
     name: "The Statement Bed",
     slug: "the-statement-bed",
     category: "bed",
-    image: "/image/Bed/bed2.jpg",
+    image: "/image/Bed/bed2.avif",
     collection: "Artistic",
 
     description: "A dramatic presence in your personal sanctuary",
@@ -659,7 +659,7 @@ export const products = [
     name: "The Heritage Sofa",
     slug: "the-heritage-sofa",
     category: "sofa",
-    image: "/image/Sofa/sofa3.jpg",
+    image: "/image/Sofa/sofa3.avif",
     collection: "Living",
 
     description: "Timeless proportions designed for lasting comfort",
@@ -717,7 +717,7 @@ export const products = [
     name: "The Comfort Sofa",
     slug: "the-comfort-sofa",
     category: "sofa",
-    image: "/image/Sofa/sofa4.jpg",
+    image: "/image/Sofa/sofa4.avif",
     collection: "Living",
 
     description: "Generous seating for relaxed everyday living",
@@ -779,7 +779,7 @@ export const products = [
     name: "The Classic Bed",
     slug: "the-classic-bed",
     category: "bed",
-    image: "/image/Bed/bed3.jpg",
+    image: "/image/Bed/bed3.avif",
     collection: "Bedroom",
 
     description: "Balanced proportions for a calm and comfortable bedroom",
@@ -836,7 +836,7 @@ export const products = [
     name: "The Upholstered Bed",
     slug: "the-upholstered-bed",
     category: "bed",
-    image: "/image/Bed/bed4.jpg",
+    image: "/image/Bed/bed4.avif",
     collection: "Bedroom",
 
     description: "Soft detailing paired with a strong architectural frame",
@@ -898,7 +898,7 @@ export const products = [
     name: "The Family Dining Table",
     slug: "the-family-dining-table",
     category: "dining-table",
-    image: "/image/Dining_table/dining1.jpg",
+    image: "/image/Dining_table/dining1.avif",
     collection: "Dining",
 
     description: "A generous table made for everyday gatherings",
@@ -955,7 +955,7 @@ export const products = [
     name: "The Contemporary Dining Table",
     slug: "the-contemporary-dining-table",
     category: "dining-table",
-    image: "/image/Dining_table/dining3.jpg",
+    image: "/image/Dining_table/dining3.avif",
     collection: "Dining",
 
     description: "Clean lines and generous proportions for modern interiors",
@@ -1016,7 +1016,7 @@ export const products = [
     name: "The Dining Chair",
     slug: "the-dining-chair",
     category: "chair",
-    image: "/image/Custom.jpg",
+    image: "/image/Custom.avif",
     collection: "Dining",
 
     description: "Supportive comfort with a refined silhouette",
@@ -1074,7 +1074,7 @@ export const products = [
     name: "The Accent Chair",
     slug: "the-accent-chair",
     category: "chair",
-    image: "/image/Custom.jpg",
+    image: "/image/Custom.avif",
     collection: "Living",
 
     description: "A distinctive seat for quiet corners and refined interiors",
@@ -1136,7 +1136,7 @@ export const products = [
     name: "The Full-Length Mirror",
     slug: "the-full-length-mirror",
     category: "mirror",
-    image: "/image/Mirror/mirror2.jpg",
+    image: "/image/Mirror/mirror2.avif",
     collection: "Bedroom",
 
     description: "A refined full-length mirror for considered interiors",
@@ -1193,7 +1193,7 @@ export const products = [
     name: "The Decorative Mirror",
     slug: "the-decorative-mirror",
     category: "mirror",
-    image: "/image/Mirror/mirror3.jpg",
+    image: "/image/Mirror/mirror3.avif",
     collection: "Artistic",
 
     description: "A crafted reflection with an architectural presence",
@@ -1254,7 +1254,7 @@ export const products = [
     name: "The Custom Storage Unit",
     slug: "the-custom-storage-unit",
     category: "other",
-    image: "/image/Wardrobe.jpg",
+    image: "/image/Wardrobe.avif",
     collection: "Bespoke",
 
     description: "Storage designed around the architecture of your room",
@@ -1313,7 +1313,7 @@ export const products = [
     name: "The Bespoke Cabinet",
     slug: "the-bespoke-cabinet",
     category: "other",
-    image: "/image/Bespoke.jpg",
+    image: "/image/Bespoke.avif",
     collection: "Bespoke",
 
     description: "Storage designed specifically for your space",
@@ -1371,7 +1371,7 @@ export const products = [
     name: "The Modern Side Table",
     slug: "the-modern-side-table",
     category: "other",
-    image: "/image/Livingroom.jpg",
+    image: "/image/Livingroom.avif",
     collection: "Living",
 
     description: "A compact surface with understated character",
@@ -1428,7 +1428,7 @@ export const products = [
     name: "The Entryway Console",
     slug: "the-entryway-console",
     category: "other",
-    image: "/image/bes.jpg",
+    image: "/image/bes.avif",
     collection: "Living",
 
     description: "A refined welcome for the spaces you enter every day",

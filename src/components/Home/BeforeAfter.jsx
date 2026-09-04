@@ -219,7 +219,7 @@ export default function BeforeAfter() {
               src={afterImage}
               alt="Fully styled luxury living room"
               fill
-              priority
+              quality={82}
               sizes="(max-width: 768px) 100vw, 1400px"
               className="
                 object-cover
@@ -288,6 +288,7 @@ export default function BeforeAfter() {
               src={beforeImage}
               alt="Empty living room before styling"
               fill
+              quality={82}
               sizes="(max-width: 768px) 100vw, 1400px"
               className="
                 object-cover

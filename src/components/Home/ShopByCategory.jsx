@@ -7,7 +7,7 @@ const categories = [
     id: "living-room",
     name: "Living Room",
     description: "Comfort, character and considered design.",
-    image: "/image/Livingroom.jpg",
+    image: "/image/Livingroom.avif",
     href: "/products?category=living-room",
     number: "01",
   },
@@ -15,7 +15,7 @@ const categories = [
     id: "bedroom",
     name: "Bedroom",
     description: "Quiet spaces designed for better living.",
-    image: "/image/Bedroom.jpg",
+    image: "/image/Bedroom.avif",
     href: "/products?category=bedroom",
     number: "02",
   },
@@ -23,7 +23,7 @@ const categories = [
     id: "dining",
     name: "Dining",
     description: "Gather, share and make every moment matter.",
-    image: "/image/Diningroom.jpg",
+    image: "/image/Diningroom.avif",
     href: "/products?category=dining",
     number: "03",
   },
@@ -31,7 +31,7 @@ const categories = [
     id: "all",
     name: "All Pieces",
     description: "Curated pieces for beautifully lived spaces.",
-    image: "/image/Wardrobe.jpg",
+    image: "/image/Wardrobe.avif",
     href: "/products",
     number: "04",
   },
@@ -41,13 +41,14 @@ export default function ShopByCategory() {
   return (
     <section
       id="categories"
-      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--surface)] py-20 sm:py-24 lg:py-32"
+      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--ivory)] py-20 sm:py-24 lg:py-32"
     >
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
         {/* Section Header */}
         <Reveal className="mb-10 sm:mb-14 lg:mb-16">
           <div className="flex items-end justify-between gap-6">
             {/* Left — Main Title */}
+            
             <div>
               <h2 className="serif text-4xl leading-[0.9] tracking-[-0.025em] text-[var(--deep-brown)] sm:text-4xl lg:text-[3.5rem]">
                 <span className="relative inline-block">Category</span>

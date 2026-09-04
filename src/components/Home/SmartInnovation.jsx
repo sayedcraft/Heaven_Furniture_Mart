@@ -60,7 +60,7 @@ export default function SmartInnovation() {
             <div className="group relative overflow-hidden bg-[var(--wood-tan)] rounded-[var(--image-radius)]">
               <div className="image-wrap relative aspect-[1.35] sm:aspect-[1.55] lg:aspect-[1.65]">
                 <Image
-                  src="/image/Office.jpg"
+                  src="/image/Office.avif"
                   alt="Modern workspace furniture by Heaven Furniture Mart"
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"

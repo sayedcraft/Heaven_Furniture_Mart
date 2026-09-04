@@ -20,6 +20,7 @@ export default function ProductCard({
           src={product.image}
           alt={`${product.name}, ${product.category} furniture by Heaven Furniture Mart`}
           fill
+          quality={80}
           sizes={
             variant === "large"
               ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

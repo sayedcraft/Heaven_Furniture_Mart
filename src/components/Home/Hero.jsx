@@ -42,6 +42,7 @@ export default function Hero() {
               alt="Heaven Furniture Mart premium furniture interior"
               fill
               priority={index === 0}
+              quality={85}
               sizes="100vw"
               className="object-cover object-center"
             />

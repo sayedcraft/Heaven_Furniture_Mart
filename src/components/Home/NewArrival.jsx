@@ -7,7 +7,7 @@ const newArrivals = [
     id: "new-1",
     name: "The Modern Settee",
     category: "Sofa",
-    image: "/image/Livingroom.jpg",
+    image: "/image/Livingroom.avif",
     description: "Contemporary comfort meets classic proportions.",
     tag: "New",
   },
@@ -15,7 +15,7 @@ const newArrivals = [
     id: "new-2",
     name: "The Platform Bed",
     category: "Bed",
-    image: "/image/Bedroom.jpg",
+    image: "/image/Bedroom.avif",
     description: "Minimalist design with maximum comfort.",
     tag: "New",
   },
@@ -23,7 +23,7 @@ const newArrivals = [
     id: "new-3",
     name: "The Extending Table",
     category: "Dining",
-    image: "/image/Diningroom.jpg",
+    image: "/image/Diningroom.avif",
     description: "Adaptable elegance for every occasion.",
     tag: "Limited",
   },
@@ -31,7 +31,7 @@ const newArrivals = [
     id: "new-4",
     name: "The Library Shelving",
     category: "Storage",
-    image: "/image/Wardrobe.jpg",
+    image: "/image/Wardrobe.avif",
     description: "Display and storage refined to an art.",
     tag: "New",
   },
@@ -87,7 +87,7 @@ export default function NewArrival() {
                   src={hero.image}
                   alt={hero.name}
                   fill
-                  priority
+                  quality={85}
                   sizes="(max-width: 1024px) 100vw, 65vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.045]"
                 />
@@ -177,23 +177,33 @@ export default function NewArrival() {
 
         <div className="mt-12 sm:mt-16 lg:mt-20">
           {/* Section Title */}
-
           <Reveal
-            className="
-          mb-7
-          flex
-          items-center
-          justify-between
-          border-b
-          border-[var(--line)]
-          pb-5
-          sm:mb-8
-        "
-          >
-            <span className="serif text-3xl font-normal tracking-tight text-[var(--deep-brown)] sm:text-4xl lg:text-5xl">
-              More new arrivals
-            </span>
-          </Reveal>
+                      className="
+                        mb-8
+                        sm:mb-10
+                        md:mb-12
+                        lg:mb-14
+                      "
+                    >
+                      <div className="flex items-end justify-between gap-5">
+                        <h2
+                          className="
+                              serif
+                              text-[2.4rem]
+                              leading-[0.9]
+                              tracking-tight
+                              text-[var(--deep-brown)]
+                              sm:text-5xl
+                              md:text-6xl
+                              lg:text-7xl
+                            "
+                        >
+                          More new arrivals
+                        </h2>
+                      </div>
+                    </Reveal>
+
+          
 
           {/* Products Grid */}
 

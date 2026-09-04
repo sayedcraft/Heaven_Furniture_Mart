@@ -43,6 +43,7 @@ export default async function ProductDetails({ params }) {
               alt={`${product.name}, ${product.category.replace("-", " ")} furniture`}
               fill
               priority
+              quality={88}
               sizes="(max-width: 1024px) 100vw, 55vw"
               className="object-cover"
             />
