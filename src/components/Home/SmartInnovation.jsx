@@ -107,11 +107,11 @@ export default function SmartInnovation() {
           {/* Section label */}
           <Reveal>
             <div className="flex items-center justify-between border-b border-[var(--line)] py-5">
-              <span className="text-[1.5rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)]">
+              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--brass)]">
                 The innovation system
               </span>
 
-              <span className="text-[1rem] uppercase tracking-[0.18em] text-[var(--brown)]">
+              <span className="text-xs uppercase tracking-[0.18em] text-[var(--brown)]">
                 04 principles
               </span>
             </div>

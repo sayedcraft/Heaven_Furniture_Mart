@@ -41,7 +41,7 @@ export default function ShopByCategory() {
   return (
     <section
       id="categories"
-      className="relative overflow-hidden border-t border-[var(--line)] bg-[#f8f6f2] py-20 sm:py-24 lg:py-32"
+      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--surface)] py-20 sm:py-24 lg:py-32"
     >
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
         {/* Section Header */}
@@ -73,7 +73,7 @@ export default function ShopByCategory() {
           {categories.map((category, index) => (
             <Reveal key={category.id} delay={index * 90} variant="clip">
               <Link href={category.href} className="group block">
-                <div className="image-wrap relative aspect-[0.82] overflow-hidden rounded-[var(--image-radius)] bg-[#e8e2d8]">
+                <div className="image-wrap relative aspect-[0.82] overflow-hidden rounded-[var(--image-radius)] bg-[var(--sand)]">
                   {/* Image */}
                   <Image
                     src={category.image}

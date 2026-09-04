@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f0e8;
-  --foreground: #241c17;
-  --ivory: #f5f0e8;
-  --deep-brown: #241c17;
-  --brown: #4a3a30;
-  --brass: #b8955a;
-  --line: rgba(36, 28, 23, 0.12);
-  --white: #fffcf7;
-  --taupe: #b8a99a;
-  --sand: #ded2c2;
-  --wood-tan: #b5a18b;
-  --surface: #ede4d8;
-  --image-radius: 18px;
+  /* ── Warm editorial palette ── */
+  --background: #f4ede2;
+  --foreground: #231b14;
+  --ivory:      #f4ede2;
+  --deep-brown: #231b14;
+  --brown:      #4e3d30;
+  --brass:      #a8895a;
+  --line:       rgba(35, 27, 20, 0.10);
+  --white:      #fffcf7;
+  --taupe:      #b5a494;
+  --sand:       #ddd0bc;
+  --wood-tan:   #b5a18b;
+  --surface:    #ece0d0;
+  --image-radius: 14px;
 }
 
 @theme inline {
@@ -30,11 +31,10 @@ body {
   color: var(--deep-brown);
   font-family: var(--font-manrope), sans-serif;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.65;
   text-rendering: optimizeLegibility;
-  background-image:
-    radial-gradient(circle at top, rgba(184, 169, 154, 0.12), transparent 38%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+  /* Single subtle warm radial — keeps the depth without looking flashy */
+  background-image: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(180, 160, 130, 0.10) 0%, transparent 60%);
 }
 
 * { box-sizing: border-box; }
@@ -48,10 +48,11 @@ button, input, textarea, select { font: inherit; }
 
 .eyebrow {
   color: var(--brass);
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
+  opacity: 0.9;
 }
 
 .line-link { position: relative; }
@@ -75,9 +76,9 @@ button, input, textarea, select { font: inherit; }
 }
 .image-wrap img {
   border-radius: var(--image-radius);
-  transition: transform 1200ms cubic-bezier(.2,.7,.2,1);
+  transition: transform 1400ms cubic-bezier(.16,.6,.2,1);
 }
-.image-wrap:hover img { transform: scale(1.05) translate3d(1%, -1%, 0); }
+.image-wrap:hover img { transform: scale(1.045) translate3d(0.5%, -0.5%, 0); }
 
  iframe { border-radius: var(--image-radius); }
 
@@ -99,9 +100,9 @@ button, input, textarea, select { font: inherit; }
 .scroll-progress { position: fixed; right: 14px; top: 50%; z-index: 40; width: 1px; height: 72px; background: rgba(168,138,88,.25); transform: translateY(-50%); }
 .scroll-progress span { display: block; width: 1px; background: var(--brass); transition: height 180ms ease-out; }
 
-.benefit-row { position: relative; transition: padding-left 400ms cubic-bezier(.2,.7,.2,1), background-color 400ms ease; }
-.benefit-row::before { content: ""; position: absolute; inset: -1px auto -1px 0; width: 2px; background: var(--brass); transform: scaleY(0); transform-origin: bottom; transition: transform 400ms ease; }
-.benefit-row:hover, .benefit-row:focus-within { padding-left: 12px; background: rgba(168,138,88,.06); }
+.benefit-row { position: relative; transition: padding-left 450ms cubic-bezier(.2,.7,.2,1), background-color 450ms ease; }
+.benefit-row::before { content: ""; position: absolute; inset: -1px auto -1px 0; width: 2px; background: var(--brass); transform: scaleY(0); transform-origin: bottom; transition: transform 450ms ease; }
+.benefit-row:hover, .benefit-row:focus-within { padding-left: 12px; background: rgba(160,130,80,.05); }
 .benefit-row:hover::before, .benefit-row:focus-within::before { transform: scaleY(1); }
 .benefit-row > span { transition: transform 400ms ease; }
 .benefit-row:hover > span { transform: translateX(4px); }

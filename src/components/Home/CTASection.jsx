@@ -16,7 +16,7 @@ export default function CTASection() {
         {/* Top label */}
         <Reveal>
           <div className="mb-16 flex items-center gap-4 sm:mb-20">
-            <span className="text-[1.2rem] font-bold uppercase tracking-[0.22em] text-[var(--brown)]">
+            <span className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--brown)]">
               Begin your journey
             </span>
           </div>

@@ -33,10 +33,10 @@ export default function Home() {
 
       <FlagshipFurniture />
 
-      <PopularFurniture />
 
       <ArtisticFurniture />
 
+      <PopularFurniture />
       <BespokeHighlight />
 
       <NewArrival />

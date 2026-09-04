@@ -16,7 +16,7 @@ export default function Button({
     dark: "bg-[var(--deep-brown)] text-[var(--ivory)] hover:bg-[var(--brown)]",
   };
 
-  const baseClass = `inline-flex min-h-12 items-center justify-center px-6 text-[0.68rem] font-bold uppercase tracking-[0.16em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brass)] ${styles[variant]} ${className}`;
+  const baseClass = `inline-flex min-h-10 items-center justify-center rounded-sm px-6 text-[0.67rem] font-semibold uppercase tracking-[0.16em] transition-colors duration-350 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brass)] ${styles[variant]} ${className}`;
 
   if (href) {
     return (
