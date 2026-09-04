@@ -190,7 +190,7 @@ export default function NewArrival() {
           sm:mb-8
         "
           >
-            <span className="serif text-3xl font-normal tracking-tight text-[var(--brass)] sm:text-4xl lg:text-5xl">
+            <span className="serif text-3xl font-normal tracking-tight text-[var(--deep-brown)] sm:text-4xl lg:text-5xl">
               More new arrivals
             </span>
           </Reveal>

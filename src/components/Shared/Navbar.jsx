@@ -51,7 +51,16 @@ export default function Navbar() {
       >
         <Link
           href="/"
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            setOpen(false);
+
+            setTimeout(() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }, 100);
+          }}
           className="group flex-shrink-0 leading-none"
         >
           <span
@@ -67,23 +76,53 @@ export default function Navbar() {
             Furniture Mart
           </span>
         </Link>
-
-        <div className="hidden items-center gap-10 lg:flex">
+        <div className="hidden items-center gap-12 lg:flex">
           {mainLinks.map(([label, href]) => (
             <Link
               key={label}
               href={href}
-              className="line-link text-[0.7rem] font-medium uppercase tracking-[0.14em] transition-colors duration-300 hover:text-[var(--brass)]"
+              className="
+        line-link
+        text-[0.78rem]
+        font-semibold
+        uppercase
+        tracking-[0.16em]
+        transition-all
+        duration-300
+        hover:-translate-y-[1px]
+        hover:text-[var(--brass)]
+      "
             >
               {label}
             </Link>
           ))}
         </div>
-
         <div className="hidden items-center gap-4 md:flex">
-          <Button href="/contact">Contact</Button>
+          <Button
+            href="/contact"
+            className="
+      border
+      border-[var(--brass)]
+      bg-[var(--brass)]
+      px-6
+      py-3
+      text-sm
+      font-semibold
+      uppercase
+      tracking-[0.12em]
+      text-white
+      shadow-[0_4px_15px_rgba(0,0,0,0.12)]
+      transition-all
+      duration-300
+      hover:-translate-y-0.5
+      hover:bg-transparent
+      hover:text-[var(--brass)]
+      hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)]
+    "
+          >
+            Contact
+          </Button>
         </div>
-
         <button
           type="button"
           onClick={() => setOpen(!open)}

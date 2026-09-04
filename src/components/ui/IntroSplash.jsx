@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 export default function IntroSplash() {
   const [show, setShow] = useState(true);
   const [animate, setAnimate] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const startTimer = setTimeout(() => {
@@ -13,11 +14,12 @@ export default function IntroSplash() {
 
     const closeTimer = setTimeout(() => {
       setAnimate(false);
-    }, 2800);
+      setFadeOut(true);
+    }, 2300);
 
     const removeTimer = setTimeout(() => {
       setShow(false);
-    }, 3500);
+    }, 3000);
 
     return () => {
       clearTimeout(startTimer);
@@ -36,7 +38,7 @@ export default function IntroSplash() {
         bg-[var(--deep-brown)]
         px-6
         transition-opacity duration-700 ease-in-out
-        ${animate ? "opacity-100" : "opacity-0"}
+        ${fadeOut ? "opacity-0" : "opacity-100"}
       `}
     >
       <div className="w-full max-w-4xl text-center text-white">
@@ -44,10 +46,7 @@ export default function IntroSplash() {
         <div
           className={`
             transition-all duration-1000 ease-out
-            ${animate
-              ? "translate-y-0 opacity-100"
-              : "translate-y-6 opacity-0"
-            }
+            ${animate ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}
           `}
         >
           <div
@@ -80,10 +79,7 @@ export default function IntroSplash() {
           className={`
             mx-auto my-8 h-[2px] bg-[var(--brass)]
             transition-all duration-1000 delay-300 ease-out
-            ${animate
-              ? "w-24 opacity-100"
-              : "w-0 opacity-0"
-            }
+            ${animate ? "w-24 opacity-100" : "w-0 opacity-0"}
           `}
         />
 
@@ -97,10 +93,7 @@ export default function IntroSplash() {
             text-white/85
             transition-all duration-1000 delay-500 ease-out
             sm:text-xs
-            ${animate
-              ? "translate-y-0 opacity-100"
-              : "translate-y-4 opacity-0"
-            }
+            ${animate ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
           `}
         >
           Designed · Crafted · Customized
