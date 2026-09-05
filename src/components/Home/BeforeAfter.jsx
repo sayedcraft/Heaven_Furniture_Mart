@@ -37,7 +37,9 @@ export default function BeforeAfter() {
   const handleKeyDown = useCallback((event) => {
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       event.preventDefault();
+
       const direction = event.key === "ArrowRight" ? 1 : -1;
+
       setSliderPos((current) =>
         Math.max(0, Math.min(100, current + direction * 5)),
       );
@@ -157,14 +159,13 @@ export default function BeforeAfter() {
               mx-auto
               max-w-4xl
               text-center
-              text-4xl
+              text-3xl
               leading-[0.95]
               tracking-tight
               text-[var(--deep-brown)]
-              sm:text-5xl
-              md:text-6xl
-              lg:text-7xl
-              xl:text-[5.5rem]
+              sm:text-4xl
+              md:text-5xl
+              lg:text-[3.2rem]
             "
           >
             From empty space to{" "}
@@ -221,19 +222,14 @@ export default function BeforeAfter() {
               fill
               quality={82}
               sizes="(max-width: 768px) 100vw, 1400px"
-              className="
-                object-cover
-                object-center
-              "
+              className="object-cover object-center"
               draggable={false}
             />
 
             {/* Subtle overlay */}
-
             <div className="pointer-events-none absolute inset-0 bg-[var(--deep-brown)]/[0.03]" />
 
             {/* AFTER LABEL */}
-
             <div
               className="
                 pointer-events-none
@@ -259,12 +255,12 @@ export default function BeforeAfter() {
               >
                 <span
                   className="
-                    text-[9px]
+                    text-[0.55rem]
                     font-medium
                     uppercase
-                    tracking-[0.3em]
+                    tracking-[0.25em]
                     text-[var(--ivory)]
-                    sm:text-[10px]
+                    sm:text-[0.6rem]
                   "
                 >
                   After
@@ -290,15 +286,11 @@ export default function BeforeAfter() {
               fill
               quality={82}
               sizes="(max-width: 768px) 100vw, 1400px"
-              className="
-                object-cover
-                object-center
-              "
+              className="object-cover object-center"
               draggable={false}
             />
 
             {/* BEFORE LABEL */}
-
             <div
               className="
                 pointer-events-none
@@ -324,12 +316,12 @@ export default function BeforeAfter() {
               >
                 <span
                   className="
-                    text-[9px]
+                    text-[0.55rem]
                     font-medium
                     uppercase
-                    tracking-[0.3em]
+                    tracking-[0.25em]
                     text-[var(--deep-brown)]
-                    sm:text-[10px]
+                    sm:text-[0.6rem]
                   "
                 >
                   Before
@@ -357,18 +349,15 @@ export default function BeforeAfter() {
               left: `${sliderPos}%`,
             }}
           >
-            {/* =================================================
-                SLIDER HANDLE
-            ================================================= */}
-
+            {/* SLIDER HANDLE */}
             <div
               className={`
                 absolute
                 left-1/2
                 top-1/2
                 flex
-                h-12
-                w-12
+                h-11
+                w-11
                 -translate-x-1/2
                 -translate-y-1/2
                 items-center
@@ -380,12 +369,14 @@ export default function BeforeAfter() {
                 shadow-[0_8px_30px_rgba(0,0,0,0.25)]
                 transition-transform
                 duration-200
-                sm:h-14
-                sm:w-14
+                sm:h-13
+                sm:w-13
+                md:h-14
+                md:w-14
                 ${isDragging ? "scale-110" : "group-hover:scale-105"}
               `}
             >
-              <span className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[var(--brown)]">
+              <span className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-[var(--brown)] sm:text-[0.7rem]">
                 ↔
               </span>
             </div>
@@ -395,3 +386,4 @@ export default function BeforeAfter() {
     </section>
   );
 }
+

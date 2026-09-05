@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
@@ -31,20 +32,23 @@ export default function BespokeHighlight() {
     <section
       id="bespoke"
       className="
-        relative overflow-hidden
+        relative
+        overflow-hidden
         border-t border-[var(--brass)]/20
         bg-[var(--deep-brown)]
         py-8
         text-[var(--ivory)]
         sm:py-12
         md:py-16
-        lg:py-24
+        lg:py-20
       "
     >
       <div
         className="
-          relative z-10
-          mx-auto w-full
+          relative
+          z-10
+          mx-auto
+          w-full
           max-w-[1500px]
           px-4
           sm:px-6
@@ -52,17 +56,14 @@ export default function BespokeHighlight() {
           lg:px-12
         "
       >
-        {/* =========================
-            SECTION HEADER
-        ========================== */}
-
+        {/* SECTION HEADER */}
         <Reveal
           className="
             mb-7
             text-center
             sm:mb-10
-            md:mb-14
-            lg:mb-20
+            md:mb-12
+            lg:mb-16
           "
         >
           <h2
@@ -71,13 +72,12 @@ export default function BespokeHighlight() {
               mx-auto
               max-w-4xl
               text-center
-              text-[2.15rem]
-              leading-[0.9]
-              tracking-tight
-              sm:text-5xl
-              md:text-6xl
-              lg:text-7xl
-              xl:text-[5.5rem]
+              text-3xl
+              leading-[0.95]
+              tracking-[-0.025em]
+              sm:text-4xl
+              md:text-5xl
+              lg:text-[3.8rem]
             "
           >
             Your space.
@@ -90,10 +90,7 @@ export default function BespokeHighlight() {
           </h2>
         </Reveal>
 
-        {/* =========================
-            MAIN CONTENT
-        ========================== */}
-
+        {/* MAIN CONTENT */}
         <div
           className="
             grid
@@ -103,10 +100,7 @@ export default function BespokeHighlight() {
             lg:gap-7
           "
         >
-          {/* =========================
-              IMAGE COMPOSITION
-          ========================== */}
-
+          {/* IMAGE COMPOSITION */}
           <div className="min-w-0 lg:col-span-7">
             <div
               className="
@@ -117,10 +111,7 @@ export default function BespokeHighlight() {
                 md:gap-5
               "
             >
-              {/* =====================
-                  MAIN IMAGE
-              ====================== */}
-
+              {/* MAIN IMAGE */}
               <Reveal
                 variant="clip"
                 delay={0}
@@ -135,7 +126,6 @@ export default function BespokeHighlight() {
                     overflow-hidden
                     rounded-[var(--image-radius)]
                     bg-[var(--wood-tan)]
-
                     sm:aspect-[1.18]
                     md:aspect-[1.2]
                     lg:aspect-[1.15]
@@ -162,7 +152,6 @@ export default function BespokeHighlight() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
 
                   {/* Label */}
-
                   <div
                     className="
                       absolute
@@ -185,11 +174,10 @@ export default function BespokeHighlight() {
                         tracking-[0.14em]
                         text-[var(--ivory)]/90
                         backdrop-blur-sm
-
                         sm:px-3
                         sm:py-2
-                        sm:text-[0.62rem]
-                        sm:tracking-[0.2em]
+                        sm:text-[0.52rem]
+                        sm:tracking-[0.18em]
                       "
                     >
                       Bespoke Studio
@@ -197,7 +185,6 @@ export default function BespokeHighlight() {
                   </div>
 
                   {/* Arrow */}
-
                   <div
                     className="
                       absolute
@@ -216,18 +203,15 @@ export default function BespokeHighlight() {
                       text-white
                       opacity-100
                       backdrop-blur-sm
-
                       sm:right-5
                       sm:top-5
                       sm:h-9
                       sm:w-9
                       sm:text-sm
-
                       md:right-7
                       md:top-7
                       md:h-10
                       md:w-10
-
                       lg:translate-y-2
                       lg:opacity-0
                       lg:transition-all
@@ -240,7 +224,6 @@ export default function BespokeHighlight() {
                   </div>
 
                   {/* Caption */}
-
                   <div
                     className="
                       absolute
@@ -248,7 +231,6 @@ export default function BespokeHighlight() {
                       left-0
                       right-0
                       p-3
-
                       sm:p-6
                       md:p-7
                     "
@@ -260,9 +242,8 @@ export default function BespokeHighlight() {
                         uppercase
                         tracking-[0.14em]
                         text-white/60
-
-                        sm:text-[0.55rem]
-                        sm:tracking-[0.2em]
+                        sm:text-[0.52rem]
+                        sm:tracking-[0.18em]
                       "
                     >
                       Designed around you
@@ -271,12 +252,11 @@ export default function BespokeHighlight() {
                     <p
                       className="
                         serif
-                        text-base
+                        text-sm
                         leading-tight
                         text-white
-
-                        sm:text-2xl
-                        md:text-3xl
+                        sm:text-xl
+                        md:text-2xl
                       "
                     >
                       Nothing off the shelf.
@@ -285,17 +265,11 @@ export default function BespokeHighlight() {
                 </div>
               </Reveal>
 
-              {/* =====================
-                  SECONDARY IMAGE
-              ====================== */}
-
+              {/* SECONDARY IMAGE */}
               <Reveal
                 variant="clip"
                 delay={140}
-                className="
-                  col-span-8
-                  min-w-0
-                "
+                className="col-span-8 min-w-0"
               >
                 <div
                   className="
@@ -306,7 +280,6 @@ export default function BespokeHighlight() {
                     overflow-hidden
                     rounded-[var(--image-radius)]
                     bg-[var(--wood-tan)]
-
                     sm:aspect-[1.7]
                   "
                 >
@@ -345,10 +318,8 @@ export default function BespokeHighlight() {
                       absolute
                       bottom-2
                       left-2
-
                       sm:bottom-4
                       sm:left-5
-
                       md:bottom-5
                       md:left-6
                     "
@@ -359,9 +330,8 @@ export default function BespokeHighlight() {
                         uppercase
                         tracking-[0.12em]
                         text-white/80
-
-                        sm:text-[0.55rem]
-                        sm:tracking-[0.2em]
+                        sm:text-[0.52rem]
+                        sm:tracking-[0.18em]
                       "
                     >
                       Handcrafted Detail
@@ -370,16 +340,10 @@ export default function BespokeHighlight() {
                 </div>
               </Reveal>
 
-              {/* =====================
-                  EDITORIAL CARD
-              ====================== */}
-
+              {/* EDITORIAL CARD */}
               <Reveal
                 delay={200}
-                className="
-                  col-span-4
-                  min-w-0
-                "
+                className="col-span-4 min-w-0"
               >
                 <div
                   className="
@@ -398,19 +362,15 @@ export default function BespokeHighlight() {
                     p-2.5
                     transition-all
                     duration-500
-
                     sm:min-h-[190px]
                     sm:p-5
-
                     md:min-h-[220px]
                     md:p-6
-
                     hover:border-[var(--brass)]/50
                     hover:bg-white/[0.05]
                   "
                 >
                   {/* Accent */}
-
                   <div className="relative z-10">
                     <span
                       className="
@@ -420,10 +380,8 @@ export default function BespokeHighlight() {
                         bg-[var(--brass)]/50
                         transition-all
                         duration-500
-
                         sm:w-10
                         sm:group-hover:w-16
-
                         group-hover:w-9
                         group-hover:bg-[var(--brass)]
                       "
@@ -431,13 +389,11 @@ export default function BespokeHighlight() {
                   </div>
 
                   {/* Content */}
-
                   <div
                     className="
                       relative
                       z-10
                       mt-2
-
                       sm:mt-8
                       md:mt-10
                     "
@@ -445,12 +401,11 @@ export default function BespokeHighlight() {
                     <h3
                       className="
                         serif
-                        text-[0.9rem]
+                        text-[0.82rem]
                         leading-[1]
                         text-white/90
-
-                        sm:text-2xl
-                        md:text-3xl
+                        sm:text-xl
+                        md:text-2xl
                       "
                     >
                       Crafted
@@ -464,13 +419,12 @@ export default function BespokeHighlight() {
                       className="
                         mt-1
                         hidden
-                        text-[0.55rem]
+                        text-[0.52rem]
                         leading-4
-                        text-white/45
-
+                        text-white/40
                         sm:mt-4
                         sm:block
-                        sm:text-[0.65rem]
+                        sm:text-[0.62rem]
                         sm:leading-5
                       "
                     >
@@ -480,7 +434,6 @@ export default function BespokeHighlight() {
                   </div>
 
                   {/* Bottom */}
-
                   <div
                     className="
                       relative
@@ -493,11 +446,10 @@ export default function BespokeHighlight() {
                       uppercase
                       tracking-[0.1em]
                       text-white/35
-
                       sm:mt-6
                       sm:gap-2
-                      sm:text-[0.5rem]
-                      sm:tracking-[0.18em]
+                      sm:text-[0.48rem]
+                      sm:tracking-[0.16em]
                     "
                   >
                     <span className="h-1 w-1 shrink-0 rounded-full bg-[var(--brass)]" />
@@ -511,16 +463,10 @@ export default function BespokeHighlight() {
             </div>
           </div>
 
-          {/* =========================
-              EDITORIAL CONTENT
-          ========================== */}
-
+          {/* EDITORIAL CONTENT */}
           <Reveal
             delay={180}
-            className="
-              min-w-0
-              lg:col-span-5
-            "
+            className="min-w-0 lg:col-span-5"
           >
             <div
               className="
@@ -528,7 +474,6 @@ export default function BespokeHighlight() {
                 h-full
                 flex-col
                 justify-center
-
                 lg:pl-6
                 xl:pl-10
               "
@@ -541,13 +486,11 @@ export default function BespokeHighlight() {
                   uppercase
                   tracking-[0.14em]
                   text-[var(--brass)]
-
                   sm:mb-5
-                  sm:text-[0.55rem]
-                  sm:tracking-[0.2em]
-
+                  sm:text-[0.52rem]
+                  sm:tracking-[0.18em]
                   lg:mb-6
-                  lg:text-[0.58rem]
+                  lg:text-[0.55rem]
                 "
               >
                 The Bespoke Process
@@ -557,13 +500,11 @@ export default function BespokeHighlight() {
                 className="
                   serif
                   max-w-lg
-                  text-[1.9rem]
+                  text-2xl
                   leading-[0.95]
-
-                  sm:text-4xl
-                  md:text-5xl
-                  lg:text-5xl
-                  xl:text-6xl
+                  sm:text-3xl
+                  md:text-4xl
+                  lg:text-[2.5rem]
                 "
               >
                 Made for your space.
@@ -580,11 +521,9 @@ export default function BespokeHighlight() {
                   text-[0.72rem]
                   leading-5
                   text-white/65
-
                   sm:mt-6
-                  sm:text-sm
-                  sm:leading-7
-
+                  sm:text-[0.82rem]
+                  sm:leading-6
                   md:mt-7
                 "
               >
@@ -593,13 +532,11 @@ export default function BespokeHighlight() {
               </p>
 
               {/* Customization */}
-
               <div
                 className="
                   mt-5
                   border-t
                   border-white/15
-
                   sm:mt-8
                   md:mt-10
                 "
@@ -618,13 +555,10 @@ export default function BespokeHighlight() {
                       py-3
                       transition-all
                       duration-300
-
                       sm:grid-cols-[38px_minmax(0,1fr)_24px]
                       sm:gap-3
                       sm:py-4
-
                       md:grid-cols-[45px_minmax(0,1fr)_24px]
-
                       hover:pl-2
                     "
                   >
@@ -633,8 +567,7 @@ export default function BespokeHighlight() {
                         text-[0.42rem]
                         tracking-[0.12em]
                         text-[var(--brass)]
-
-                        sm:text-[0.55rem]
+                        sm:text-[0.52rem]
                         sm:tracking-[0.16em]
                       "
                     >
@@ -648,9 +581,8 @@ export default function BespokeHighlight() {
                           text-sm
                           leading-tight
                           text-white/90
-
-                          sm:text-lg
-                          md:text-xl
+                          sm:text-base
+                          md:text-[1.05rem]
                         "
                       >
                         {item.title}
@@ -662,8 +594,7 @@ export default function BespokeHighlight() {
                           text-[0.48rem]
                           leading-3.5
                           text-white/40
-
-                          sm:text-[0.65rem]
+                          sm:text-[0.62rem]
                           sm:leading-5
                         "
                       >
@@ -678,9 +609,7 @@ export default function BespokeHighlight() {
                         text-white/30
                         transition-all
                         duration-300
-
                         sm:text-sm
-
                         group-hover:translate-x-1
                         group-hover:text-[var(--brass)]
                       "
@@ -692,12 +621,10 @@ export default function BespokeHighlight() {
               </div>
 
               {/* CTA */}
-
               <div
                 className="
                   mt-5
                   w-full
-
                   sm:mt-8
                   md:mt-10
                 "
@@ -713,3 +640,4 @@ export default function BespokeHighlight() {
     </section>
   );
 }
+

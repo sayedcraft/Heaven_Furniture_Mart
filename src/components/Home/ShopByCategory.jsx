@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
@@ -41,27 +42,25 @@ export default function ShopByCategory() {
   return (
     <section
       id="categories"
-      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--ivory)] py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--ivory)] py-14 sm:py-18 lg:py-22"
     >
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
         {/* SECTION HEADER */}
-        <Reveal className="mb-10 sm:mb-12 lg:mb-14">
+        <Reveal className="mb-9 sm:mb-11 lg:mb-13">
           <div className="flex items-end justify-between gap-6">
             <div>
-
-
-              <h2 className="serif text-4xl leading-[0.9] tracking-[-0.025em] text-[var(--deep-brown)] sm:text-5xl lg:text-[3.8rem]">
+              <h2 className="serif text-3xl leading-[0.95] tracking-[-0.025em] text-[var(--deep-brown)] sm:text-4xl lg:text-[3.2rem]">
                 Shop by Category
               </h2>
             </div>
 
             <Link
               href="/products"
-              className="group mb-1 inline-flex shrink-0 items-center gap-3 text-[0.6rem] font-bold uppercase tracking-[0.16em] text-[var(--deep-brown)] transition-colors duration-300 hover:text-[var(--brass)] sm:text-xs"
+              className="group mb-1 inline-flex shrink-0 items-center gap-2.5 text-[0.58rem] font-bold uppercase tracking-[0.16em] text-[var(--deep-brown)] transition-colors duration-300 hover:text-[var(--brass)] sm:text-[0.62rem] lg:text-[0.65rem]"
             >
               <span>View All</span>
 
-              <span className="text-base text-[var(--brass)] transition-transform duration-300 group-hover:translate-x-1">
+              <span className="text-sm text-[var(--brass)] transition-transform duration-300 group-hover:translate-x-1 sm:text-[0.95rem]">
                 →
               </span>
             </Link>
@@ -98,6 +97,7 @@ export default function ShopByCategory() {
                       translate-y-1
                       items-center
                       justify-center
+                      rounded-full
                       border
                       border-white/50
                       bg-white/10
@@ -111,7 +111,6 @@ export default function ShopByCategory() {
                       group-hover:opacity-100
                       sm:right-5
                       sm:top-5
-                      rounded-full
                     "
                   >
                     ↗
@@ -119,45 +118,42 @@ export default function ShopByCategory() {
                 </div>
 
                 {/* CONTENT BELOW IMAGE */}
-                <div className="border-b border-[var(--line)] py-4 sm:py-5">
+                <div className="border-b border-[var(--line)] py-3.5 sm:py-4">
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
                       <h3
                         className="
                           serif
-                          text-2xl
+                          text-xl
                           leading-none
                           text-[var(--deep-brown)]
                           transition-colors
                           duration-300
                           group-hover:text-[var(--brass)]
-                          sm:text-[1.65rem]
+                          sm:text-[1.4rem]
+                          lg:text-[1.5rem]
                         "
                       >
                         {category.name}
                       </h3>
-
-                      
                     </div>
 
                     {/* SMALL ARROW */}
                     <span
                       className="
-                        mt-1
+                        mt-0.5
                         shrink-0
-                        text-sm
+                        text-xs
                         text-[var(--brass)]
                         transition-transform
                         duration-300
                         group-hover:translate-x-1
+                        sm:text-sm
                       "
                     >
                       →
                     </span>
                   </div>
-
-                  {/* EXPLORE LABEL */}
-                  
                 </div>
               </Link>
             </Reveal>
@@ -167,3 +163,4 @@ export default function ShopByCategory() {
     </section>
   );
 }
+

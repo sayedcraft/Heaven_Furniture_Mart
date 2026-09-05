@@ -49,13 +49,13 @@ export default function MostSelling() {
             <h2
               className="
                 serif
-                text-[2.4rem]
-                leading-[0.9]
-                tracking-tight
+                text-3xl
+                leading-[0.95]
+                tracking-[-0.025em]
                 text-[var(--deep-brown)]
-                sm:text-5xl
-                md:text-6xl
-                lg:text-7xl
+                sm:text-4xl
+                md:text-5xl
+                lg:text-[3.2rem]
               "
             >
               Most Selling
@@ -70,11 +70,9 @@ export default function MostSelling() {
             grid-cols-2
             gap-x-3
             gap-y-8
-
             sm:grid-cols-3
             sm:gap-x-5
             sm:gap-y-10
-
             lg:grid-cols-4
             lg:gap-x-6
             lg:gap-y-12
@@ -162,7 +160,6 @@ export default function MostSelling() {
                             tracking-[0.12em]
                             text-[var(--deep-brown)]
                             backdrop-blur-sm
-
                             sm:px-2.5
                             sm:py-1.5
                             sm:text-[0.45rem]
@@ -196,10 +193,8 @@ export default function MostSelling() {
                         backdrop-blur-sm
                         transition-all
                         duration-500
-
                         group-hover:translate-y-0
                         group-hover:opacity-100
-
                         sm:right-4
                         sm:top-4
                         sm:h-9
@@ -217,12 +212,11 @@ export default function MostSelling() {
                     <p
                       className="
                         mb-1
-                        text-[0.42rem]
+                        text-[0.4rem]
                         font-bold
                         uppercase
                         tracking-[0.14em]
                         text-[var(--brass)]
-
                         sm:text-[0.5rem]
                         sm:tracking-[0.17em]
                       "
@@ -237,14 +231,15 @@ export default function MostSelling() {
                           serif
                           min-w-0
                           truncate
-                          text-[0.95rem]
+                          text-[0.85rem]
                           leading-tight
                           text-[var(--deep-brown)]
                           transition-colors
                           duration-300
                           group-hover:text-[var(--brass)]
-                          sm:text-lg
-                          md:text-xl
+                          sm:text-base
+                          md:text-[1.05rem]
+                          lg:text-[1.1rem]
                         "
                       >
                         {product.name}
@@ -255,14 +250,12 @@ export default function MostSelling() {
                           mt-0.5
                           hidden
                           shrink-0
-                          text-sm
+                          text-xs
                           text-[var(--brass)]
                           opacity-0
                           transition-all
                           duration-300
-
                           sm:block
-
                           group-hover:translate-x-1
                           group-hover:opacity-100
                         "
@@ -289,12 +282,12 @@ export default function MostSelling() {
                         <span
                           className="
                             serif
-                            text-base
+                            text-sm
                             font-medium
                             leading-none
                             text-[var(--deep-brown)]
-
-                            sm:text-lg
+                            sm:text-base
+                            md:text-[1.05rem]
                           "
                         >
                           {formattedPrice}
@@ -302,11 +295,10 @@ export default function MostSelling() {
 
                         <span
                           className="
-                            text-[0.42rem]
+                            text-[0.4rem]
                             uppercase
                             tracking-[0.12em]
                             text-[var(--brown)]
-
                             sm:text-[0.48rem]
                           "
                         >
@@ -337,7 +329,6 @@ export default function MostSelling() {
               border-t
               border-[var(--line)]
               pt-6
-
               sm:pt-7
             "
           >
@@ -348,3 +339,4 @@ export default function MostSelling() {
     </section>
   );
 }
+

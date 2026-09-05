@@ -18,9 +18,9 @@ export default function FlagshipCollection() {
     >
       <div className="mx-auto w-full max-w-[1500px] px-4 sm:px-6 md:px-8 lg:px-12">
         {/* Heading */}
-        <Reveal className="mb-9 sm:mb-12 md:mb-14">
+        <Reveal className="mb-9 sm:mb-11 md:mb-13">
           <div className="max-w-2xl">
-            <h2 className="serif text-[2.35rem] leading-[0.92] tracking-tight text-[var(--deep-brown)] sm:text-5xl md:text-6xl lg:text-7xl">
+            <h2 className="serif text-3xl leading-[0.95] tracking-[-0.025em] text-[var(--deep-brown)] sm:text-4xl md:text-5xl lg:text-[3.2rem]">
               Flagship Collection.
             </h2>
           </div>
@@ -64,21 +64,31 @@ export default function FlagshipCollection() {
                     {/* Arrow */}
                     <span
                       className="
-                        absolute right-2.5 top-2.5
-                        flex h-7 w-7
+                        absolute
+                        right-2.5
+                        top-2.5
+                        flex
+                        h-7
+                        w-7
                         translate-y-2
-                        items-center justify-center
+                        items-center
+                        justify-center
                         rounded-full
-                        border border-white/40
+                        border
+                        border-white/40
                         bg-[var(--deep-brown)]/10
-                        text-xs text-[var(--ivory)]
+                        text-xs
+                        text-[var(--ivory)]
                         opacity-0
                         backdrop-blur-md
-                        transition-all duration-500
+                        transition-all
+                        duration-500
                         group-hover:translate-y-0
                         group-hover:opacity-100
-                        sm:right-4 sm:top-4
-                        sm:h-8 sm:w-8
+                        sm:right-4
+                        sm:top-4
+                        sm:h-8
+                        sm:w-8
                         sm:text-sm
                       "
                     >
@@ -89,7 +99,7 @@ export default function FlagshipCollection() {
                   {/* Product Info */}
                   <div className="mt-3 sm:mt-4">
                     {/* Category */}
-                    <p className="mb-1 text-[0.42rem] font-bold uppercase tracking-[0.14em] text-[var(--brass)] sm:text-[0.55rem] sm:tracking-[0.16em]">
+                    <p className="mb-1 text-[0.42rem] font-bold uppercase tracking-[0.14em] text-[var(--brass)] sm:text-[0.52rem] sm:tracking-[0.16em]">
                       {product.category.replace("-", " ")}
                     </p>
 
@@ -99,14 +109,15 @@ export default function FlagshipCollection() {
                         className="
                           serif
                           min-w-0
-                          text-sm
+                          text-[0.85rem]
                           leading-tight
                           text-[var(--deep-brown)]
                           transition-colors
                           duration-300
                           group-hover:text-[var(--brass)]
-                          sm:text-lg
-                          md:text-xl
+                          sm:text-base
+                          md:text-[1.05rem]
+                          lg:text-[1.1rem]
                         "
                       >
                         {product.name}
@@ -118,7 +129,7 @@ export default function FlagshipCollection() {
                           mt-0.5
                           hidden
                           shrink-0
-                          text-sm
+                          text-xs
                           text-[var(--brass)]
                           opacity-0
                           transition-all
@@ -135,11 +146,11 @@ export default function FlagshipCollection() {
                     {/* Price */}
                     {formattedPrice && (
                       <div className="mt-2 flex items-center justify-between border-t border-[var(--line)] pt-2.5 sm:mt-3 sm:pt-3">
-                        <span className="serif text-base font-medium text-[var(--deep-brown)] sm:text-lg">
+                        <span className="serif text-sm font-medium text-[var(--deep-brown)] sm:text-base md:text-[1.05rem]">
                           {formattedPrice}
                         </span>
 
-                        <span className="text-[0.45rem] uppercase tracking-[0.12em] text-[var(--brown)] sm:text-[0.52rem]">
+                        <span className="text-[0.42rem] uppercase tracking-[0.12em] text-[var(--brown)] sm:text-[0.48rem]">
                           View piece
                         </span>
                       </div>
@@ -161,3 +172,4 @@ export default function FlagshipCollection() {
     </section>
   );
 }
+
