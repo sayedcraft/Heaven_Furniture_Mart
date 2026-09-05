@@ -29,29 +29,29 @@ export default function Home() {
 
       <Hero />
 
-      <ShopByCategory /><hr />
+      <ShopByCategory />
 
-      <FlagshipFurniture /> <hr />
+      <FlagshipFurniture />
 
-      <ArtisticFurniture /> <hr />
+      <ArtisticFurniture />
 
-      <PopularFurniture /> <hr />
+      <PopularFurniture />
 
-      <BespokeHighlight /> <hr />
+      <BespokeHighlight />
 
-      <NewArrival /> <hr />
+      <NewArrival />
 
-      <VideoShowcase /> <hr />
+      <VideoShowcase />
 
-      <BeforeAfter></BeforeAfter> <hr />
+      <BeforeAfter></BeforeAfter>
 
-      <SmartInnovation /> <hr />
+      <SmartInnovation />
 
-      <Showroom /> <hr />
+      <Showroom />
 
-      <BrandIntro /> <hr />
+      <BrandIntro />
 
-      <SocialProof /> <hr />
+      <SocialProof />
 
       <MapSection></MapSection>
     </>

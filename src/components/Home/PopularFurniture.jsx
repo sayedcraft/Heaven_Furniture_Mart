@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { getProductsByCollection } from "@/data/products";
@@ -35,10 +36,7 @@ export default function MostSelling() {
           lg:px-12
         "
       >
-        {/* =====================================================
-            SECTION HEADER
-        ====================================================== */}
-
+        {/* SECTION HEADER */}
         <Reveal
           className="
             mb-8
@@ -50,25 +48,22 @@ export default function MostSelling() {
           <div className="flex items-end justify-between gap-5">
             <h2
               className="
-                  serif
-                  text-[2.4rem]
-                  leading-[0.9]
-                  tracking-tight
-                  text-[var(--deep-brown)]
-                  sm:text-5xl
-                  md:text-6xl
-                  lg:text-7xl
-                "
+                serif
+                text-[2.4rem]
+                leading-[0.9]
+                tracking-tight
+                text-[var(--deep-brown)]
+                sm:text-5xl
+                md:text-6xl
+                lg:text-7xl
+              "
             >
               Most Selling
             </h2>
           </div>
         </Reveal>
 
-        {/* =====================================================
-            PRODUCT GRID
-        ====================================================== */}
-
+        {/* PRODUCT GRID */}
         <div
           className="
             grid
@@ -85,162 +80,169 @@ export default function MostSelling() {
             lg:gap-y-12
           "
         >
-          {products.map((product, index) => (
-            <Reveal
-              key={product.id}
-              delay={Math.min(index * 70, 500)}
-              className="min-w-0"
-            >
-              <article className="group cursor-pointer">
-                {/* =============================================
-                    PRODUCT IMAGE
-                ============================================== */}
+          {products.map((product, index) => {
+            const formattedPrice =
+              typeof product.price === "number"
+                ? `৳${product.price.toLocaleString("en-BD")}`
+                : product.priceLabel || "";
 
-                <div
-                  className="
-                    image-wrap
-                    relative
-                    aspect-[0.82]
-                    w-full
-                    overflow-hidden
-                    bg-[var(--surface)]
-
-                    sm:aspect-[0.82]
-
-                    lg:aspect-[0.82]
-                  "
+            return (
+              <Reveal
+                key={product.id}
+                delay={Math.min(index * 70, 500)}
+                className="min-w-0"
+              >
+                <Link
+                  href="/products"
+                  className="group block cursor-pointer"
                 >
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    sizes="
-                      (max-width: 640px) 50vw,
-                      (max-width: 1024px) 33vw,
-                      25vw
-                    "
-                    className="
-                      object-cover
-                      transition-transform
-                      duration-[1000ms]
-                      ease-out
-                      group-hover:scale-[1.055]
-                    "
-                  />
-
-                  {/* Subtle overlay */}
-
+                  {/* PRODUCT IMAGE */}
                   <div
                     className="
-                      absolute
-                      inset-0
-                      bg-[var(--deep-brown)]/10
-                      opacity-0
-                      transition-opacity
-                      duration-500
-                      group-hover:opacity-100
+                      image-wrap
+                      relative
+                      aspect-[0.82]
+                      w-full
+                      overflow-hidden
+                      bg-[var(--surface)]
                     "
-                  />
+                  >
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="
+                        (max-width: 640px) 50vw,
+                        (max-width: 1024px) 33vw,
+                        25vw
+                      "
+                      className="
+                        object-cover
+                        transition-transform
+                        duration-[1000ms]
+                        ease-out
+                        group-hover:scale-[1.055]
+                      "
+                    />
 
-                  {/* =========================================
-                      MOST SELLING LABEL
-                  ========================================== */}
-
-                  {index < 3 && (
+                    {/* SUBTLE OVERLAY */}
                     <div
                       className="
                         absolute
-                        left-2.5
-                        top-2.5
-
-                        sm:left-4
-                        sm:top-4
+                        inset-0
+                        bg-[var(--deep-brown)]/10
+                        opacity-0
+                        transition-opacity
+                        duration-500
+                        group-hover:opacity-100
                       "
-                    >
-                      <span
-                        className="
-                          inline-flex
-                          items-center
-                          bg-[var(--ivory)]/90
-                          px-2
-                          py-1
-                          text-[0.38rem]
-                          font-bold
-                          uppercase
-                          tracking-[0.12em]
-                          text-[var(--deep-brown)]
-                          backdrop-blur-sm
+                    />
 
-                          sm:px-2.5
-                          sm:py-1.5
-                          sm:text-[0.45rem]
-                          sm:tracking-[0.16em]
+                    {/* BEST SELLER */}
+                    {index < 3 && (
+                      <div
+                        className="
+                          absolute
+                          left-2.5
+                          top-2.5
+                          sm:left-4
+                          sm:top-4
                         "
                       >
-                        Best Seller
-                      </span>
-                    </div>
-                  )}
+                        <span
+                          className="
+                            inline-flex
+                            items-center
+                            bg-[var(--ivory)]/90
+                            px-2
+                            py-1
+                            text-[0.38rem]
+                            font-bold
+                            uppercase
+                            tracking-[0.12em]
+                            text-[var(--deep-brown)]
+                            backdrop-blur-sm
 
-                  {/* =========================================
-                      ARROW
-                  ========================================== */}
+                            sm:px-2.5
+                            sm:py-1.5
+                            sm:text-[0.45rem]
+                            sm:tracking-[0.16em]
+                          "
+                        >
+                          Best Seller
+                        </span>
+                      </div>
+                    )}
 
-                  <span
-                    className="
-                      absolute
-                      right-2.5
-                      top-2.5
-                      flex
-                      h-7
-                      w-7
-                      translate-y-2
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-white/40
-                      bg-[var(--deep-brown)]/15
-                      text-xs
-                      text-white
-                      opacity-0
-                      backdrop-blur-sm
-                      transition-all
-                      duration-500
+                    {/* IMAGE ARROW */}
+                    <span
+                      className="
+                        absolute
+                        right-2.5
+                        top-2.5
+                        flex
+                        h-7
+                        w-7
+                        translate-y-2
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        border-white/40
+                        bg-[var(--deep-brown)]/15
+                        text-xs
+                        text-white
+                        opacity-0
+                        backdrop-blur-sm
+                        transition-all
+                        duration-500
 
-                      group-hover:translate-y-0
-                      group-hover:opacity-100
+                        group-hover:translate-y-0
+                        group-hover:opacity-100
 
-                      sm:right-4
-                      sm:top-4
-                      sm:h-9
-                      sm:w-9
-                      sm:text-sm
-                    "
-                  >
-                    ↗
-                  </span>
-                </div>
+                        sm:right-4
+                        sm:top-4
+                        sm:h-9
+                        sm:w-9
+                        sm:text-sm
+                      "
+                    >
+                      ↗
+                    </span>
+                  </div>
 
-                {/* =============================================
-                    PRODUCT INFORMATION
-                ============================================== */}
+                  {/* PRODUCT INFORMATION */}
+                  <div className="mt-3 sm:mt-4">
+                    {/* CATEGORY */}
+                    <p
+                      className="
+                        mb-1
+                        text-[0.42rem]
+                        font-bold
+                        uppercase
+                        tracking-[0.14em]
+                        text-[var(--brass)]
 
-                <div className="mt-3 sm:mt-4">
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="min-w-0">
+                        sm:text-[0.5rem]
+                        sm:tracking-[0.17em]
+                      "
+                    >
+                      {product.category.replace("-", " ")}
+                    </p>
+
+                    {/* NAME + ARROW */}
+                    <div className="flex items-start justify-between gap-2">
                       <h3
                         className="
                           serif
+                          min-w-0
                           truncate
                           text-[0.95rem]
                           leading-tight
                           text-[var(--deep-brown)]
                           transition-colors
                           duration-300
-
                           group-hover:text-[var(--brass)]
-
                           sm:text-lg
                           md:text-xl
                         "
@@ -248,56 +250,78 @@ export default function MostSelling() {
                         {product.name}
                       </h3>
 
-                      <p
+                      <span
                         className="
-                          mt-1
-                          truncate
-                          text-[0.42rem]
-                          font-bold
-                          uppercase
-                          tracking-[0.14em]
-                          text-[var(--brown)]/70
+                          mt-0.5
+                          hidden
+                          shrink-0
+                          text-sm
+                          text-[var(--brass)]
+                          opacity-0
+                          transition-all
+                          duration-300
 
-                          sm:text-[0.5rem]
-                          sm:tracking-[0.17em]
+                          sm:block
+
+                          group-hover:translate-x-1
+                          group-hover:opacity-100
                         "
                       >
-                        {product.category}
-                      </p>
+                        ↗
+                      </span>
                     </div>
 
-                    {/* Desktop hover arrow */}
+                    {/* PRICE */}
+                    {formattedPrice && (
+                      <div
+                        className="
+                          mt-2.5
+                          flex
+                          items-center
+                          justify-between
+                          border-t
+                          border-[var(--line)]
+                          pt-2.5
+                          sm:mt-3
+                          sm:pt-3
+                        "
+                      >
+                        <span
+                          className="
+                            serif
+                            text-base
+                            font-medium
+                            leading-none
+                            text-[var(--deep-brown)]
 
-                    <span
-                      className="
-                        mt-0.5
-                        hidden
-                        shrink-0
-                        text-sm
-                        text-[var(--brass)]
-                        opacity-0
-                        transition-all
-                        duration-300
+                            sm:text-lg
+                          "
+                        >
+                          {formattedPrice}
+                        </span>
 
-                        sm:block
+                        <span
+                          className="
+                            text-[0.42rem]
+                            uppercase
+                            tracking-[0.12em]
+                            text-[var(--brown)]
 
-                        group-hover:translate-x-1
-                        group-hover:opacity-100
-                      "
-                    >
-                      ↗
-                    </span>
+                            sm:text-[0.48rem]
+                          "
+                        >
+                          View piece
+                        </span>
+                      </div>
+                    )}
                   </div>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+                </Link>
+              </Reveal>
+            );
+          })}
         </div>
 
-        {/* =====================================================
-            BOTTOM CTA
-        ====================================================== */}
-
+        {/* BOTTOM CTA */}
         <Reveal
           delay={350}
           className="

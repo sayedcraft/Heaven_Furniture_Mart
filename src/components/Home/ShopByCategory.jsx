@@ -41,24 +41,23 @@ export default function ShopByCategory() {
   return (
     <section
       id="categories"
-      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--ivory)] py-20 sm:py-24 lg:py-32"
+      className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--ivory)] py-16 sm:py-20 lg:py-24"
     >
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
-        {/* Section Header */}
-        <Reveal className="mb-10 sm:mb-14 lg:mb-16">
+        {/* SECTION HEADER */}
+        <Reveal className="mb-10 sm:mb-12 lg:mb-14">
           <div className="flex items-end justify-between gap-6">
-            {/* Left — Main Title */}
-            
             <div>
-              <h2 className="serif text-4xl leading-[0.9] tracking-[-0.025em] text-[var(--deep-brown)] sm:text-4xl lg:text-[3.5rem]">
-                <span className="relative inline-block">Category</span>
+
+
+              <h2 className="serif text-4xl leading-[0.9] tracking-[-0.025em] text-[var(--deep-brown)] sm:text-5xl lg:text-[3.8rem]">
+                Shop by Category
               </h2>
             </div>
 
-            {/* Right — View All */}
             <Link
               href="/products"
-              className="group mb-1 inline-flex shrink-0 items-center gap-3 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[var(--deep-brown)] transition-colors duration-300 hover:text-[var(--brass)] sm:text-xl"
+              className="group mb-1 inline-flex shrink-0 items-center gap-3 text-[0.6rem] font-bold uppercase tracking-[0.16em] text-[var(--deep-brown)] transition-colors duration-300 hover:text-[var(--brass)] sm:text-xs"
             >
               <span>View All</span>
 
@@ -69,48 +68,96 @@ export default function ShopByCategory() {
           </div>
         </Reveal>
 
-        {/* Category Grid */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        {/* CATEGORY GRID */}
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {categories.map((category, index) => (
             <Reveal key={category.id} delay={index * 90} variant="clip">
               <Link href={category.href} className="group block">
-                <div className="image-wrap relative aspect-[0.82] overflow-hidden rounded-[var(--image-radius)] bg-[var(--sand)]">
-                  {/* Image */}
+                {/* IMAGE */}
+                <div className="relative aspect-[0.9] overflow-hidden rounded-[var(--image-radius)] bg-[var(--sand)]">
                   <Image
                     src={category.image}
                     alt={category.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.055]"
+                    className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.045]"
                   />
 
-                  {/* Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                  {/* SUBTLE IMAGE OVERLAY */}
+                  <div className="absolute inset-0 bg-[var(--deep-brown)]/0 transition-colors duration-500 group-hover:bg-[var(--deep-brown)]/[0.08]" />
 
-                  {/* Number */}
-                  <span className="absolute left-5 top-5 text-[0.58rem] font-medium tracking-[0.2em] text-white/70 sm:left-6 sm:top-6">
-                    {category.number}
-                  </span>
-
-                  {/* Arrow */}
-                  <div className="absolute right-5 top-5 flex h-9 w-9 -translate-y-2 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:right-6 sm:top-6">
+                  {/* ARROW */}
+                  <div
+                    className="
+                      absolute
+                      right-4
+                      top-4
+                      flex
+                      h-9
+                      w-9
+                      translate-y-1
+                      items-center
+                      justify-center
+                      border
+                      border-white/50
+                      bg-white/10
+                      text-sm
+                      text-white
+                      opacity-0
+                      backdrop-blur-sm
+                      transition-all
+                      duration-500
+                      group-hover:translate-y-0
+                      group-hover:opacity-100
+                      sm:right-5
+                      sm:top-5
+                      rounded-full
+                    "
+                  >
                     ↗
                   </div>
+                </div>
 
-                  {/* Card Content */}
-                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                    <div className="translate-y-1 transition-transform duration-500 group-hover:translate-y-0">
-                      {/* Category Name */}
-                      <h3 className="serif text-2xl leading-tight text-white sm:text-3xl">
+                {/* CONTENT BELOW IMAGE */}
+                <div className="border-b border-[var(--line)] py-4 sm:py-5">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="min-w-0">
+                      <h3
+                        className="
+                          serif
+                          text-2xl
+                          leading-none
+                          text-[var(--deep-brown)]
+                          transition-colors
+                          duration-300
+                          group-hover:text-[var(--brass)]
+                          sm:text-[1.65rem]
+                        "
+                      >
                         {category.name}
                       </h3>
 
-                      {/* Description */}
-                      <p className="mt-2 max-w-[220px] text-xs leading-5 text-white/70 sm:text-sm">
-                        {category.description}
-                      </p>
+                      
                     </div>
+
+                    {/* SMALL ARROW */}
+                    <span
+                      className="
+                        mt-1
+                        shrink-0
+                        text-sm
+                        text-[var(--brass)]
+                        transition-transform
+                        duration-300
+                        group-hover:translate-x-1
+                      "
+                    >
+                      →
+                    </span>
                   </div>
+
+                  {/* EXPLORE LABEL */}
+                  
                 </div>
               </Link>
             </Reveal>

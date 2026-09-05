@@ -19,8 +19,9 @@ export const products = [
     longDescription:
       "The Signature Sofa is designed to become the quiet focal point of a living space. Its balanced proportions, generous seating, and carefully considered upholstery create a piece that feels luxurious without becoming excessive. Built for everyday living, it combines craftsmanship with lasting comfort.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 125000,
+    priceLabel: "৳125,000",
+    priceLevel: 4,
 
     material: "Solid wood frame with premium upholstery",
 
@@ -77,8 +78,9 @@ export const products = [
     longDescription:
       "The Haven Bed combines a strong handcrafted frame with understated detailing. Its generous proportions create a grounded presence while the refined finish keeps the design visually calm. Designed for modern bedrooms where comfort and craftsmanship matter equally.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 98000,
+    priceLabel: "৳98,000",
+    priceLevel: 4,
 
     material: "Solid wood with a hand-finished veneer",
 
@@ -135,8 +137,9 @@ export const products = [
     longDescription:
       "The Dining Statement brings architectural simplicity to the dining room. Its clean silhouette and carefully finished surface create an elegant foundation for everyday meals as well as larger gatherings. The proportions can be adapted to suit different spaces and seating arrangements.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 85000,
+    priceLabel: "৳85,000",
+    priceLevel: 4,
 
     material: "Engineered wood with a natural wood finish",
 
@@ -193,8 +196,9 @@ export const products = [
     longDescription:
       "The Executive Desk is designed for focused work without sacrificing the character of the surrounding interior. Its clean architectural lines, generous working surface, and integrated storage options make it suitable for sophisticated home offices and professional workspaces.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 72000,
+    priceLabel: "৳72,000",
+    priceLevel: 3,
 
     material: "Solid wood and durable matte laminate",
 
@@ -251,8 +255,9 @@ export const products = [
     longDescription:
       "The Media Console combines concealed storage with a refined architectural profile. Designed to keep entertainment spaces visually calm, it offers practical storage while maintaining the character of a premium interior.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 48000,
+    priceLabel: "৳48,000",
+    priceLevel: 3,
 
     material: "Veneered board with solid wood detailing",
 
@@ -313,8 +318,9 @@ export const products = [
     longDescription:
       "The Lounge Chair is designed for moments of quiet comfort. Its supportive frame and tailored upholstery create a relaxed yet sophisticated presence, making it equally suited to living rooms, reading corners, bedrooms, and private lounges.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 32000,
+    priceLabel: "৳32,000",
+    priceLevel: 2,
 
     material: "Solid wood frame with tailored upholstery",
 
@@ -372,8 +378,9 @@ export const products = [
     longDescription:
       "The Wardrobe provides a considered balance between generous storage and refined exterior detailing. The interior can be configured around clothing, accessories, shelves, drawers, and hanging requirements, making it ideal for custom bedroom interiors.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 78000,
+    priceLabel: "৳78,000",
+    priceLevel: 3,
 
     material: "Moisture-resistant board with wood veneer",
 
@@ -431,8 +438,9 @@ export const products = [
     longDescription:
       "The Accent Mirror brings a crafted decorative element to refined interiors. Its clean proportions and wood frame make it suitable for bedrooms, entryways, living rooms, and dressing spaces.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 18000,
+    priceLabel: "৳18,000",
+    priceLevel: 2,
 
     material: "High-clarity mirror with a crafted wood frame",
 
@@ -488,8 +496,9 @@ export const products = [
     longDescription:
       "The Corner Console makes use of overlooked spaces without compromising visual elegance. Its compact proportions and integrated storage make it useful in entryways, hallways, living rooms, and bedrooms.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 28000,
+    priceLabel: "৳28,000",
+    priceLevel: 2,
 
     material: "Veneered board with solid wood accents",
 
@@ -549,8 +558,9 @@ export const products = [
     longDescription:
       "The Sculptural Sofa explores the relationship between furniture and architecture. Its expressive silhouette creates a strong visual identity while maintaining the comfort expected from a premium everyday sofa.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 145000,
+    priceLabel: "৳145,000",
+    priceLevel: 4,
 
     material: "Solid wood frame with premium textured upholstery",
 
@@ -607,8 +617,9 @@ export const products = [
     longDescription:
       "The Statement Bed creates a strong focal point while maintaining the calm atmosphere expected in a bedroom. Its expressive headboard detailing and solid construction make it a distinctive addition to sophisticated interiors.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 115000,
+    priceLabel: "৳115,000",
+    priceLevel: 4,
 
     material: "Solid wood with upholstered headboard detailing",
 
@@ -670,8 +681,9 @@ export const products = [
     longDescription:
       "The Heritage Sofa takes inspiration from timeless furniture proportions while maintaining a clean contemporary character. Its comfortable seating and refined upholstery make it an adaptable centerpiece for both classic and modern interiors.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 89000,
+    priceLabel: "৳89,000",
+    priceLevel: 3,
 
     material: "Solid wood frame with premium fabric upholstery",
 
@@ -728,8 +740,9 @@ export const products = [
     longDescription:
       "The Comfort Sofa is designed around the simple pleasure of sitting well. Generous proportions, supportive cushioning, and a soft tailored appearance make it a natural choice for family living rooms and larger spaces.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 105000,
+    priceLabel: "৳105,000",
+    priceLevel: 4,
 
     material: "Solid wood and engineered wood frame with high-density foam",
 
@@ -790,8 +803,9 @@ export const products = [
     longDescription:
       "The Classic Bed focuses on proportion, durability, and simplicity. Its restrained silhouette allows it to work naturally with different interior styles while its strong frame provides a reliable foundation for everyday use.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 68000,
+    priceLabel: "৳68,000",
+    priceLevel: 3,
 
     material: "Solid wood frame with premium wood veneer",
 
@@ -847,8 +861,9 @@ export const products = [
     longDescription:
       "The Upholstered Bed introduces softness and texture into the bedroom through its tailored headboard and refined frame. It is designed to create a comfortable focal point without overwhelming the surrounding space.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 82000,
+    priceLabel: "৳82,000",
+    priceLevel: 3,
 
     material: "Solid wood frame with premium upholstered headboard",
 
@@ -909,8 +924,9 @@ export const products = [
     longDescription:
       "The Family Dining Table is designed to sit naturally at the heart of the home. Its generous tabletop provides space for everyday meals, celebrations, and long conversations while its timeless design remains easy to pair with different dining chairs.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 62000,
+    priceLabel: "৳62,000",
+    priceLevel: 3,
 
     material: "Solid wood with a durable natural finish",
 
@@ -966,8 +982,9 @@ export const products = [
     longDescription:
       "The Contemporary Dining Table brings a clean architectural character to the dining area. Its simple geometry and refined finish allow it to work as both a functional dining surface and a strong interior design element.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 55000,
+    priceLabel: "৳55,000",
+    priceLevel: 3,
 
     material: "Engineered wood with premium natural wood veneer",
 
@@ -1027,8 +1044,9 @@ export const products = [
     longDescription:
       "The Dining Chair combines a strong wooden frame with a comfortable upholstered seat. Its understated design allows it to complement a variety of dining tables while adding warmth and refinement to the room.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 12500,
+    priceLabel: "৳12,500",
+    priceLevel: 1,
 
     material: "Solid wood frame with upholstered seat",
 
@@ -1085,8 +1103,9 @@ export const products = [
     longDescription:
       "The Accent Chair is designed as a flexible statement piece. Its compact proportions make it suitable for reading corners, bedrooms, living rooms, and reception spaces while its upholstery can be customized to complement the surrounding interior.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 28500,
+    priceLabel: "৳28,500",
+    priceLevel: 2,
 
     material: "Solid wood frame with premium upholstered cushioning",
 
@@ -1147,8 +1166,9 @@ export const products = [
     longDescription:
       "The Full-Length Mirror combines functional clarity with crafted detailing. Its generous proportions make it ideal for dressing areas while the refined frame allows it to become a decorative element within the room.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 24000,
+    priceLabel: "৳24,000",
+    priceLevel: 2,
 
     material: "High-clarity mirror with solid wood frame",
 
@@ -1204,8 +1224,9 @@ export const products = [
     longDescription:
       "The Decorative Mirror works as both a functional mirror and a considered design element. Its crafted frame and adaptable proportions make it suitable for living rooms, bedrooms, entryways, and feature walls.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 21000,
+    priceLabel: "৳21,000",
+    priceLevel: 2,
 
     material: "High-clarity mirror with crafted wood frame",
 
@@ -1265,8 +1286,9 @@ export const products = [
     longDescription:
       "The Custom Storage Unit is designed for interiors where standard furniture cannot fully answer the needs of the space. From open shelving to concealed storage, every element can be configured to create a seamless result.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 65000,
+    priceLabel: "৳65,000",
+    priceLevel: 3,
 
     material: "Premium board with natural wood veneer and solid wood detailing",
 
@@ -1324,8 +1346,9 @@ export const products = [
     longDescription:
       "The Bespoke Cabinet brings together practical storage and refined craftsmanship. Every detail, from the overall proportions to the internal arrangement, can be developed around the architecture and requirements of your room.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 58000,
+    priceLabel: "৳58,000",
+    priceLevel: 3,
 
     material: "Premium wood veneer with solid wood detailing",
 
@@ -1382,8 +1405,9 @@ export const products = [
     longDescription:
       "The Modern Side Table adds a small but considered layer of functionality to an interior. Its compact proportions allow it to sit naturally beside a sofa, lounge chair, or bed while its finish can be adapted to match the wider furniture collection.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 16500,
+    priceLabel: "৳16,500",
+    priceLevel: 2,
 
     material: "Solid wood with premium protective finish",
 
@@ -1439,8 +1463,9 @@ export const products = [
     longDescription:
       "The Entryway Console creates a welcoming transition between the outside world and the home. Its slim proportions provide useful storage and display space without overwhelming the entryway.",
 
-    price: null,
-    priceLabel: "Price on request",
+    price: 32000,
+    priceLabel: "৳32,000",
+    priceLevel: 2,
 
     material: "Veneered board with solid wood accents",
 
