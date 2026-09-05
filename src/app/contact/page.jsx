@@ -26,7 +26,7 @@ const details = [
 export default function Contact() {
   return (
     <main className="bg-[var(--ivory)] text-[var(--deep-brown)]">
-      <section className="px-5 pb-20 pt-36 sm:px-8 sm:pb-28 sm:pt-44 lg:px-12 lg:pb-36">
+      {/* <section className="px-5 pb-20 pt-36 sm:px-8 sm:pb-28 sm:pt-44 lg:px-12 lg:pb-36">
         <div className="mx-auto max-w-[1400px]">
           <Reveal className="max-w-5xl">
             <p className="eyebrow">The studio is listening</p>
@@ -43,7 +43,7 @@ export default function Contact() {
             </p>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
       <section className="border-t border-[var(--line)] px-5 py-20 sm:px-8 sm:py-28 lg:px-12 lg:py-36">
         <div className="mx-auto grid max-w-[1400px] gap-16 lg:grid-cols-12 lg:gap-20">
