@@ -58,7 +58,7 @@ export default function ShopByCategory() {
               href="/products"
               className="group mb-1 inline-flex shrink-0 items-center gap-2.5 text-[0.58rem] font-bold uppercase tracking-[0.16em] text-[var(--deep-brown)] transition-colors duration-300 hover:text-[var(--brass)] sm:text-[0.62rem] lg:text-[0.65rem]"
             >
-              <span>View All</span>
+              <span className='text-sm'>View All</span>
 
               <span className="text-sm text-[var(--brass)] transition-transform duration-300 group-hover:translate-x-1 sm:text-[0.95rem]">
                 →
