@@ -31,6 +31,7 @@ export default function Navbar() {
     ["About", "/about"],
     ["Bespoke", "/#bespoke"],
     ["Showroom", "/showroom"],
+    ["Delivery", "/delivery"],
   ];
 
   const transparentHome = isHomePage && !scrolled;
