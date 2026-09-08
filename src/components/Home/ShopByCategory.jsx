@@ -70,7 +70,7 @@ export default function ShopByCategory() {
         {/* CATEGORY GRID */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {categories.map((category, index) => (
-            <Reveal key={category.id} delay={index * 90} variant="clip">
+            <Reveal key={category.id} delay={index * 60} >
               <Link href={category.href} className="group block">
                 {/* IMAGE */}
                 <div className="relative aspect-[0.9] overflow-hidden rounded-[var(--image-radius)] bg-[var(--sand)]">

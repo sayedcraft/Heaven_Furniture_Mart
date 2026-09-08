@@ -56,7 +56,7 @@ export default function SmartInnovation() {
           </Reveal>
 
           {/* Image */}
-          <Reveal variant="clip" delay={160} className="lg:col-span-7">
+          <Reveal  delay={160} className="lg:col-span-7">
             <div className="group relative overflow-hidden bg-[var(--wood-tan)] rounded-[var(--image-radius)]">
               <div className="image-wrap relative aspect-[1.35] sm:aspect-[1.55] lg:aspect-[1.65]">
                 <Image

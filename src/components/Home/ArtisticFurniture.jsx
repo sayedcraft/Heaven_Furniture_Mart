@@ -45,7 +45,7 @@ export default function ArtisticFurniture() {
         {/* EDITORIAL COMPOSITION */}
         <div className="grid gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-7">
           {/* FEATURED ARTWORK */}
-          <Reveal variant="clip" delay={0} className="relative lg:col-span-7">
+          <Reveal  delay={0} className="relative lg:col-span-7">
             <article className="group relative">
               <div className="image-wrap relative aspect-[0.92] overflow-hidden bg-[var(--wood-tan)] sm:aspect-[1.05] lg:aspect-[0.98]">
                 <Image
@@ -113,7 +113,7 @@ export default function ArtisticFurniture() {
 
             {/* SECONDARY ARTWORK */}
             {secondary && (
-              <Reveal variant="clip" delay={220} className="lg:ml-8">
+              <Reveal  delay={220} className="lg:ml-8">
                 <article className="group">
                   <div className="image-wrap relative aspect-[1.15] overflow-hidden bg-[var(--wood-tan)] sm:aspect-[1.35] lg:aspect-[1.28]">
                     <Image

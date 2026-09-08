@@ -113,7 +113,7 @@ export default function BespokeHighlight() {
             >
               {/* MAIN IMAGE */}
               <Reveal
-                variant="clip"
+                // variant="clip"
                 delay={0}
                 className="col-span-12 min-w-0"
               >
@@ -267,7 +267,7 @@ export default function BespokeHighlight() {
 
               {/* SECONDARY IMAGE */}
               <Reveal
-                variant="clip"
+                // variant="clip"
                 delay={140}
                 className="col-span-8 min-w-0"
               >

@@ -8,7 +8,7 @@ export default function SocialProof() {
       <div className="mx-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-12 lg:gap-24">
           {/* Image */}
-          <Reveal variant="clip" delay={0} className="lg:col-span-5">
+          <Reveal delay={0} className="lg:col-span-5">
             <div className="image-wrap relative aspect-[0.8] overflow-hidden bg-[var(--wood-tan)] lg:aspect-[0.9]">
               <Image
                 src={images.proof}

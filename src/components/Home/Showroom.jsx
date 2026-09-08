@@ -12,7 +12,7 @@ export default function Showroom() {
     >
       {/* Main showroom image */}
       <div className="relative min-h-[560px] sm:min-h-[720px] lg:min-h-[850px]">
-        <Reveal variant="clip" className="absolute inset-0">
+        <Reveal className="absolute inset-0">
           <div className="relative h-full w-full">
             <Image
               src={images.showroom}

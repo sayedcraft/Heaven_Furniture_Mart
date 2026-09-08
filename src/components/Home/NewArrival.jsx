@@ -68,7 +68,7 @@ export default function NewArrival() {
         <div className="grid items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-7">
 
           {/* Featured Image */}
-          <Reveal variant="clip" delay={0} className="lg:col-span-8">
+          <Reveal  delay={0} className="lg:col-span-8">
             <article className="group relative">
               <div className="image-wrap relative aspect-[1.15] overflow-hidden bg-[var(--surface)] sm:aspect-[1.35] lg:aspect-[1.42]">
 
