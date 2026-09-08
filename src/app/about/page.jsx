@@ -40,7 +40,7 @@ export default function About() {
 
       <section className="border-t border-[var(--line)] px-5 py-20 sm:px-8 sm:py-28 lg:px-12 lg:py-36">
         <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-12 lg:gap-16">
-          <Reveal variant="clip" className="lg:col-span-7">
+          <Reveal className="lg:col-span-7">
             <div className="image-wrap relative aspect-[1.05] bg-[var(--wood-tan)] sm:aspect-[1.2]">
               <Image
                 src="/image/Livingroom.avif"
