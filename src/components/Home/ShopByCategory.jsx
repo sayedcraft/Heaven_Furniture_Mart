@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
@@ -8,7 +7,8 @@ const categories = [
     id: "living-room",
     name: "Living Room",
     description: "Comfort, character and considered design.",
-    image: "/image/Livingroom.avif",
+    image:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
     href: "/products?category=living-room",
     number: "01",
   },
@@ -16,7 +16,8 @@ const categories = [
     id: "bedroom",
     name: "Bedroom",
     description: "Quiet spaces designed for better living.",
-    image: "/image/Bedroom.avif",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
     href: "/products?category=bedroom",
     number: "02",
   },
@@ -24,7 +25,8 @@ const categories = [
     id: "dining",
     name: "Dining",
     description: "Gather, share and make every moment matter.",
-    image: "/image/Diningroom.avif",
+    image:
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
     href: "/products?category=dining",
     number: "03",
   },
@@ -32,7 +34,8 @@ const categories = [
     id: "all",
     name: "All Pieces",
     description: "Curated pieces for beautifully lived spaces.",
-    image: "/image/Wardrobe.avif",
+    image:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
     href: "/products",
     number: "04",
   },
@@ -58,7 +61,7 @@ export default function ShopByCategory() {
               href="/products"
               className="group mb-1 inline-flex shrink-0 items-center gap-2.5 text-[0.58rem] font-bold uppercase tracking-[0.16em] text-[var(--deep-brown)] transition-colors duration-300 hover:text-[var(--brass)] sm:text-[0.62rem] lg:text-[0.65rem]"
             >
-              <span className='text-sm'>View All</span>
+              <span className="text-sm">View All</span>
 
               <span className="text-sm text-[var(--brass)] transition-transform duration-300 group-hover:translate-x-1 sm:text-[0.95rem]">
                 →
@@ -70,7 +73,7 @@ export default function ShopByCategory() {
         {/* CATEGORY GRID */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {categories.map((category, index) => (
-            <Reveal key={category.id} delay={index * 60} >
+            <Reveal key={category.id} delay={index * 60}>
               <Link href={category.href} className="group block">
                 {/* IMAGE */}
                 <div className="relative aspect-[0.9] overflow-hidden rounded-[var(--image-radius)] bg-[var(--sand)]">
@@ -163,4 +166,3 @@ export default function ShopByCategory() {
     </section>
   );
 }
-

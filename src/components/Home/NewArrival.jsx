@@ -7,7 +7,8 @@ const newArrivals = [
     id: "new-1",
     name: "The Modern Settee",
     category: "Sofa",
-    image: "/image/Livingroom.avif",
+    image:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
     description: "Contemporary comfort meets classic proportions.",
     tag: "New",
   },
@@ -15,7 +16,8 @@ const newArrivals = [
     id: "new-2",
     name: "The Platform Bed",
     category: "Bed",
-    image: "/image/Bedroom.avif",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
     description: "Minimalist design with maximum comfort.",
     tag: "New",
   },
@@ -23,7 +25,8 @@ const newArrivals = [
     id: "new-3",
     name: "The Extending Table",
     category: "Dining",
-    image: "/image/Diningroom.avif",
+    image:
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80",
     description: "Adaptable elegance for every occasion.",
     tag: "Limited",
   },
@@ -31,7 +34,8 @@ const newArrivals = [
     id: "new-4",
     name: "The Library Shelving",
     category: "Storage",
-    image: "/image/Wardrobe.avif",
+    image:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
     description: "Display and storage refined to an art.",
     tag: "New",
   },
@@ -43,7 +47,6 @@ export default function NewArrival() {
   return (
     <section className="relative overflow-hidden border-t border-[var(--line)] bg-[var(--ivory)] py-10 sm:py-15 lg:py-20">
       <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
-
         {/* SECTION HEADER */}
         <Reveal className="mb-10 text-center sm:mb-16 lg:mb-20">
           <h2
@@ -66,12 +69,10 @@ export default function NewArrival() {
 
         {/* FEATURED ARRIVAL */}
         <div className="grid items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-7">
-
           {/* Featured Image */}
-          <Reveal  delay={0} className="lg:col-span-8">
+          <Reveal delay={0} className="lg:col-span-8">
             <article className="group relative">
               <div className="image-wrap relative aspect-[1.15] overflow-hidden bg-[var(--surface)] sm:aspect-[1.35] lg:aspect-[1.42]">
-
                 <Image
                   src={hero.image}
                   alt={hero.name}
@@ -113,7 +114,6 @@ export default function NewArrival() {
           {/* EDITORIAL TEXT */}
           <Reveal delay={140} className="lg:col-span-4">
             <div className="border-t border-[var(--line)] pt-6 sm:pt-7 lg:pt-8">
-
               {/* Small Label */}
               <span className="mb-4 block text-[0.55rem] font-bold uppercase tracking-[0.2em] text-[var(--brass)] sm:mb-5 sm:text-[0.58rem]">
                 The Latest Piece
@@ -150,7 +150,6 @@ export default function NewArrival() {
 
         {/* SUPPORTING ARRIVALS */}
         <div className="mt-12 sm:mt-16 lg:mt-20">
-
           {/* Section Title */}
           <Reveal className="mb-8 sm:mb-10 md:mb-12 lg:mb-14">
             <div className="flex items-end justify-between gap-5">
@@ -174,7 +173,6 @@ export default function NewArrival() {
             {rest.map((item, index) => (
               <Reveal key={item.id} delay={180 + index * 90}>
                 <article className="group cursor-pointer">
-
                   {/* Product Image */}
                   <div className="image-wrap relative aspect-[0.92] overflow-hidden bg-[var(--surface)] sm:aspect-[1.02]">
                     <Image
@@ -204,7 +202,6 @@ export default function NewArrival() {
                   {/* Product Information */}
                   <div className="mt-4 sm:mt-5">
                     <div className="flex items-start justify-between gap-3 sm:gap-4">
-
                       <div>
                         <p className="mb-1.5 text-[0.52rem] font-bold uppercase tracking-[0.16em] text-[var(--brass)] sm:mb-2 sm:text-[0.55rem]">
                           {item.category}
@@ -248,9 +245,7 @@ export default function NewArrival() {
             </span>
           </div>
         </Reveal>
-
       </div>
     </section>
   );
 }
-

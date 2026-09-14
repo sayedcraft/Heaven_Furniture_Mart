@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
@@ -84,9 +83,7 @@ export default function BespokeHighlight() {
             <br />
             Your vision.
             <br />
-            <em className="font-normal text-[var(--brass)]">
-              Our piece.
-            </em>
+            <em className="font-normal text-[var(--brass)]">Our piece.</em>
           </h2>
         </Reveal>
 
@@ -132,7 +129,7 @@ export default function BespokeHighlight() {
                   "
                 >
                   <Image
-                    src={images.bespoke}
+                    src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80"
                     alt="Bespoke custom furniture design"
                     fill
                     sizes="
@@ -284,7 +281,7 @@ export default function BespokeHighlight() {
                   "
                 >
                   <Image
-                    src="/image/Custom.avif"
+                    src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80"
                     alt="Custom bespoke furniture detail"
                     fill
                     sizes="
@@ -341,10 +338,7 @@ export default function BespokeHighlight() {
               </Reveal>
 
               {/* EDITORIAL CARD */}
-              <Reveal
-                delay={200}
-                className="col-span-4 min-w-0"
-              >
+              <Reveal delay={200} className="col-span-4 min-w-0">
                 <div
                   className="
                     group
@@ -454,9 +448,7 @@ export default function BespokeHighlight() {
                   >
                     <span className="h-1 w-1 shrink-0 rounded-full bg-[var(--brass)]" />
 
-                    <span className="truncate">
-                      Heaven Furniture Mart
-                    </span>
+                    <span className="truncate">Heaven Furniture Mart</span>
                   </div>
                 </div>
               </Reveal>
@@ -464,10 +456,7 @@ export default function BespokeHighlight() {
           </div>
 
           {/* EDITORIAL CONTENT */}
-          <Reveal
-            delay={180}
-            className="min-w-0 lg:col-span-5"
-          >
+          <Reveal delay={180} className="min-w-0 lg:col-span-5">
             <div
               className="
                 flex
@@ -509,9 +498,7 @@ export default function BespokeHighlight() {
               >
                 Made for your space.
                 <br />
-                <span className="text-[var(--brass)]">
-                  Made for you.
-                </span>
+                <span className="text-[var(--brass)]">Made for you.</span>
               </h3>
 
               <p
@@ -527,8 +514,8 @@ export default function BespokeHighlight() {
                   md:mt-7
                 "
               >
-                Every detail is shaped around your space, materials, finish,
-                and the way you live.
+                Every detail is shaped around your space, materials, finish, and
+                the way you live.
               </p>
 
               {/* Customization */}
@@ -629,9 +616,7 @@ export default function BespokeHighlight() {
                   md:mt-10
                 "
               >
-                <Button href="/contact">
-                  Start Your Custom Piece
-                </Button>
+                <Button href="/contact">Start Your Custom Piece</Button>
               </div>
             </div>
           </Reveal>
@@ -640,4 +625,3 @@ export default function BespokeHighlight() {
     </section>
   );
 }
-

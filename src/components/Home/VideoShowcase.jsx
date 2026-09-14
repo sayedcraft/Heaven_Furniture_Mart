@@ -28,7 +28,7 @@ export default function VideoShowcase() {
           muted
           loop
           playsInline
-          poster="/image/Livingroom.avif"
+          poster="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1800&q=80"
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
         >

@@ -56,11 +56,11 @@ export default function SmartInnovation() {
           </Reveal>
 
           {/* Image */}
-          <Reveal  delay={160} className="lg:col-span-7">
+          <Reveal delay={160} className="lg:col-span-7">
             <div className="group relative overflow-hidden bg-[var(--wood-tan)] rounded-[var(--image-radius)]">
               <div className="image-wrap relative aspect-[1.35] sm:aspect-[1.55] lg:aspect-[1.65]">
                 <Image
-                  src="/image/Office.avif"
+                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80"
                   alt="Modern workspace furniture by Heaven Furniture Mart"
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"

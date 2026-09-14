@@ -43,7 +43,7 @@ export default function About() {
           <Reveal className="lg:col-span-7">
             <div className="image-wrap relative aspect-[1.05] bg-[var(--wood-tan)] sm:aspect-[1.2]">
               <Image
-                src="/image/Livingroom.avif"
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1600&q=80"
                 alt="Warm living room interior furnished by Heaven Furniture Mart"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
