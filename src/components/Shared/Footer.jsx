@@ -75,7 +75,7 @@ export default function Footer() {
 
             <div className="space-y-3 text-sm text-white/70">
               <p>
-                Agrabad Access Road,
+                Khulshi,
                 <br />
                 Chattogram, Bangladesh
               </p>
@@ -84,7 +84,7 @@ export default function Footer() {
                 href="tel:+8801960481983"
                 className="block transition-colors duration-300 hover:text-[var(--brass)]"
               >
-                +880 1960-481983
+                +880 181 818 8181
               </a>
 
               <a

@@ -1,3 +1,63 @@
+const sofaImages = [
+  "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1549187774-b4e9c44e4269?auto=format&fit=crop&w=1400&q=80",
+  "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/2082080/pexels-photo-2082080.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1400",
+];
+
+const bedImages = [
+  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
+  "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/210265/pexels-photo-210265.jpeg?auto=compress&cs=tinysrgb&w=1400",
+];
+
+const diningImages = [
+  "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1472224371017-08207f84aaae?auto=format&fit=crop&w=1400&q=80",
+  "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/3889855/pexels-photo-3889855.jpeg?auto=compress&cs=tinysrgb&w=1400",
+];
+
+const chairImages = [
+  "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80",
+  "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/3705601/pexels-photo-3705601.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=1400",
+];
+
+const mirrorImages = [
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80",
+  "https://images.pexels.com/photos/1250463/pexels-photo-1250463.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/210594/pexels-photo-210594.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1400",
+];
+
+const storageImages = [
+  "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80",
+  "https://images.pexels.com/photos/194094/pexels-photo-194094.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/2923178/pexels-photo-2923178.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/3201761/pexels-photo-3201761.jpeg?auto=compress&cs=tinysrgb&w=1400",
+  "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1400",
+];
+
 export const products = [
   // =========================================================
   // FLAGSHIP COLLECTION
@@ -8,7 +68,8 @@ export const products = [
     name: "The Signature Sofa",
     slug: "the-signature-sofa",
     category: "sofa",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
     collection: "Flagship",
 
     description: "A considered centerpiece for everyday life",
@@ -39,20 +100,13 @@ export const products = [
       "Made-to-order options",
     ],
 
-    colors: [
-      "Warm Beige",
-      "Ivory",
-      "Charcoal",
-      "Deep Brown",
-      "Custom",
-    ],
+    colors: ["Warm Beige", "Ivory", "Charcoal", "Deep Brown", "Custom"],
 
     tags: ["sofa", "living room", "luxury", "custom", "flagship"],
 
     availability: "Made to order",
 
-    care:
-      "Vacuum upholstery regularly and clean spills immediately using a suitable fabric cleaner.",
+    care: "Vacuum upholstery regularly and clean spills immediately using a suitable fabric cleaner.",
 
     warranty: "Manufacturer warranty available",
 
@@ -67,7 +121,8 @@ export const products = [
     name: "The Haven Bed",
     slug: "the-haven-bed",
     category: "bed",
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Flagship",
 
     description: "A calm foundation for the room you return to",
@@ -98,20 +153,13 @@ export const products = [
       "Made-to-order craftsmanship",
     ],
 
-    colors: [
-      "Natural Oak",
-      "Walnut",
-      "Dark Brown",
-      "Warm Beige",
-      "Custom",
-    ],
+    colors: ["Natural Oak", "Walnut", "Dark Brown", "Warm Beige", "Custom"],
 
     tags: ["bed", "bedroom", "luxury", "custom", "flagship"],
 
     availability: "Made to order",
 
-    care:
-      "Clean wooden surfaces with a soft dry cloth and avoid prolonged exposure to moisture.",
+    care: "Clean wooden surfaces with a soft dry cloth and avoid prolonged exposure to moisture.",
 
     warranty: "Manufacturer warranty available",
 
@@ -126,7 +174,8 @@ export const products = [
     name: "The Dining Statement",
     slug: "the-dining-statement",
     category: "dining-table",
-    image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80",
     collection: "Flagship",
 
     description: "Made for long conversations and shared meals",
@@ -157,25 +206,17 @@ export const products = [
       "Multiple finish options",
     ],
 
-    colors: [
-      "Natural Wood",
-      "Walnut",
-      "Dark Oak",
-      "Warm Brown",
-      "Custom",
-    ],
+    colors: ["Natural Wood", "Walnut", "Dark Oak", "Warm Brown", "Custom"],
 
     tags: ["dining", "dining table", "family", "luxury", "flagship"],
 
     availability: "Made to order",
 
-    care:
-      "Wipe the surface with a soft slightly damp cloth and avoid harsh cleaning products.",
+    care: "Wipe the surface with a soft slightly damp cloth and avoid harsh cleaning products.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery and installation can be arranged based on location.",
+    delivery: "Delivery and installation can be arranged based on location.",
 
     featured: true,
   },
@@ -185,7 +226,7 @@ export const products = [
     name: "The Executive Desk",
     slug: "the-executive-desk",
     category: "other",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80",
     collection: "Flagship",
 
     description: "A focused surface, made to fit the way you work",
@@ -216,25 +257,17 @@ export const products = [
       "Premium hardware",
     ],
 
-    colors: [
-      "Matte Black",
-      "Walnut",
-      "Natural Wood",
-      "Dark Brown",
-      "Custom",
-    ],
+    colors: ["Matte Black", "Walnut", "Natural Wood", "Dark Brown", "Custom"],
 
     tags: ["desk", "office", "executive", "workspace", "flagship"],
 
     availability: "Made to order",
 
-    care:
-      "Use a soft dry cloth for regular cleaning and avoid abrasive products.",
+    care: "Use a soft dry cloth for regular cleaning and avoid abrasive products.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Professional delivery and installation available.",
+    delivery: "Professional delivery and installation available.",
 
     featured: true,
   },
@@ -244,7 +277,7 @@ export const products = [
     name: "The Media Console",
     slug: "the-media-console",
     category: "other",
-    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/194094/pexels-photo-194094.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Flagship",
 
     description: "Quiet utility with a strong architectural line",
@@ -275,25 +308,17 @@ export const products = [
       "Custom dimensions",
     ],
 
-    colors: [
-      "Natural Oak",
-      "Walnut",
-      "Dark Brown",
-      "Matte Black",
-      "Custom",
-    ],
+    colors: ["Natural Oak", "Walnut", "Dark Brown", "Matte Black", "Custom"],
 
     tags: ["tv unit", "media console", "living room", "storage"],
 
     availability: "Made to order",
 
-    care:
-      "Clean using a soft dry or slightly damp cloth. Avoid excessive moisture.",
+    care: "Clean using a soft dry or slightly damp cloth. Avoid excessive moisture.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery and installation available according to location.",
+    delivery: "Delivery and installation available according to location.",
 
     featured: true,
   },
@@ -307,7 +332,8 @@ export const products = [
     name: "The Lounge Chair",
     slug: "the-lounge-chair",
     category: "chair",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
     collection: "Popular",
 
     description: "Comfort meets contemporary design",
@@ -338,26 +364,17 @@ export const products = [
       "Custom finish options",
     ],
 
-    colors: [
-      "Ivory",
-      "Beige",
-      "Olive",
-      "Charcoal",
-      "Brown",
-      "Custom",
-    ],
+    colors: ["Ivory", "Beige", "Olive", "Charcoal", "Brown", "Custom"],
 
     tags: ["chair", "lounge", "living room", "comfort"],
 
     availability: "Made to order",
 
-    care:
-      "Regularly vacuum fabric surfaces and clean spills promptly.",
+    care: "Regularly vacuum fabric surfaces and clean spills promptly.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery available according to location.",
+    delivery: "Delivery available according to location.",
 
     featured: false,
   },
@@ -367,7 +384,8 @@ export const products = [
     name: "The Wardrobe",
     slug: "the-wardrobe",
     category: "other",
-    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
     collection: "Popular",
 
     description: "Storage shaped around the character of your space",
@@ -411,13 +429,11 @@ export const products = [
 
     availability: "Made to order",
 
-    care:
-      "Clean exterior surfaces with a soft dry cloth and avoid excessive moisture.",
+    care: "Clean exterior surfaces with a soft dry cloth and avoid excessive moisture.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Professional delivery and installation available.",
+    delivery: "Professional delivery and installation available.",
 
     featured: false,
   },
@@ -427,7 +443,8 @@ export const products = [
     name: "The Accent Mirror",
     slug: "the-accent-mirror",
     category: "mirror",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80",
     collection: "Popular",
 
     description: "A tailored detail that completes a room",
@@ -446,8 +463,7 @@ export const products = [
 
     dimensions: "90 × 5 × 120 cm",
 
-    customization:
-      "Select the frame finish, shape, and preferred dimensions.",
+    customization: "Select the frame finish, shape, and preferred dimensions.",
 
     features: [
       "High-clarity mirror",
@@ -457,25 +473,17 @@ export const products = [
       "Wall mounting support",
     ],
 
-    colors: [
-      "Natural Wood",
-      "Walnut",
-      "Dark Brown",
-      "Matte Black",
-      "Custom",
-    ],
+    colors: ["Natural Wood", "Walnut", "Dark Brown", "Matte Black", "Custom"],
 
     tags: ["mirror", "decor", "bedroom", "living room"],
 
     availability: "Made to order",
 
-    care:
-      "Clean the mirror with a suitable glass cleaner and use a soft cloth on the frame.",
+    care: "Clean the mirror with a suitable glass cleaner and use a soft cloth on the frame.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Careful delivery and installation available.",
+    delivery: "Careful delivery and installation available.",
 
     featured: false,
   },
@@ -485,7 +493,8 @@ export const products = [
     name: "The Corner Console",
     slug: "the-corner-console",
     category: "other",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Popular",
 
     description: "Elegant utility for refined spaces",
@@ -515,25 +524,17 @@ export const products = [
       "Custom dimensions",
     ],
 
-    colors: [
-      "Natural Oak",
-      "Walnut",
-      "Dark Brown",
-      "Matte Black",
-      "Custom",
-    ],
+    colors: ["Natural Oak", "Walnut", "Dark Brown", "Matte Black", "Custom"],
 
     tags: ["console", "storage", "entryway", "living room"],
 
     availability: "Made to order",
 
-    care:
-      "Wipe with a soft dry cloth and avoid abrasive cleaning products.",
+    care: "Wipe with a soft dry cloth and avoid abrasive cleaning products.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery available according to location.",
+    delivery: "Delivery available according to location.",
 
     featured: false,
   },
@@ -547,7 +548,7 @@ export const products = [
     name: "The Sculptural Sofa",
     slug: "the-sculptural-sofa",
     category: "sofa",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1400&q=80",
     collection: "Artistic",
 
     description: "Where form and function become art",
@@ -578,25 +579,17 @@ export const products = [
       "Made-to-order craftsmanship",
     ],
 
-    colors: [
-      "Cream",
-      "Sand",
-      "Warm Grey",
-      "Charcoal",
-      "Custom",
-    ],
+    colors: ["Cream", "Sand", "Warm Grey", "Charcoal", "Custom"],
 
     tags: ["sofa", "artistic", "sculptural", "luxury"],
 
     availability: "Made to order",
 
-    care:
-      "Vacuum upholstery regularly and use professional cleaning when necessary.",
+    care: "Vacuum upholstery regularly and use professional cleaning when necessary.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Specialized delivery and installation available.",
+    delivery: "Specialized delivery and installation available.",
 
     featured: false,
   },
@@ -606,7 +599,8 @@ export const products = [
     name: "The Statement Bed",
     slug: "the-statement-bed",
     category: "bed",
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
     collection: "Artistic",
 
     description: "A dramatic presence in your personal sanctuary",
@@ -637,26 +631,17 @@ export const products = [
       "Custom finish options",
     ],
 
-    colors: [
-      "Ivory",
-      "Beige",
-      "Taupe",
-      "Charcoal",
-      "Deep Brown",
-      "Custom",
-    ],
+    colors: ["Ivory", "Beige", "Taupe", "Charcoal", "Deep Brown", "Custom"],
 
     tags: ["bed", "bedroom", "artistic", "statement", "luxury"],
 
     availability: "Made to order",
 
-    care:
-      "Use a soft cloth on wooden surfaces and vacuum upholstered sections regularly.",
+    care: "Use a soft cloth on wooden surfaces and vacuum upholstered sections regularly.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Professional delivery and installation available.",
+    delivery: "Professional delivery and installation available.",
 
     featured: false,
   },
@@ -670,7 +655,8 @@ export const products = [
     name: "The Heritage Sofa",
     slug: "the-heritage-sofa",
     category: "sofa",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Living",
 
     description: "Timeless proportions designed for lasting comfort",
@@ -700,26 +686,17 @@ export const products = [
       "Custom fabric options",
     ],
 
-    colors: [
-      "Beige",
-      "Ivory",
-      "Brown",
-      "Grey",
-      "Charcoal",
-      "Custom",
-    ],
+    colors: ["Beige", "Ivory", "Brown", "Grey", "Charcoal", "Custom"],
 
     tags: ["sofa", "living room", "classic", "comfort"],
 
     availability: "Made to order",
 
-    care:
-      "Vacuum upholstery regularly and clean stains promptly.",
+    care: "Vacuum upholstery regularly and clean stains promptly.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery available according to location.",
+    delivery: "Delivery available according to location.",
 
     featured: false,
   },
@@ -729,7 +706,7 @@ export const products = [
     name: "The Comfort Sofa",
     slug: "the-comfort-sofa",
     category: "sofa",
-    image: "https://images.unsplash.com/photo-1549187774-b4e9c44e4269?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Living",
 
     description: "Generous seating for relaxed everyday living",
@@ -759,26 +736,17 @@ export const products = [
       "Custom upholstery",
     ],
 
-    colors: [
-      "Cream",
-      "Beige",
-      "Light Grey",
-      "Charcoal",
-      "Brown",
-      "Custom",
-    ],
+    colors: ["Cream", "Beige", "Light Grey", "Charcoal", "Brown", "Custom"],
 
     tags: ["sofa", "comfort", "family", "living room"],
 
     availability: "Made to order",
 
-    care:
-      "Vacuum regularly and follow the recommended fabric cleaning method.",
+    care: "Vacuum regularly and follow the recommended fabric cleaning method.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery and installation available.",
+    delivery: "Delivery and installation available.",
 
     featured: false,
   },
@@ -792,7 +760,8 @@ export const products = [
     name: "The Classic Bed",
     slug: "the-classic-bed",
     category: "bed",
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Bedroom",
 
     description: "Balanced proportions for a calm and comfortable bedroom",
@@ -822,25 +791,17 @@ export const products = [
       "Multiple wood finishes",
     ],
 
-    colors: [
-      "Natural Oak",
-      "Walnut",
-      "Dark Brown",
-      "Warm Brown",
-      "Custom",
-    ],
+    colors: ["Natural Oak", "Walnut", "Dark Brown", "Warm Brown", "Custom"],
 
     tags: ["bed", "bedroom", "classic", "wood"],
 
     availability: "Made to order",
 
-    care:
-      "Use a soft dry cloth for wooden surfaces and avoid excessive moisture.",
+    care: "Use a soft dry cloth for wooden surfaces and avoid excessive moisture.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Professional delivery and installation available.",
+    delivery: "Professional delivery and installation available.",
 
     featured: false,
   },
@@ -850,7 +811,8 @@ export const products = [
     name: "The Upholstered Bed",
     slug: "the-upholstered-bed",
     category: "bed",
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Bedroom",
 
     description: "Soft detailing paired with a strong architectural frame",
@@ -880,26 +842,17 @@ export const products = [
       "Reinforced support",
     ],
 
-    colors: [
-      "Ivory",
-      "Beige",
-      "Taupe",
-      "Grey",
-      "Charcoal",
-      "Custom",
-    ],
+    colors: ["Ivory", "Beige", "Taupe", "Grey", "Charcoal", "Custom"],
 
     tags: ["bed", "bedroom", "upholstered", "comfort"],
 
     availability: "Made to order",
 
-    care:
-      "Vacuum upholstered areas regularly and wipe wooden parts with a soft cloth.",
+    care: "Vacuum upholstered areas regularly and wipe wooden parts with a soft cloth.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery and professional installation available.",
+    delivery: "Delivery and professional installation available.",
 
     featured: false,
   },
@@ -913,7 +866,8 @@ export const products = [
     name: "The Family Dining Table",
     slug: "the-family-dining-table",
     category: "dining-table",
-    image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1472224371017-08207f84aaae?auto=format&fit=crop&w=1400&q=80",
     collection: "Dining",
 
     description: "A generous table made for everyday gatherings",
@@ -943,25 +897,17 @@ export const products = [
       "Multiple wood finishes",
     ],
 
-    colors: [
-      "Natural Oak",
-      "Walnut",
-      "Dark Oak",
-      "Warm Brown",
-      "Custom",
-    ],
+    colors: ["Natural Oak", "Walnut", "Dark Oak", "Warm Brown", "Custom"],
 
     tags: ["dining", "dining table", "family", "wood"],
 
     availability: "Made to order",
 
-    care:
-      "Wipe with a soft cloth and avoid prolonged exposure to moisture.",
+    care: "Wipe with a soft cloth and avoid prolonged exposure to moisture.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery and installation available.",
+    delivery: "Delivery and installation available.",
 
     featured: false,
   },
@@ -971,7 +917,7 @@ export const products = [
     name: "The Contemporary Dining Table",
     slug: "the-contemporary-dining-table",
     category: "dining-table",
-    image: "https://images.unsplash.com/photo-1472224371017-08207f84aaae?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Dining",
 
     description: "Clean lines and generous proportions for modern interiors",
@@ -1001,25 +947,17 @@ export const products = [
       "Multiple finish options",
     ],
 
-    colors: [
-      "Natural Wood",
-      "Walnut",
-      "Dark Brown",
-      "Matte Black",
-      "Custom",
-    ],
+    colors: ["Natural Wood", "Walnut", "Dark Brown", "Matte Black", "Custom"],
 
     tags: ["dining", "modern", "dining table", "contemporary"],
 
     availability: "Made to order",
 
-    care:
-      "Clean with a soft cloth and avoid abrasive or chemical cleaners.",
+    care: "Clean with a soft cloth and avoid abrasive or chemical cleaners.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Professional delivery and installation available.",
+    delivery: "Professional delivery and installation available.",
 
     featured: false,
   },
@@ -1033,7 +971,8 @@ export const products = [
     name: "The Dining Chair",
     slug: "the-dining-chair",
     category: "chair",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Dining",
 
     description: "Supportive comfort with a refined silhouette",
@@ -1052,8 +991,7 @@ export const products = [
 
     dimensions: "52 × 58 × 82 cm",
 
-    customization:
-      "Select upholstery fabric, wood finish, and seat height.",
+    customization: "Select upholstery fabric, wood finish, and seat height.",
 
     features: [
       "Solid wood frame",
@@ -1063,26 +1001,17 @@ export const products = [
       "Custom wood finishes",
     ],
 
-    colors: [
-      "Beige",
-      "Ivory",
-      "Brown",
-      "Charcoal",
-      "Olive",
-      "Custom",
-    ],
+    colors: ["Beige", "Ivory", "Brown", "Charcoal", "Olive", "Custom"],
 
     tags: ["chair", "dining", "dining chair", "comfort"],
 
     availability: "Made to order",
 
-    care:
-      "Vacuum fabric surfaces regularly and wipe wooden parts with a soft cloth.",
+    care: "Vacuum fabric surfaces regularly and wipe wooden parts with a soft cloth.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery available according to location.",
+    delivery: "Delivery available according to location.",
 
     featured: false,
   },
@@ -1092,7 +1021,8 @@ export const products = [
     name: "The Accent Chair",
     slug: "the-accent-chair",
     category: "chair",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Living",
 
     description: "A distinctive seat for quiet corners and refined interiors",
@@ -1122,26 +1052,17 @@ export const products = [
       "Custom finish options",
     ],
 
-    colors: [
-      "Cream",
-      "Beige",
-      "Olive",
-      "Brown",
-      "Charcoal",
-      "Custom",
-    ],
+    colors: ["Cream", "Beige", "Olive", "Brown", "Charcoal", "Custom"],
 
     tags: ["chair", "accent", "living room", "bedroom"],
 
     availability: "Made to order",
 
-    care:
-      "Vacuum upholstery regularly and clean spills promptly.",
+    care: "Vacuum upholstery regularly and clean spills promptly.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery available according to location.",
+    delivery: "Delivery available according to location.",
 
     featured: false,
   },
@@ -1155,7 +1076,8 @@ export const products = [
     name: "The Full-Length Mirror",
     slug: "the-full-length-mirror",
     category: "mirror",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/1250463/pexels-photo-1250463.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Bedroom",
 
     description: "A refined full-length mirror for considered interiors",
@@ -1185,25 +1107,17 @@ export const products = [
       "Multiple frame finishes",
     ],
 
-    colors: [
-      "Natural Oak",
-      "Walnut",
-      "Dark Brown",
-      "Matte Black",
-      "Custom",
-    ],
+    colors: ["Natural Oak", "Walnut", "Dark Brown", "Matte Black", "Custom"],
 
     tags: ["mirror", "bedroom", "dressing", "full length"],
 
     availability: "Made to order",
 
-    care:
-      "Use a suitable glass cleaner and a soft microfiber cloth.",
+    care: "Use a suitable glass cleaner and a soft microfiber cloth.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Careful delivery and installation available.",
+    delivery: "Careful delivery and installation available.",
 
     featured: false,
   },
@@ -1213,7 +1127,8 @@ export const products = [
     name: "The Decorative Mirror",
     slug: "the-decorative-mirror",
     category: "mirror",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/210594/pexels-photo-210594.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Artistic",
 
     description: "A crafted reflection with an architectural presence",
@@ -1232,8 +1147,7 @@ export const products = [
 
     dimensions: "100 × 5 × 130 cm",
 
-    customization:
-      "Choose the shape, frame profile, dimensions, and finish.",
+    customization: "Choose the shape, frame profile, dimensions, and finish.",
 
     features: [
       "High-clarity reflective surface",
@@ -1243,25 +1157,17 @@ export const products = [
       "Wall mounting support",
     ],
 
-    colors: [
-      "Natural Wood",
-      "Walnut",
-      "Dark Brown",
-      "Matte Black",
-      "Custom",
-    ],
+    colors: ["Natural Wood", "Walnut", "Dark Brown", "Matte Black", "Custom"],
 
     tags: ["mirror", "decorative", "artistic", "interior"],
 
     availability: "Made to order",
 
-    care:
-      "Clean the mirror with a suitable glass cleaner and wipe the frame gently.",
+    care: "Clean the mirror with a suitable glass cleaner and wipe the frame gently.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Careful delivery and installation available.",
+    delivery: "Careful delivery and installation available.",
 
     featured: false,
   },
@@ -1275,7 +1181,8 @@ export const products = [
     name: "The Custom Storage Unit",
     slug: "the-custom-storage-unit",
     category: "other",
-    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/2923178/pexels-photo-2923178.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Bespoke",
 
     description: "Storage designed around the architecture of your room",
@@ -1319,13 +1226,11 @@ export const products = [
 
     availability: "Made to order",
 
-    care:
-      "Wipe surfaces with a soft dry cloth and avoid excessive moisture.",
+    care: "Wipe surfaces with a soft dry cloth and avoid excessive moisture.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Professional delivery and installation available.",
+    delivery: "Professional delivery and installation available.",
 
     featured: false,
   },
@@ -1335,7 +1240,8 @@ export const products = [
     name: "The Bespoke Cabinet",
     slug: "the-bespoke-cabinet",
     category: "other",
-    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Bespoke",
 
     description: "Storage designed specifically for your space",
@@ -1366,25 +1272,17 @@ export const products = [
       "Custom finishes",
     ],
 
-    colors: [
-      "Natural Oak",
-      "Walnut",
-      "Dark Brown",
-      "Matte Black",
-      "Custom",
-    ],
+    colors: ["Natural Oak", "Walnut", "Dark Brown", "Matte Black", "Custom"],
 
     tags: ["cabinet", "storage", "bespoke", "custom"],
 
     availability: "Made to order",
 
-    care:
-      "Clean with a soft cloth and avoid harsh or abrasive cleaning products.",
+    care: "Clean with a soft cloth and avoid harsh or abrasive cleaning products.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Professional delivery and installation available.",
+    delivery: "Professional delivery and installation available.",
 
     featured: false,
   },
@@ -1394,7 +1292,8 @@ export const products = [
     name: "The Modern Side Table",
     slug: "the-modern-side-table",
     category: "other",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/3201761/pexels-photo-3201761.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Living",
 
     description: "A compact surface with understated character",
@@ -1424,25 +1323,17 @@ export const products = [
       "Custom dimensions",
     ],
 
-    colors: [
-      "Natural Oak",
-      "Walnut",
-      "Dark Brown",
-      "Matte Black",
-      "Custom",
-    ],
+    colors: ["Natural Oak", "Walnut", "Dark Brown", "Matte Black", "Custom"],
 
     tags: ["side table", "living room", "bedroom", "wood"],
 
     availability: "Made to order",
 
-    care:
-      "Wipe with a soft dry cloth and protect the surface from prolonged moisture.",
+    care: "Wipe with a soft dry cloth and protect the surface from prolonged moisture.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery available according to location.",
+    delivery: "Delivery available according to location.",
 
     featured: false,
   },
@@ -1452,7 +1343,8 @@ export const products = [
     name: "The Entryway Console",
     slug: "the-entryway-console",
     category: "other",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=1400",
     collection: "Living",
 
     description: "A refined welcome for the spaces you enter every day",
@@ -1482,25 +1374,17 @@ export const products = [
       "Custom dimensions",
     ],
 
-    colors: [
-      "Natural Oak",
-      "Walnut",
-      "Dark Brown",
-      "Matte Black",
-      "Custom",
-    ],
+    colors: ["Natural Oak", "Walnut", "Dark Brown", "Matte Black", "Custom"],
 
     tags: ["console", "entryway", "storage", "living"],
 
     availability: "Made to order",
 
-    care:
-      "Clean with a soft cloth and avoid abrasive cleaning products.",
+    care: "Clean with a soft cloth and avoid abrasive cleaning products.",
 
     warranty: "Manufacturer warranty available",
 
-    delivery:
-      "Delivery and installation available.",
+    delivery: "Delivery and installation available.",
 
     featured: false,
   },

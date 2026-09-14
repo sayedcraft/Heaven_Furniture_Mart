@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { images } from "@/components/data";
+// import { images } from "@/components/data";
 import Reveal from "@/components/ui/Reveal";
 
 export default function SocialProof() {
@@ -11,7 +11,7 @@ export default function SocialProof() {
           <Reveal delay={0} className="lg:col-span-5">
             <div className="image-wrap relative aspect-[0.8] overflow-hidden bg-[var(--wood-tan)] lg:aspect-[0.9]">
               <Image
-                src={images.proof}
+                src='/images.jpeg'
                 alt="Elegant interior styled with Heaven Furniture Mart pieces"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
@@ -40,7 +40,7 @@ export default function SocialProof() {
 
               <div className="mb-12">
                 <p className="serif mb-2 text-2xl text-[var(--deep-brown)] sm:text-3xl">
-                  Abul Kalam Bhuiyan
+                  Muhammad Sayed
                 </p>
 
                 <p className="mb-4 text-xs font-bold uppercase tracking-[0.12em] text-[var(--brass)]">
@@ -48,7 +48,7 @@ export default function SocialProof() {
                 </p>
 
                 <p className="text-xs text-[var(--brown)]">
-                  Agrabad, Chattogram
+                  Khulshi, Chattogram
                 </p>
               </div>
 
