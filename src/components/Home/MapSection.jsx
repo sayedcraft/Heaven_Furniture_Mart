@@ -9,9 +9,9 @@ import {
 } from "lucide-react";
 
 const PLACE = {
-  name: "Heaven Furniture BD",
+  name: "Heaven Furniture",
   address: [
-    "Lucky Hotel More, North of Bheluaar Dighi",
+    "Khulshi, Chattogram",
     "Chattogram 4202, Bangladesh",
   ],
   phone: "+880 1881-818181",
