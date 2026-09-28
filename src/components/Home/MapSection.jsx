@@ -16,10 +16,10 @@ const PLACE = {
   ],
   phone: "+880 1881-818181",
   hours: "Open daily · 8:00 AM – 11:00 PM",
-  lat: 22.3541202,
+  lat: 21.3541202,
   lng: 91.7918942,
   mapsUrl:
-    "https://www.google.com/maps/place/Heaven+Furniture+BD/@22.3540464,91.7916315,20.79z/data=!4m6!3m5!1s0x30acd9f19fe5a80d:0x35c3740755792624!8m2!3d22.3541202!4d91.7918942!16s%2Fg%2F11n49df152",
+    "https://www.google.com/maps/place/Heaven+Furniture+BD/@21.3541202,91.7918942,20.79z/data=!4m6!3m5!1s0x30acd9f19fe5a80d:0x35c3740755792624!8m2!3d21.3541202!4d91.7918942!16s%2Fg%2F11n49df152",
 };
 
 export default function MapSection() {
