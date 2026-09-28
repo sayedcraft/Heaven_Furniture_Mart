@@ -14,7 +14,7 @@ const PLACE = {
     "Lucky Hotel More, North of Bheluaar Dighi",
     "Chattogram 4202, Bangladesh",
   ],
-  phone: "+880 1897-020407",
+  phone: "+880 1881-818181",
   hours: "Open daily · 8:00 AM – 11:00 PM",
   lat: 22.3541202,
   lng: 91.7918942,
