@@ -141,9 +141,7 @@ export default function SmartInnovation() {
                   {/* Content */}
                   <div className="relative z-10 flex h-full flex-col justify-between">
                     <div className="flex items-start justify-between">
-                      <span className="text-[0.55rem] font-bold tracking-[0.18em] text-[var(--brass)]">
-                        {innovation.number}
-                      </span>
+                      
 
                       <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[var(--line)] text-sm text-[var(--brown)] opacity-50 transition-all duration-500 group-hover:translate-x-1 group-hover:border-[var(--brass)] group-hover:text-[var(--brass)] group-hover:opacity-100">
                         ↗
